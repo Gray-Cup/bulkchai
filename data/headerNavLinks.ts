@@ -5,8 +5,8 @@ const headerNavLinks = [
   { href: '/blog', title: 'Blog' },
   // { href: '/tags', title: 'Tags' },
   { href: '/products', title: 'Products' },
+  {href: 'https://b2b.graycup.in', title: 'Bulk Store'},
   { href: '/about', title: 'About' },
-  {href: 'https://b2b.graycup.in', title: 'Bulk Store'}
 ]
 
 export default headerNavLinks
