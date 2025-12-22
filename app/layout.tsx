@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <div className='w-full bg-green-600 py-3'>
+          <div className="sticky top-0 z-50 w-full bg-green-600 py-3">
             <HeaderTop />
           </div>
           <SectionContainer>
