@@ -2,9 +2,9 @@
 const siteMetadata = {
   title: 'Bulk Chai',
   author: 'Gray Cup Enterprises Pvt. Ltd.',
-  headerTitle: 'Bulk Chai',
-  description: 'A blog created with Next.js and Tailwind.css',
-  language: 'en-us',
+  headerTitle: 'Bulk Chai for Everyone',
+  description: 'A website from where you can buy bulk chai with ease.',
+  language: 'en-IN',
   theme: 'light', // system, dark or light
   siteUrl: 'https://bulkchai.vercel.app',
   siteRepo: 'https://github.com/timlrx/bulkchai',
@@ -15,13 +15,13 @@ const siteMetadata = {
   github: 'https://github.com/gray-cup',
   x: 'https://twitter.com/thegraycup',
   // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
+  facebook: 'https://www.facebook.com/groups/1177349100659004',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/company/gray-cup/',
   threads: 'https://www.threads.net',
   instagram: 'https://www.instagram.com/thegraycup',
   // medium: 'https://medium.com',
-  locale: 'en-US',
+  locale: 'en-IN',
   // set to true if you want a navbar fixed to the top
   stickyNav: true,
   analytics: {
