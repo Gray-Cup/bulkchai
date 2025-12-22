@@ -25,7 +25,7 @@ const HeaderTop = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className="hover:text-neutral-200 mx-2 font-medium text-nowrap text-neutral-50"
+                className="hover:text-neutral-200 text-xs sm:text-base mx-2 font-medium text-nowrap text-neutral-50"
               >
                 {link.title}
               </Link>
