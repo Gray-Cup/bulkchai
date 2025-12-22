@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-IN',
   theme: 'light', // system, dark or light
   siteUrl: 'https://bulkchai.vercel.app',
-  siteRepo: 'https://github.com/timlrx/bulkchai',
+  // siteRepo: 'https://github.com/timlrx/bulkchai',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/og.png`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
