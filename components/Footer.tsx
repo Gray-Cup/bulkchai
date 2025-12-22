@@ -25,9 +25,12 @@ export default function Footer() {
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex items-center space-x-2 mb-8 text-xs text-gray-500 dark:text-gray-400">
           <Link href="https://graycup.org/" target="_blank">
             Company Website
+          </Link>
+          <Link href="/sitemap.xml" target="_blank">
+            Sitemap
           </Link>
         </div>
       </div>
