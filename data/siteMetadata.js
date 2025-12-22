@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Bulk Chai',
+  title: 'Bulk Chai for Everyone',
   author: 'Gray Cup Enterprises Pvt. Ltd.',
-  headerTitle: 'Bulk Chai for Everyone',
+  headerTitle: 'Bulk Chai',
   description: 'A website from where you can buy bulk chai with ease.',
   language: 'en-IN',
   theme: 'light', // system, dark or light
