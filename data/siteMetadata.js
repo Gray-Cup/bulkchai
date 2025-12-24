@@ -1,9 +1,10 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Bulk Chai for Everyone',
+  title: 'Bulk Chai Supplier in India | Wholesale Tea for Business',
   author: 'Gray Cup Enterprises Pvt. Ltd.',
   headerTitle: 'Bulk Chai',
-  description: 'A website from where you can buy bulk chai with ease.',
+  description:
+    'Looking for bulk chai supply in India? Learn about wholesale tea sourcing, pricing, logistics, and quality standards for cafes, offices, and businesses.',
   language: 'en-IN',
   theme: 'light', // system, dark or light
   siteUrl: 'https://bulkchai.com',
