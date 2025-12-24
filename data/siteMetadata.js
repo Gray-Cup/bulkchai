@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'A website from where you can buy bulk chai with ease.',
   language: 'en-IN',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://bulkchai.vercel.app',
+  siteUrl: 'https://bulkchai.com',
   // siteRepo: 'https://github.com/timlrx/bulkchai',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/og.png`,
