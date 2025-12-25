@@ -1,24 +1,917 @@
 {
-  "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane", "Aurangabad", "Solapur", "Kolhapur", "Amravati", "Jalgaon"],
-  "Karnataka": ["Bengaluru", "Mysuru", "Hubli Dharwad", "Belagavi", "Mangalore", "Ballari"],
-  "Tamil Nadu": ["Chennai", "Coimbatore", "Tiruchirappalli", "Salem", "Tiruppur", "Thoothukudi"],
-  "Telangana": ["Hyderabad", "Warangal", "Karimnagar"],
-  "Gujarat": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar", "Anand"],
-  "Uttar Pradesh": ["Lucknow", "Kanpur", "Agra", "Varanasi", "Ghaziabad", "Meerut"],
-  "West Bengal": ["Kolkata", "Howrah", "Siliguri"],
-  "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Bikaner"],
-  "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Kakinada"],
-  "Madhya Pradesh": ["Indore", "Bhopal", "Jabalpur", "Gwalior", "Ujjain"],
-  "Punjab": ["Ludhiana", "Jalandhar", "Amritsar"],
-  "Kerala": ["Kochi", "Thiruvananthapuram", "Kozhikode", "Kollam"],
-  "Haryana": ["Faridabad", "Gurugram", "Panipat"],
-  "Bihar": ["Patna", "Gaya", "Bhagalpur"],
-  "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela"],
-  "Assam": ["Guwahati", "Silchar"],
-  "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad"],
-  "Chhattisgarh": ["Raipur", "Bhilai"],
-  "Uttarakhand": ["Dehradun", "Haridwar"],
-  "Goa": ["Panaji"],
-  "Jammu & Kashmir": ["Srinagar", "Jammu"],
-  "North-East-Others": ["Agartala", "Itanagar", "Imphal"]
+  "Maharashtra": {
+    "Mumbai": {
+      "nearbyAreas": ["Andheri", "Bandra", "Powai", "Borivali", "Navi Mumbai"],
+      "industries": ["corporate offices", "cafés", "canteens", "retailers"],
+      "transitDays": "2-3 days",
+      "stateLogistics": "Mumbai is served through major Maharashtra logistics corridors with frequent bulk freight movement.",
+      "cityContext": "Mumbai has extremely high daily chai consumption driven by offices, transport hubs, and dense commercial areas.",
+      "usageFocus": "Buyers prioritise fast brewing and consistency due to high daily serving volumes.",
+      "educationAngle": "Balanced CTC grades are preferred over very fine dust-heavy blends.",
+      "localNote": "Bulk orders are commonly placed weekly to manage limited storage space."
+    },
+    "Pune": {
+      "nearbyAreas": ["Hinjewadi", "Baner", "Wakad", "Kothrud"],
+      "industries": ["IT offices", "cafés", "canteens"],
+      "transitDays": "2-3 days",
+      "stateLogistics": "Pune shares distribution routes with Mumbai for bulk tea deliveries.",
+      "cityContext": "Pune’s chai demand is shaped by IT parks and café culture.",
+      "usageFocus": "Taste consistency and smoothness are prioritised for frequent consumption.",
+      "educationAngle": "Mid-sized CTC grades are commonly selected for balanced liquor.",
+      "localNote": "Demand is higher on weekdays due to office footfall."
+    },
+    "Nagpur": {
+      "nearbyAreas": ["Sitabuldi", "Manewada", "Wardha Road"],
+      "industries": ["traders", "retail distributors"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Nagpur functions as a central redistribution hub for Vidarbha.",
+      "cityContext": "Nagpur supports bulk chai redistribution to surrounding towns.",
+      "usageFocus": "Cost stability and blend flexibility are key buying factors.",
+      "educationAngle": "CTC fannings and dust are often blended for resale.",
+      "localNote": "Orders are frequently consolidated for regional supply."
+    },
+    "Nashik": {
+      "nearbyAreas": ["CIDCO", "Gangapur Road"],
+      "industries": ["retailers", "hotels"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Nashik receives bulk supply via western Maharashtra routes.",
+      "cityContext": "Chai demand in Nashik is steady across retail and hospitality.",
+      "usageFocus": "Buyers prefer stable colour and moderate strength.",
+      "educationAngle": "Even particle CTC grades are preferred.",
+      "localNote": "Monthly ordering cycles are common."
+    },
+    "Thane": {
+      "nearbyAreas": ["Ghodbunder", "Kalwa", "Mulund"],
+      "industries": ["corporate offices", "canteens"],
+      "transitDays": "2-3 days",
+      "stateLogistics": "Thane benefits from proximity to Mumbai logistics networks.",
+      "cityContext": "Thane has strong office-driven chai consumption.",
+      "usageFocus": "Fast brewing chai is preferred for peak-hour service.",
+      "educationAngle": "Balanced CTC grades reduce bitterness at scale.",
+      "localNote": "Demand closely follows office working days."
+    },
+    "Aurangabad": {
+      "nearbyAreas": ["CIDCO", "Waluj"],
+      "industries": ["industrial units", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply is routed through central Maharashtra freight lines.",
+      "cityContext": "Industrial areas drive steady bulk chai demand.",
+      "usageFocus": "Consistency across batches is critical.",
+      "educationAngle": "Medium-fine CTC grades are commonly used.",
+      "localNote": "Orders are often planned monthly."
+    },
+    "Solapur": {
+      "nearbyAreas": ["Hotgi Road", "Akkalkot Road"],
+      "industries": ["retailers", "wholesalers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Solapur receives consolidated freight shipments.",
+      "cityContext": "Retail resale forms a large part of chai demand.",
+      "usageFocus": "Pricing stability is a key concern.",
+      "educationAngle": "Dust-heavy blends are commonly used for resale.",
+      "localNote": "Buyers often service nearby rural markets."
+    },
+    "Kolhapur": {
+      "nearbyAreas": ["Tarabai Park", "Shahupuri"],
+      "industries": ["hotels", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply routes connect Kolhapur with western Maharashtra hubs.",
+      "cityContext": "Hospitality outlets contribute significantly to chai usage.",
+      "usageFocus": "Taste smoothness is valued over extreme strength.",
+      "educationAngle": "Larger CTC particles are often preferred.",
+      "localNote": "Orders are moderate but consistent."
+    },
+    "Amravati": {
+      "nearbyAreas": ["Badnera", "Camp Area"],
+      "industries": ["retailers", "distributors"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Amravati is supplied via Vidarbha distribution routes.",
+      "cityContext": "Retail consumption dominates chai demand.",
+      "usageFocus": "Durable blends suitable for resale are prioritised.",
+      "educationAngle": "CTC dust and fannings are commonly blended.",
+      "localNote": "Bulk buying supports regional redistribution."
+    },
+    "Jalgaon": {
+      "nearbyAreas": ["MIDC", "Zilla Peth"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Jalgaon is served through north Maharashtra routes.",
+      "cityContext": "Retail tea sales drive steady demand.",
+      "usageFocus": "Cost and availability are primary factors.",
+      "educationAngle": "Simple CTC blends are widely used.",
+      "localNote": "Orders are placed based on retail turnover."
+    }
+  },
+
+  "Karnataka": {
+    "Bengaluru": {
+      "nearbyAreas": ["Whitefield", "Electronic City", "Indiranagar"],
+      "industries": ["corporate offices", "cafés", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Bengaluru is Karnataka’s main logistics hub for bulk tea.",
+      "cityContext": "Office campuses drive high daily chai consumption.",
+      "usageFocus": "Smooth taste and consistency are preferred.",
+      "educationAngle": "Balanced CTC grades reduce bitterness.",
+      "localNote": "Monthly planning is common."
+    },
+    "Mysuru": {
+      "nearbyAreas": ["VV Mohalla", "Hebbal"],
+      "industries": ["hotels", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply is routed via Bengaluru.",
+      "cityContext": "Hospitality contributes significantly to chai demand.",
+      "usageFocus": "Clean taste is prioritised.",
+      "educationAngle": "Medium-sized CTC grades are common.",
+      "localNote": "Orders are moderate in volume."
+    },
+    "Hubli Dharwad": {
+      "nearbyAreas": ["Vidyanagar", "Gokul Road"],
+      "industries": ["retailers", "traders"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Northern Karnataka supply routes serve the region.",
+      "cityContext": "Acts as a regional trading centre.",
+      "usageFocus": "Cost-effective blends are preferred.",
+      "educationAngle": "Dust-heavy grades are commonly used.",
+      "localNote": "Bulk buying supports nearby towns."
+    },
+    "Belagavi": {
+      "nearbyAreas": ["Tilakwadi", "Shahapur"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply routes connect to Maharashtra and Karnataka hubs.",
+      "cityContext": "Retail tea sales dominate consumption.",
+      "usageFocus": "Stable pricing is important.",
+      "educationAngle": "Simple CTC blends are used.",
+      "localNote": "Orders follow retail demand."
+    },
+    "Mangalore": {
+      "nearbyAreas": ["Surathkal", "Kadri"],
+      "industries": ["hotels", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Coastal logistics require moisture-safe packaging.",
+      "cityContext": "Hospitality and port activity influence chai demand.",
+      "usageFocus": "Smooth, less bitter chai is preferred.",
+      "educationAngle": "Larger particle grades perform better in humid conditions.",
+      "localNote": "Storage planning accounts for humidity."
+    },
+    "Ballari": {
+      "nearbyAreas": ["Hospet Road", "Cantonment"],
+      "industries": ["retailers", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supplies move via central Karnataka routes.",
+      "cityContext": "Industrial and retail demand supports steady consumption.",
+      "usageFocus": "Durability is prioritised.",
+      "educationAngle": "Medium-fine CTC blends are common.",
+      "localNote": "Orders are consistent but moderate."
+    }
+  },
+
+  "Tamil Nadu": {
+    "Chennai": {
+      "nearbyAreas": ["T Nagar", "Anna Nagar", "Velachery"],
+      "industries": ["corporate offices", "canteens", "retailers"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Chennai acts as a major southern logistics gateway for bulk tea.",
+      "cityContext": "Office canteens and public-sector units drive steady chai consumption.",
+      "usageFocus": "Reliable colour and moderate strength are preferred.",
+      "educationAngle": "CTC grades that perform well with milk are commonly selected.",
+      "localNote": "Procurement often aligns with fixed purchasing cycles."
+    },
+    "Coimbatore": {
+      "nearbyAreas": ["Gandhipuram", "Peelamedu"],
+      "industries": ["textile units", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Coimbatore is supplied via western Tamil Nadu freight routes.",
+      "cityContext": "Industrial workplaces contribute to daily chai demand.",
+      "usageFocus": "Consistency across batches is important.",
+      "educationAngle": "Medium-sized CTC grades are preferred.",
+      "localNote": "Orders are typically placed monthly."
+    },
+    "Tiruchirappalli": {
+      "nearbyAreas": ["Srirangam", "Thillai Nagar"],
+      "industries": ["retailers", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supplies move via central Tamil Nadu distribution lines.",
+      "cityContext": "Retail and institutional buyers drive demand.",
+      "usageFocus": "Balanced blends are commonly chosen.",
+      "educationAngle": "CTC fannings are frequently used.",
+      "localNote": "Volumes are steady but moderate."
+    },
+    "Salem": {
+      "nearbyAreas": ["Ammapet", "Fairlands"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Salem is connected through inland logistics routes.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Cost stability is prioritised.",
+      "educationAngle": "Simple CTC blends are widely used.",
+      "localNote": "Orders depend on retail turnover."
+    },
+    "Tiruppur": {
+      "nearbyAreas": ["Avinashi", "PN Road"],
+      "industries": ["garment factories", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Tiruppur is served via Coimbatore logistics corridors.",
+      "cityContext": "Factory canteens contribute significantly to chai demand.",
+      "usageFocus": "Fast brewing tea is preferred.",
+      "educationAngle": "Medium-fine CTC grades perform well.",
+      "localNote": "Bulk orders are often scheduled monthly."
+    },
+    "Thoothukudi": {
+      "nearbyAreas": ["Millerpuram", "Bryant Nagar"],
+      "industries": ["port workers", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Coastal supply routes require careful packaging.",
+      "cityContext": "Port activity influences daily chai consumption.",
+      "usageFocus": "Strong liquor is often preferred.",
+      "educationAngle": "Dust-heavy CTC grades are common.",
+      "localNote": "Humidity impacts storage planning."
+    }
+  },
+
+  "Telangana": {
+    "Hyderabad": {
+      "nearbyAreas": ["Gachibowli", "Madhapur", "Secunderabad"],
+      "industries": ["corporate offices", "cafés", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Hyderabad is a major logistics hub for Telangana.",
+      "cityContext": "Corporate offices and IT parks drive high chai demand.",
+      "usageFocus": "Smooth taste with consistent colour is preferred.",
+      "educationAngle": "Balanced CTC grades reduce bitterness.",
+      "localNote": "Demand is stable throughout the week."
+    },
+    "Warangal": {
+      "nearbyAreas": ["Hanamkonda", "Kazipet"],
+      "industries": ["retailers", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply routes connect via Hyderabad.",
+      "cityContext": "Retail and institutional demand supports steady consumption.",
+      "usageFocus": "Cost-effective blends are preferred.",
+      "educationAngle": "CTC fannings are commonly used.",
+      "localNote": "Orders are moderate in size."
+    },
+    "Karimnagar": {
+      "nearbyAreas": ["Ramagundam Road", "Kothirampur"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Karimnagar is supplied through northern Telangana routes.",
+      "cityContext": "Retail tea sales dominate.",
+      "usageFocus": "Availability and price stability matter most.",
+      "educationAngle": "Simple CTC blends are preferred.",
+      "localNote": "Buying patterns follow retail demand."
+    }
+  },
+
+  "Gujarat": {
+    "Ahmedabad": {
+      "nearbyAreas": ["Navrangpura", "Bopal", "Maninagar"],
+      "industries": ["traders", "retailers"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Ahmedabad serves as a bulk redistribution hub in Gujarat.",
+      "cityContext": "Trader-led chai distribution drives demand.",
+      "usageFocus": "Blending flexibility is prioritised.",
+      "educationAngle": "Dust-heavy CTC grades are commonly used.",
+      "localNote": "Buyers often supply multiple cities."
+    },
+    "Surat": {
+      "nearbyAreas": ["Adajan", "Varachha"],
+      "industries": ["textile units", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Surat is connected via southern Gujarat logistics corridors.",
+      "cityContext": "Factory canteens generate steady chai consumption.",
+      "usageFocus": "Fast brewing blends are preferred.",
+      "educationAngle": "Medium-fine CTC grades are common.",
+      "localNote": "Orders are frequent but predictable."
+    },
+    "Vadodara": {
+      "nearbyAreas": ["Alkapuri", "Manjalpur"],
+      "industries": ["corporate offices", "retailers"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Vadodara benefits from central Gujarat distribution routes.",
+      "cityContext": "Office and retail buyers both contribute to demand.",
+      "usageFocus": "Balanced taste is preferred.",
+      "educationAngle": "CTC grades with consistent liquor are selected.",
+      "localNote": "Monthly ordering is common."
+    },
+    "Rajkot": {
+      "nearbyAreas": ["Kalavad Road", "150 Feet Ring Road"],
+      "industries": ["retailers", "traders"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Rajkot is supplied via western Gujarat freight routes.",
+      "cityContext": "Retail resale is a key driver.",
+      "usageFocus": "Cost efficiency is prioritised.",
+      "educationAngle": "Dust-heavy blends are widely used.",
+      "localNote": "Orders support regional resale."
+    },
+    "Bhavnagar": {
+      "nearbyAreas": ["Talaja Road", "Subhashnagar"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Bhavnagar is served through coastal Gujarat routes.",
+      "cityContext": "Retail tea sales dominate consumption.",
+      "usageFocus": "Availability matters more than variety.",
+      "educationAngle": "Simple CTC blends are preferred.",
+      "localNote": "Volumes remain steady."
+    },
+    "Anand": {
+      "nearbyAreas": ["Vallabh Vidyanagar"],
+      "industries": ["educational institutions", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Anand is supplied via central Gujarat hubs.",
+      "cityContext": "Institutional demand supports chai consumption.",
+      "usageFocus": "Smooth and mild chai is preferred.",
+      "educationAngle": "Medium-sized CTC grades are used.",
+      "localNote": "Orders align with academic schedules."
+    }
+  },
+
+  "Uttar Pradesh": {
+    "Lucknow": {
+      "nearbyAreas": ["Gomti Nagar", "Alambagh", "Hazratganj"],
+      "industries": ["government offices", "canteens", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Lucknow is supplied through central Uttar Pradesh freight corridors.",
+      "cityContext": "Government offices and public institutions drive steady chai demand.",
+      "usageFocus": "Balanced strength and consistency are preferred.",
+      "educationAngle": "Medium-sized CTC grades perform well for daily consumption.",
+      "localNote": "Orders usually follow fixed procurement cycles."
+    },
+    "Kanpur": {
+      "nearbyAreas": ["Kalyanpur", "Rawatpur", "Govind Nagar"],
+      "industries": ["industrial units", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Kanpur receives consolidated freight from central UP hubs.",
+      "cityContext": "Industrial workforce contributes significantly to chai consumption.",
+      "usageFocus": "Strong liquor with reliable colour is preferred.",
+      "educationAngle": "CTC fannings and dust blends are common.",
+      "localNote": "Bulk buying supports factory canteens."
+    },
+    "Agra": {
+      "nearbyAreas": ["Sikandra", "Dayal Bagh"],
+      "industries": ["retailers", "hospitality"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Agra is connected via western UP logistics routes.",
+      "cityContext": "Tourism and retail demand drive chai usage.",
+      "usageFocus": "Consistent taste across batches is important.",
+      "educationAngle": "Balanced CTC grades are preferred.",
+      "localNote": "Demand increases during peak tourist seasons."
+    },
+    "Varanasi": {
+      "nearbyAreas": ["Lanka", "Sigra"],
+      "industries": ["retailers", "small eateries"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supplies move through eastern UP distribution routes.",
+      "cityContext": "High footfall areas generate steady chai demand.",
+      "usageFocus": "Strong, quick-brewing chai is preferred.",
+      "educationAngle": "Dust-heavy blends are commonly used.",
+      "localNote": "Retail turnover drives order frequency."
+    },
+    "Ghaziabad": {
+      "nearbyAreas": ["Indirapuram", "Vaishali"],
+      "industries": ["corporate offices", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Ghaziabad benefits from NCR logistics connectivity.",
+      "cityContext": "Office and industrial zones drive consumption.",
+      "usageFocus": "Fast brewing tea is prioritised.",
+      "educationAngle": "Medium-fine CTC grades are common.",
+      "localNote": "Demand closely follows working days."
+    },
+    "Meerut": {
+      "nearbyAreas": ["Shastri Nagar", "Pallavpuram"],
+      "industries": ["retailers", "traders"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Meerut is served via western UP routes.",
+      "cityContext": "Retail resale is a major demand driver.",
+      "usageFocus": "Cost efficiency is prioritised.",
+      "educationAngle": "CTC dust blends are widely used.",
+      "localNote": "Bulk orders support regional resale."
+    }
+  },
+
+  "West Bengal": {
+    "Kolkata": {
+      "nearbyAreas": ["Salt Lake", "Howrah", "Behala"],
+      "industries": ["retailers", "offices", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Kolkata is a major eastern logistics hub for bulk tea.",
+      "cityContext": "High tea consumption across offices and retail markets.",
+      "usageFocus": "Strong colour and aroma are preferred.",
+      "educationAngle": "CTC dust and fannings are commonly used.",
+      "localNote": "Daily consumption volumes are high."
+    },
+    "Howrah": {
+      "nearbyAreas": ["Shibpur", "Bally"],
+      "industries": ["retailers", "small eateries"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Supply is routed via Kolkata hubs.",
+      "cityContext": "Retail-driven chai demand dominates.",
+      "usageFocus": "Fast brewing tea is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Orders are frequent but moderate."
+    },
+    "Siliguri": {
+      "nearbyAreas": ["Matigara", "Sevoke Road"],
+      "industries": ["traders", "retailers"],
+      "transitDays": "4-6 days",
+      "stateLogistics": "Siliguri acts as a gateway to North-East distribution.",
+      "cityContext": "Trading activity supports bulk chai demand.",
+      "usageFocus": "Durable blends for resale are prioritised.",
+      "educationAngle": "CTC fannings are commonly used.",
+      "localNote": "Orders often serve multiple regions."
+    }
+  },
+
+  "Rajasthan": {
+    "Jaipur": {
+      "nearbyAreas": ["Vaishali Nagar", "Malviya Nagar"],
+      "industries": ["retailers", "hospitality"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Jaipur is supplied through central Rajasthan routes.",
+      "cityContext": "Retail and hospitality drive chai demand.",
+      "usageFocus": "Balanced strength is preferred.",
+      "educationAngle": "Medium-sized CTC grades are common.",
+      "localNote": "Seasonal demand variations occur."
+    },
+    "Jodhpur": {
+      "nearbyAreas": ["Ratanada", "Paota"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Supply routes connect via western Rajasthan.",
+      "cityContext": "Retail consumption dominates.",
+      "usageFocus": "Cost stability is important.",
+      "educationAngle": "Simple CTC blends are used.",
+      "localNote": "Orders are moderate."
+    },
+    "Udaipur": {
+      "nearbyAreas": ["Hiran Magri", "Fatehpura"],
+      "industries": ["hospitality", "retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Udaipur receives consolidated freight.",
+      "cityContext": "Tourism influences chai demand.",
+      "usageFocus": "Smooth taste is preferred.",
+      "educationAngle": "Balanced CTC grades perform well.",
+      "localNote": "Demand peaks during tourist seasons."
+    },
+    "Bikaner": {
+      "nearbyAreas": ["Rani Bazar", "Junagarh"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Bikaner is served via western Rajasthan routes.",
+      "cityContext": "Retail tea sales drive demand.",
+      "usageFocus": "Availability is prioritised.",
+      "educationAngle": "Simple CTC blends are common.",
+      "localNote": "Orders depend on retail turnover."
+    }
+  },
+
+  "Andhra Pradesh": {
+    "Visakhapatnam": {
+      "nearbyAreas": ["Gajuwaka", "MVP Colony"],
+      "industries": ["port workers", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Port-linked logistics support bulk supply.",
+      "cityContext": "Industrial and port activity drive chai consumption.",
+      "usageFocus": "Strong liquor is preferred.",
+      "educationAngle": "Dust-heavy CTC grades are common.",
+      "localNote": "Humidity affects storage planning."
+    },
+    "Vijayawada": {
+      "nearbyAreas": ["Benz Circle", "Auto Nagar"],
+      "industries": ["traders", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Central Andhra distribution routes serve the city.",
+      "cityContext": "Trading activity supports steady demand.",
+      "usageFocus": "Cost-effective blends are preferred.",
+      "educationAngle": "CTC fannings are commonly used.",
+      "localNote": "Orders often support redistribution."
+    },
+    "Guntur": {
+      "nearbyAreas": ["Brodipet", "Lakshmipuram"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply is routed via central Andhra hubs.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Consistency is prioritised.",
+      "educationAngle": "Balanced CTC grades are used.",
+      "localNote": "Orders are moderate."
+    },
+    "Nellore": {
+      "nearbyAreas": ["Stonehousepet", "Vedayapalem"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Southern Andhra logistics routes serve Nellore.",
+      "cityContext": "Retail demand supports steady usage.",
+      "usageFocus": "Availability matters most.",
+      "educationAngle": "Simple CTC blends are common.",
+      "localNote": "Orders follow retail cycles."
+    },
+    "Kakinada": {
+      "nearbyAreas": ["Ramanayyapeta"],
+      "industries": ["port workers", "retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Coastal supply routes require careful packaging.",
+      "cityContext": "Port activity influences consumption.",
+      "usageFocus": "Strong tea is preferred.",
+      "educationAngle": "Dust-heavy grades are common.",
+      "localNote": "Humidity affects storage."
+    }
+  },
+
+  "Madhya Pradesh": {
+    "Indore": {
+      "nearbyAreas": ["Vijay Nagar", "Palasia"],
+      "industries": ["retailers", "offices"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Indore is a central MP logistics hub.",
+      "cityContext": "Retail and office demand both contribute.",
+      "usageFocus": "Balanced taste is preferred.",
+      "educationAngle": "Medium CTC grades are common.",
+      "localNote": "Orders are steady."
+    },
+    "Bhopal": {
+      "nearbyAreas": ["MP Nagar", "Arera Colony"],
+      "industries": ["government offices", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Bhopal is served through central MP routes.",
+      "cityContext": "Institutional demand drives chai usage.",
+      "usageFocus": "Consistency is prioritised.",
+      "educationAngle": "Balanced blends are used.",
+      "localNote": "Orders follow procurement schedules."
+    },
+    "Jabalpur": {
+      "nearbyAreas": ["Napier Town"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Supply routes connect via eastern MP.",
+      "cityContext": "Retail consumption dominates.",
+      "usageFocus": "Cost efficiency matters.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Orders support resale."
+    },
+    "Gwalior": {
+      "nearbyAreas": ["Lashkar"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Northern MP routes serve the city.",
+      "cityContext": "Retail tea demand is steady.",
+      "usageFocus": "Availability is key.",
+      "educationAngle": "Simple CTC blends are used.",
+      "localNote": "Orders are moderate."
+    },
+    "Ujjain": {
+      "nearbyAreas": ["Freeganj"],
+      "industries": ["retailers", "small eateries"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Ujjain is supplied via Indore routes.",
+      "cityContext": "Religious tourism influences demand.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy grades are common.",
+      "localNote": "Demand peaks seasonally."
+    }
+  },
+
+  "Punjab": {
+    "Ludhiana": {
+      "nearbyAreas": ["Dugri", "Model Town"],
+      "industries": ["industrial units", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Ludhiana is a major industrial supply point.",
+      "cityContext": "Factory workers drive chai demand.",
+      "usageFocus": "Strong, quick-brewing tea is preferred.",
+      "educationAngle": "CTC dust blends are common.",
+      "localNote": "Bulk orders support canteens."
+    },
+    "Jalandhar": {
+      "nearbyAreas": ["Model Town"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply routes connect via central Punjab.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Cost stability is key.",
+      "educationAngle": "Simple CTC blends are used.",
+      "localNote": "Orders follow retail demand."
+    },
+    "Amritsar": {
+      "nearbyAreas": ["Ranjit Avenue"],
+      "industries": ["hospitality", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Amritsar receives supply through northern Punjab routes.",
+      "cityContext": "Tourism and retail both drive demand.",
+      "usageFocus": "Smooth but strong chai is preferred.",
+      "educationAngle": "Balanced CTC grades are common.",
+      "localNote": "Demand peaks during tourist seasons."
+    }
+  },
+
+  "Kerala": {
+    "Kochi": {
+      "nearbyAreas": ["Edapally", "Kakkanad"],
+      "industries": ["retailers", "offices"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Moisture-safe packaging is important for Kerala supply.",
+      "cityContext": "Urban consumption drives steady chai demand.",
+      "usageFocus": "Smooth taste is prioritised.",
+      "educationAngle": "Larger particle CTC grades are preferred.",
+      "localNote": "Humidity affects storage."
+    },
+    "Thiruvananthapuram": {
+      "nearbyAreas": ["Kowdiar"],
+      "industries": ["government offices"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Supply routes extend via central Kerala.",
+      "cityContext": "Institutional demand dominates.",
+      "usageFocus": "Consistency is important.",
+      "educationAngle": "Balanced CTC grades are used.",
+      "localNote": "Orders follow procurement cycles."
+    },
+    "Kozhikode": {
+      "nearbyAreas": ["Nadakkavu"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Northern Kerala routes serve Kozhikode.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Availability matters most.",
+      "educationAngle": "Simple blends are common.",
+      "localNote": "Orders are moderate."
+    },
+    "Kollam": {
+      "nearbyAreas": ["Chinnakada"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Supply is routed via southern Kerala.",
+      "cityContext": "Retail-driven demand supports usage.",
+      "usageFocus": "Smooth taste is preferred.",
+      "educationAngle": "Medium CTC grades are common.",
+      "localNote": "Humidity affects planning."
+    }
+  },
+
+  "Haryana": {
+    "Faridabad": {
+      "nearbyAreas": ["Sector 15", "NIT"],
+      "industries": ["industrial units", "offices"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "NCR logistics networks serve Faridabad.",
+      "cityContext": "Factories and offices drive consumption.",
+      "usageFocus": "Fast brewing tea is preferred.",
+      "educationAngle": "Medium-fine CTC grades are common.",
+      "localNote": "Demand follows working days."
+    },
+    "Gurugram": {
+      "nearbyAreas": ["DLF Phase 3"],
+      "industries": ["corporate offices", "canteens"],
+      "transitDays": "3-4 days",
+      "stateLogistics": "Strong NCR logistics connectivity supports supply.",
+      "cityContext": "Corporate offices drive high chai consumption.",
+      "usageFocus": "Smooth and consistent chai is preferred.",
+      "educationAngle": "Balanced grades are selected.",
+      "localNote": "Orders align with office schedules."
+    },
+    "Panipat": {
+      "nearbyAreas": ["Model Town"],
+      "industries": ["textile units"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Panipat is served via central Haryana routes.",
+      "cityContext": "Factory-driven demand dominates.",
+      "usageFocus": "Strong tea is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Bulk buying supports canteens."
+    }
+  },
+
+  "Bihar": {
+    "Patna": {
+      "nearbyAreas": ["Kankarbagh", "Boring Road"],
+      "industries": ["government offices", "retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Patna is supplied via eastern freight routes.",
+      "cityContext": "Institutional and retail demand both contribute.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy CTC blends are common.",
+      "localNote": "Orders are steady."
+    },
+    "Gaya": {
+      "nearbyAreas": ["Bodh Gaya"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Supply routes extend from Patna.",
+      "cityContext": "Pilgrimage-related demand influences usage.",
+      "usageFocus": "Availability matters most.",
+      "educationAngle": "Simple blends are common.",
+      "localNote": "Demand peaks seasonally."
+    },
+    "Bhagalpur": {
+      "nearbyAreas": ["Tilka Manjhi"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Eastern Bihar routes serve the city.",
+      "cityContext": "Retail tea sales dominate.",
+      "usageFocus": "Cost efficiency is key.",
+      "educationAngle": "Dust-heavy blends are used.",
+      "localNote": "Orders support resale."
+    }
+  },
+
+  "Odisha": {
+    "Bhubaneswar": {
+      "nearbyAreas": ["Patia", "Kharavel Nagar"],
+      "industries": ["government offices", "canteens"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Bhubaneswar is a state logistics centre.",
+      "cityContext": "Institutional demand drives chai usage.",
+      "usageFocus": "Consistency is important.",
+      "educationAngle": "Balanced CTC grades are preferred.",
+      "localNote": "Orders follow procurement schedules."
+    },
+    "Cuttack": {
+      "nearbyAreas": ["College Square"],
+      "industries": ["retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Supply routes connect via Bhubaneswar.",
+      "cityContext": "Retail-driven chai consumption dominates.",
+      "usageFocus": "Cost stability is important.",
+      "educationAngle": "Simple blends are used.",
+      "localNote": "Orders are moderate."
+    },
+    "Rourkela": {
+      "nearbyAreas": ["Sector 2"],
+      "industries": ["industrial units"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Northern Odisha routes serve Rourkela.",
+      "cityContext": "Industrial workforce drives demand.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Bulk buying supports canteens."
+    }
+  },
+
+  "Assam": {
+    "Guwahati": {
+      "nearbyAreas": ["Paltan Bazaar", "Dispur"],
+      "industries": ["retailers", "traders"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Guwahati is the main gateway to North-East supply.",
+      "cityContext": "Trading activity supports steady chai demand.",
+      "usageFocus": "Durable blends are preferred.",
+      "educationAngle": "CTC fannings are commonly used.",
+      "localNote": "Orders often serve multiple regions."
+    },
+    "Silchar": {
+      "nearbyAreas": ["Tarapur"],
+      "industries": ["retailers"],
+      "transitDays": "6-7 days",
+      "stateLogistics": "Southern Assam routes serve Silchar.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Availability is key.",
+      "educationAngle": "Simple blends are common.",
+      "localNote": "Orders are moderate."
+    }
+  },
+
+  "Jharkhand": {
+    "Ranchi": {
+      "nearbyAreas": ["Doranda"],
+      "industries": ["government offices", "retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Ranchi is supplied via eastern freight routes.",
+      "cityContext": "Institutional demand drives consumption.",
+      "usageFocus": "Consistency is important.",
+      "educationAngle": "Balanced CTC grades are preferred.",
+      "localNote": "Orders follow procurement cycles."
+    },
+    "Jamshedpur": {
+      "nearbyAreas": ["Bistupur"],
+      "industries": ["industrial units"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Industrial corridors support supply.",
+      "cityContext": "Factory workforce drives chai demand.",
+      "usageFocus": "Strong tea is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Bulk buying supports canteens."
+    },
+    "Dhanbad": {
+      "nearbyAreas": ["Bank More"],
+      "industries": ["mining areas"],
+      "transitDays": "6-7 days",
+      "stateLogistics": "Supply routes connect via central Jharkhand.",
+      "cityContext": "Mining workforce contributes to demand.",
+      "usageFocus": "Durable blends are preferred.",
+      "educationAngle": "Simple blends are used.",
+      "localNote": "Orders are moderate."
+    }
+  },
+
+  "Chhattisgarh": {
+    "Raipur": {
+      "nearbyAreas": ["Pandri"],
+      "industries": ["government offices", "retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Raipur is a central state distribution hub.",
+      "cityContext": "Institutional and retail demand drive usage.",
+      "usageFocus": "Balanced strength is preferred.",
+      "educationAngle": "Medium CTC grades are common.",
+      "localNote": "Orders are steady."
+    },
+    "Bhilai": {
+      "nearbyAreas": ["Supela"],
+      "industries": ["industrial units"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Industrial corridors support supply.",
+      "cityContext": "Factory workforce drives consumption.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Bulk buying supports canteens."
+    }
+  },
+
+  "Uttarakhand": {
+    "Dehradun": {
+      "nearbyAreas": ["Rajpur Road"],
+      "industries": ["government offices", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Dehradun is served via northern hill routes.",
+      "cityContext": "Institutional demand drives chai usage.",
+      "usageFocus": "Smooth tea is preferred.",
+      "educationAngle": "Balanced CTC grades are common.",
+      "localNote": "Orders follow procurement schedules."
+    },
+    "Haridwar": {
+      "nearbyAreas": ["Jwalapur"],
+      "industries": ["retailers", "pilgrimage services"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Haridwar receives supply via plains routes.",
+      "cityContext": "Pilgrimage traffic influences chai demand.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Seasonal demand peaks."
+    }
+  },
+
+  "Goa": {
+    "Panaji": {
+      "nearbyAreas": ["Miramar"],
+      "industries": ["hospitality", "retailers"],
+      "transitDays": "4-5 days",
+      "stateLogistics": "Coastal logistics require moisture-safe handling.",
+      "cityContext": "Tourism drives chai consumption.",
+      "usageFocus": "Smooth taste is preferred.",
+      "educationAngle": "Balanced grades are selected.",
+      "localNote": "Demand fluctuates seasonally."
+    }
+  },
+
+  "Jammu & Kashmir": {
+    "Srinagar": {
+      "nearbyAreas": ["Lal Chowk"],
+      "industries": ["retailers"],
+      "transitDays": "6-7 days",
+      "stateLogistics": "Mountain logistics affect delivery timelines.",
+      "cityContext": "Cold climate influences tea consumption.",
+      "usageFocus": "Strong chai is preferred.",
+      "educationAngle": "Dust-heavy blends are common.",
+      "localNote": "Weather impacts supply."
+    },
+    "Jammu": {
+      "nearbyAreas": ["Gandhi Nagar"],
+      "industries": ["retailers"],
+      "transitDays": "5-6 days",
+      "stateLogistics": "Jammu is supplied via northern plains routes.",
+      "cityContext": "Retail demand drives usage.",
+      "usageFocus": "Availability is important.",
+      "educationAngle": "Simple blends are common.",
+      "localNote": "Orders are steady."
+    }
+  },
+
+  "North-East-Others": {
+    "Agartala": {
+      "nearbyAreas": ["Jogendranagar"],
+      "industries": ["retailers"],
+      "transitDays": "6-7 days",
+      "stateLogistics": "Supply routes extend from Assam.",
+      "cityContext": "Retail tea consumption dominates.",
+      "usageFocus": "Availability matters most.",
+      "educationAngle": "Simple blends are used.",
+      "localNote": "Orders are moderate."
+    },
+    "Itanagar": {
+      "nearbyAreas": ["Naharlagun"],
+      "industries": ["retailers"],
+      "transitDays": "7-8 days",
+      "stateLogistics": "Hilly terrain affects logistics timelines.",
+      "cityContext": "Retail demand supports consumption.",
+      "usageFocus": "Durable blends are preferred.",
+      "educationAngle": "Simple CTC blends are common.",
+      "localNote": "Weather affects delivery."
+    },
+    "Imphal": {
+      "nearbyAreas": ["Lamphel"],
+      "industries": ["retailers"],
+      "transitDays": "6-7 days",
+      "stateLogistics": "North-East corridors support supply.",
+      "cityContext": "Retail consumption dominates.",
+      "usageFocus": "Availability is key.",
+      "educationAngle": "Simple blends are common.",
+      "localNote": "Orders are steady."
+    }
+  }
 }
