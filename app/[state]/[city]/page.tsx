@@ -21,7 +21,7 @@ export async function generateStaticParams() {
 
 /* ---------- Metadata ---------- */
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const { state, city } = params
+  const { state, city } = await params
   const cityInfo = getCityInfoFromSlugs(state, city)
 
   if (!cityInfo) {
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
 /* ---------- Page ---------- */
 export default async function CityPage({ params }: CityPageProps) {
-  const { state, city } = params
+  const { state, city } = await params
   const cityInfo = getCityInfoFromSlugs(state, city)
 
   if (!cityInfo) {
