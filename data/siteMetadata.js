@@ -19,7 +19,7 @@ const siteMetadata = {
   facebook: 'https://www.facebook.com/groups/1177349100659004',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/company/gray-cup/',
-  threads: 'https://www.threads.net',
+  // threads: 'https://www.threads.net',
   instagram: 'https://www.instagram.com/thegraycup',
   // medium: 'https://medium.com',
   locale: 'en-IN',
