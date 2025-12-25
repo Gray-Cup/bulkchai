@@ -71,6 +71,56 @@ export default function AboutPage() {
             goes into a good cup of chai at scale.
           </p>
         </div>
+        <div>
+  <h2 className="text-xl font-medium text-neutral-800">
+    Other Informational Websites by Gray Cup
+  </h2>
+
+  <p className="mt-3 text-neutral-600 leading-relaxed">
+    BulkChai is part of a small group of websites operated by <a href="https://graycup.org" target="_blank" rel="dofollow" className="underline underline-offset-4">Gray Cup</a>. Each
+    website focuses on a specific area of tea knowledge and is designed to share
+    information alongside product availability where applicable.
+  </p>
+
+  <ul className="mt-4 space-y-2 text-neutral-600 list-disc list-inside">
+    <li>
+      <a
+        href="https://purecha.in"
+        target="_blank"
+        className="underline underline-offset-4"
+      >
+        PureCha.in
+      </a>{" "}
+      – An informational website focused on loose leaf tea, tea purity, leaf
+      grades, and quality characteristics across different tea types.
+    </li>
+
+    <li>
+      <a
+        href="https://bulkctc.com"
+        target="_blank"
+        className="underline underline-offset-4"
+      >
+        BulkCTC.com
+      </a>{" "}
+      - An informational website focused specifically on CTC tea, including
+      grades, processing methods, particle sizes, and brewing behaviour.
+    </li>
+
+    <li>
+      <a
+        href="https://graycup.org"
+        target="_blank"
+        className="underline underline-offset-4"
+      >
+        GrayCup.org
+      </a>{" "}
+      – The official company website of Gray Cup, providing information about the
+      brand, sourcing philosophy, and its tea and coffee offerings.
+    </li>
+  </ul>
+</div>
+
       </section>
     </main>
   )

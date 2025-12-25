@@ -40,6 +40,10 @@ export default function Footer() {
           <Link href="/contact-us" className='hover:underline' target="_blank">
             Contact Us
           </Link>
+          <div>{` • `}</div>
+          <Link href="/about" className='hover:underline' target="_blank">
+            About
+          </Link>
         </div>
       </div>
     </footer>
