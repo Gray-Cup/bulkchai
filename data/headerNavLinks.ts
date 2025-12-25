@@ -7,7 +7,7 @@ const headerNavLinks = [
 ]
 
 const headerTopNavLinks = [
-  { href: 'https://graycup.org', title: 'Contact Us' },
+  { href: 'https://graycup.org/contact-us', title: 'Contact Us' },
   { href: 'https://graycup.in', title: 'Retail Online Store' },
   { href: 'https://graycup.org', title: 'Powered by Gray Cup' },
 ]
