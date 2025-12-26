@@ -21,11 +21,11 @@ export default function Home({ posts }) {
             return (
               <li key={slug} className="py-12">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <div className="space-y-5 xl:col-span-3">
+                  <div className="max-w-sm rounded-md border border-neutral-400 p-5 hover:bg-neutral-100">
+                    <div className="space-y-5">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-2xl leading-8 font-bold tracking-tight">
+                          <h2 className="text-lg leading-8 font-bold tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
