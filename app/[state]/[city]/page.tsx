@@ -1,7 +1,18 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getAllCityPages, getCityInfoFromSlugs } from '../../../lib/cityData'
+import {
+  getAllCityPages,
+  getCityInfoFromSlugs,
+  getCityCoordinates,
+  getRelatedCities,
+} from '../../../lib/cityData'
+import {
+  generatePageMetadata,
+  generateLocalBusinessSchema,
+  generateBreadcrumbSchema,
+} from '@/lib/seo-utils'
+import siteMetadata from '@/data/siteMetadata'
 
 import FreightCalculator from '@/components/local/FreightCalculator'
 import ContactCTA from '@/components/local/ContactCTA'
@@ -20,6 +31,7 @@ export async function generateStaticParams() {
 }
 
 /* ---------- Metadata ---------- */
+/* ---------- Metadata ---------- */
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
   const { state, city } = await params
   const cityInfo = getCityInfoFromSlugs(state, city)
@@ -31,18 +43,11 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   const title = `Bulk CTC Tea Supplier in ${cityInfo.city}, ${cityInfo.state} | BulkCTC`
   const description = `Wholesale bulk CTC tea supply for businesses in ${cityInfo.city}, ${cityInfo.state}. GST billing, consistent quality, and reliable delivery across nearby areas.`
 
-  return {
+  return generatePageMetadata({
     title,
     description,
-    alternates: {
-      canonical: `/${state}/${city}`,
-    },
-    openGraph: {
-      title,
-      description,
-      type: 'website',
-    },
-  }
+    canonical: `/${state}/${city}`,
+  })
 }
 
 /* ---------- Page ---------- */
@@ -54,8 +59,45 @@ export default async function CityPage({ params }: CityPageProps) {
     notFound()
   }
 
+  const relatedCities = getRelatedCities(cityInfo.citySlug)
+  const cityCoords = getCityCoordinates(cityInfo.city)
+
+  // Schemas
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', item: '/' },
+    { name: 'Locations', item: '/available-locations' },
+    { name: cityInfo.city, item: `/${state}/${city}` },
+  ])
+
+  const localBusinessSchema = generateLocalBusinessSchema({
+    name: `Bulk Chai Supplier in ${cityInfo.city} - BulkCTC`,
+    description: `Premium wholesale bulk CTC tea supplier serving ${cityInfo.city}, ${cityInfo.state} and surrounding areas like ${cityInfo.nearbyAreas.join(', ')}.`,
+    url: `${siteMetadata.siteUrl}/${state}/${city}`,
+    address: {
+      addressLocality: cityInfo.city,
+      addressRegion: cityInfo.state,
+      addressCountry: 'IN',
+    },
+    geo: {
+      latitude: cityCoords.lat,
+      longitude: cityCoords.lng,
+    },
+    telephone: siteMetadata.contactPoint.telephone,
+    priceRange: '₹₹',
+  })
+
   return (
     <div className="mx-auto max-w-4xl">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+
       {/* Breadcrumbs */}
       <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
         <ol className="flex items-center space-x-2">
@@ -138,6 +180,27 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* Map */}
       <section className="mb-12">
         <CityMap city={cityInfo.city} state={cityInfo.state} />
+      </section>
+
+      {/* Related Cities & Internal Linking */}
+      <section className="mb-16 border-t border-gray-200 pt-10 dark:border-gray-700">
+        <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-gray-100">
+          Nearby Delivery Locations
+        </h2>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          {relatedCities.map((related) => (
+            <Link
+              key={related.citySlug}
+              href={`/${related.stateSlug}/${related.citySlug}`}
+              className="group rounded-md border border-gray-200 bg-white p-4 shadow-sm transition-all hover:border-green-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:border-green-400"
+            >
+              <div className="mb-1 font-medium text-gray-900 group-hover:text-green-600 dark:text-gray-100 dark:group-hover:text-green-400">
+                {related.city}
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">{related.state}</div>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   )

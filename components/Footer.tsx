@@ -1,10 +1,12 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import FooterLocations from '@/components/seo/FooterLocations'
 
 export default function Footer() {
   return (
     <footer>
+      <FooterLocations />
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-5">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
@@ -23,25 +25,25 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
         </div>
-        <div className="flex items-center space-x-2 mb-8 text-xs text-gray-500 dark:text-gray-400">
-          <Link href="https://graycup.org/" className='hover:underline' target="_blank">
+        <div className="mb-8 flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+          <Link href="https://graycup.org/" className="hover:underline" target="_blank">
             Company Website
           </Link>
           <div>{` • `}</div>
 
-          <Link href="/sitemap.xml" className='hover:underline' target="_blank">
+          <Link href="/sitemap.xml" className="hover:underline" target="_blank">
             Sitemap
           </Link>
           <div>{` • `}</div>
-          <Link href="/privacy-policy" className='hover:underline' target="_blank">
+          <Link href="/privacy-policy" className="hover:underline" target="_blank">
             Privacy Policy
           </Link>
           <div>{` • `}</div>
-          <Link href="/contact-us" className='hover:underline' target="_blank">
+          <Link href="/contact-us" className="hover:underline" target="_blank">
             Contact Us
           </Link>
           <div>{` • `}</div>
-          <Link href="/about" className='hover:underline' target="_blank">
+          <Link href="/about" className="hover:underline" target="_blank">
             About
           </Link>
         </div>

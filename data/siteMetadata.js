@@ -42,6 +42,25 @@ const siteMetadata = {
     //   googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
   },
+  // Business Schema Data
+  companyName: 'Gray Cup Enterprises Pvt. Ltd.',
+  foundingDate: '2019',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-9876543210',
+    contactType: 'sales',
+    areaServed: 'IN',
+    availableLanguage: ['en', 'hi'],
+  },
+  defaultKeywords: [
+    'bulk chai',
+    'wholesale tea',
+    'ctc tea supplier',
+    'tea distributor',
+    'bulk tea powder',
+    'chai business',
+    'tea wholesale price',
+  ],
 }
 
 module.exports = siteMetadata
