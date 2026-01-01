@@ -7,7 +7,7 @@ const siteMetadata = {
     'Looking for bulk chai supply in India? Learn about wholesale tea sourcing, pricing, logistics, and quality standards for cafes, offices, and businesses.',
   language: 'en-IN',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://bulkchai.com',
+  siteUrl: 'https://www.bulkchai.com',
   // siteRepo: 'https://github.com/timlrx/bulkchai',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/og.png`,
