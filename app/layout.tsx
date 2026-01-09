@@ -3,7 +3,6 @@ import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Space_Grotesk } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -13,7 +12,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import HeaderTop from '@/components/HeaderTop'
 import { generateOrganizationSchema } from '@/lib/seo-utils'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/next'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -106,7 +105,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <ThemeProviders>
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <div className="sticky top-0 z-50 w-full bg-green-600 py-3">
             <HeaderTop />
           </div>
