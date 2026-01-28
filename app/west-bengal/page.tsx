@@ -1,63 +1,27 @@
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getAllCities, slugify } from '@/lib/cityData'
+import type { Metadata } from 'next'
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo-utils'
 import StateNavigator from '@/components/seo/StateNavigator'
-import siteMetadata from '@/data/siteMetadata'
+import { getAllCities, slugify } from '@/lib/cityData'
 
-interface StatePageProps {
-  params: {
-    state: string
-  }
-}
+// Static metadata for West Bengal
+export const metadata: Metadata = generatePageMetadata({
+  title: `Bulk Tea Supplier in West Bengal | Wholesale Chai | BulkCTC`,
+  description: `Leading bulk CTC tea supplier in West Bengal. We deliver premium wholesale chai to hotels, offices, and retailers across West Bengal. Check our delivery locations.`,
+  canonical: '/west-bengal',
+})
 
-export async function generateStaticParams() {
-  const cities = getAllCities()
-  return Object.keys(cities).map((state) => ({
-    state: slugify(state),
-  }))
-}
+// Cities in West Bengal
+const citiesInState = ['Kolkata', 'Howrah', 'Siliguri']
 
-export async function generateMetadata({ params }: StatePageProps) {
-  const { state: stateSlug } = await params
-  const cities = getAllCities()
-
-  // Find matching state (case insensitive search via slug)
-  const stateName = Object.keys(cities).find((s) => slugify(s) === stateSlug)
-
-  if (!stateName) return { title: 'State Not Found' }
-
-  return generatePageMetadata({
-    title: `Bulk Tea Supplier in ${stateName} | Wholesale Chai | BulkCTC`,
-    description: `Leading bulk CTC tea supplier in ${stateName}. We deliver premium wholesale chai to hotels, offices, and retailers across ${stateName}. Check our delivery locations.`,
-    canonical: `/${stateSlug}`,
-  })
-}
-
-export default async function StatePage({ params }: StatePageProps) {
-  const { state: stateSlug } = await params
+export default function WestBengalPage() {
   const allData = getAllCities()
-
-  // Find state data
-  const stateName = Object.keys(allData).find((s) => slugify(s) === stateSlug)
-
-  if (!stateName) {
-    notFound()
-  }
-
-  const citiesInState = allData[stateName]
-  const cityCount = Object.keys(citiesInState).length
-
-  // Collect a logistics overview from the first city if available, or generic
-  const firstCityKey = Object.keys(citiesInState)[0]
-  const logisticsInfo =
-    citiesInState[firstCityKey]?.stateLogistics ||
-    `We have distinctive logistics networks covering all major districts in ${stateName}.`
+  const cityCount = 3
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', item: '/' },
     { name: 'Locations', item: '/available-locations' },
-    { name: stateName, item: `/${stateSlug}` },
+    { name: 'West Bengal', item: '/west-bengal' },
   ])
 
   return (
@@ -81,17 +45,17 @@ export default async function StatePage({ params }: StatePageProps) {
             </Link>
           </li>
           <li>/</li>
-          <li className="font-medium text-gray-900 dark:text-gray-100">{stateName}</li>
+          <li className="font-medium text-gray-900 dark:text-gray-100">West Bengal</li>
         </ol>
       </nav>
 
       <div className="mb-12">
         <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100">
-          Bulk Tea Supply in {stateName}
+          Bulk Tea Supply in West Bengal
         </h1>
         <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300">
           Gray Cup Enterprises is a premier supplier of bulk CTC tea across{' '}
-          <strong>{stateName}</strong>. We serve {cityCount} major cities in the region, providing
+          <strong>West Bengal</strong>. We serve {cityCount} major cities in the region, providing
           consistent quality assurance, GST billing, and reliable logistics for businesses.
         </p>
       </div>
@@ -101,16 +65,16 @@ export default async function StatePage({ params }: StatePageProps) {
         <div className="md:col-span-2">
           <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
-              Supply Network in {stateName}
+              Supply Network in West Bengal
             </h2>
             <div className="prose dark:prose-invert">
               <p>
-                Our distribution network in {stateName} is designed to meet the high-volume demands
-                of wholesalers, semi-wholesalers, and institutional buyers.
-                {logisticsInfo}
+                Our distribution network in West Bengal is designed to meet the high-volume demands
+                of wholesalers, semi-wholesalers, and institutional buyers. Kolkata is a major
+                eastern logistics hub for bulk tea.
               </p>
               <p>
-                Whether you are running a chain of tea stalls, a large café, or an industrial
+                Whether you are running a chain of tea stalls, a large caf\u00e9, or an industrial
                 canteen, we ensure timely delivery of fresh stock directly to your doorstep.
               </p>
             </div>
@@ -118,15 +82,15 @@ export default async function StatePage({ params }: StatePageProps) {
 
           <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
-              Available Cities in {stateName}
+              Available Cities in West Bengal
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {Object.keys(citiesInState).map((city) => {
+              {citiesInState.map((city) => {
                 const citySlug = slugify(city)
                 return (
                   <Link
                     key={city}
-                    href={`/${stateSlug}/${citySlug}`}
+                    href={`/west-bengal/${citySlug}`}
                     className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-5 py-4 transition-colors hover:border-green-500 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800"
                   >
                     <span className="font-medium text-gray-900 dark:text-gray-100">{city}</span>
@@ -139,7 +103,7 @@ export default async function StatePage({ params }: StatePageProps) {
 
           <section className="rounded-xl bg-green-50 p-6 dark:bg-green-900/10">
             <h3 className="mb-2 text-xl font-semibold text-green-800 dark:text-green-400">
-              Partner with Us in {stateName}
+              Partner with Us in West Bengal
             </h3>
             <p className="mb-4 text-green-700 dark:text-green-300">
               Looking for a reliable long-term tea partner? We offer sample testing and custom

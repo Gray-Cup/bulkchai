@@ -1,0 +1,149 @@
+import Link from 'next/link'
+import type { Metadata } from 'next'
+import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo-utils'
+import StateNavigator from '@/components/seo/StateNavigator'
+import { getAllCities, slugify } from '@/lib/cityData'
+
+// Static metadata for Andhra Pradesh
+export const metadata: Metadata = generatePageMetadata({
+  title: `Bulk Tea Supplier in Andhra Pradesh | Wholesale Chai | BulkCTC`,
+  description: `Leading bulk CTC tea supplier in Andhra Pradesh. We deliver premium wholesale chai to hotels, offices, and retailers across Andhra Pradesh. Check our delivery locations.`,
+  canonical: '/andhra-pradesh',
+})
+
+// Cities in Andhra Pradesh
+const citiesInState = ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Nellore', 'Kakinada']
+
+export default function AndhraPradeshPage() {
+  const allData = getAllCities()
+  const cityCount = 5
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', item: '/' },
+    { name: 'Locations', item: '/available-locations' },
+    { name: 'Andhra Pradesh', item: '/andhra-pradesh' },
+  ])
+
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+        <ol className="flex items-center space-x-2">
+          <li>
+            <Link href="/" className="hover:text-primary-600">
+              Home
+            </Link>
+          </li>
+          <li>/</li>
+          <li>
+            <Link href="/available-locations" className="hover:text-primary-600">
+              Locations
+            </Link>
+          </li>
+          <li>/</li>
+          <li className="font-medium text-gray-900 dark:text-gray-100">Andhra Pradesh</li>
+        </ol>
+      </nav>
+
+      <div className="mb-12">
+        <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100">
+          Bulk Tea Supply in Andhra Pradesh
+        </h1>
+        <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+          Gray Cup Enterprises is a premier supplier of bulk CTC tea across{' '}
+          <strong>Andhra Pradesh</strong>. We serve {cityCount} major cities in the region,
+          providing consistent quality assurance, GST billing, and reliable logistics for
+          businesses.
+        </p>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-3">
+        {/* Main Content */}
+        <div className="md:col-span-2">
+          <section className="mb-10">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
+              Supply Network in Andhra Pradesh
+            </h2>
+            <div className="prose dark:prose-invert">
+              <p>
+                Our distribution network in Andhra Pradesh is designed to meet the high-volume
+                demands of wholesalers, semi-wholesalers, and institutional buyers. Port-linked
+                logistics support bulk supply.
+              </p>
+              <p>
+                Whether you are running a chain of tea stalls, a large caf\u00e9, or an industrial
+                canteen, we ensure timely delivery of fresh stock directly to your doorstep.
+              </p>
+            </div>
+          </section>
+
+          <section className="mb-10">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
+              Available Cities in Andhra Pradesh
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {citiesInState.map((city) => {
+                const citySlug = slugify(city)
+                return (
+                  <Link
+                    key={city}
+                    href={`/andhra-pradesh/${citySlug}`}
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-5 py-4 transition-colors hover:border-green-500 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800"
+                  >
+                    <span className="font-medium text-gray-900 dark:text-gray-100">{city}</span>
+                    <span className="text-sm text-gray-500">View Details →</span>
+                  </Link>
+                )
+              })}
+            </div>
+          </section>
+
+          <section className="rounded-xl bg-green-50 p-6 dark:bg-green-900/10">
+            <h3 className="mb-2 text-xl font-semibold text-green-800 dark:text-green-400">
+              Partner with Us in Andhra Pradesh
+            </h3>
+            <p className="mb-4 text-green-700 dark:text-green-300">
+              Looking for a reliable long-term tea partner? We offer sample testing and custom
+              blending options for large orders.
+            </p>
+            <Link
+              href="/contact-us"
+              className="inline-block rounded-md bg-green-600 px-6 py-2 font-medium text-white transition-colors hover:bg-green-700"
+            >
+              Request Samples
+            </Link>
+          </section>
+        </div>
+
+        {/* Sidebar */}
+        <div>
+          <div className="sticky top-24">
+            <StateNavigator states={allData} />
+
+            <div className="mt-8 rounded-lg border border-gray-200 p-6 dark:border-gray-700">
+              <h4 className="mb-2 font-bold text-gray-900 dark:text-gray-100">Quick Facts</h4>
+              <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                <li className="flex justify-between">
+                  <span>Cities Covered:</span>
+                  <span className="font-medium">{cityCount}</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Min Order:</span>
+                  <span className="font-medium">50 kg</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Delivery:</span>
+                  <span className="font-medium">3-7 Days</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

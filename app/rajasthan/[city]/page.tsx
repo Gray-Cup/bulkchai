@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import {
-  getAllCityPages,
-  getCityInfoFromSlugs,
-  getCityCoordinates,
-  getRelatedCities,
-} from '../../../lib/cityData'
+import { getCityInfoFromSlugs, getCityCoordinates, getRelatedCities, slugify } from '@/lib/cityData'
 import {
   generatePageMetadata,
   generateLocalBusinessSchema,
@@ -19,22 +14,34 @@ import ContactCTA from '@/components/local/ContactCTA'
 import CityMap from '@/components/local/CityMap'
 
 interface CityPageProps {
-  params: {
-    state: string
+  params: Promise<{
     city: string
-  }
+  }>
 }
+
+// State slug for this folder
+const STATE_SLUG = 'rajasthan'
+const STATE_NAME = 'Rajasthan'
 
 /* ---------- Static Params ---------- */
 export async function generateStaticParams() {
-  return getAllCityPages()
+  const { getAllCities, slugify } = await import('@/lib/cityData')
+  const allCities = getAllCities()
+
+  const stateData = Object.entries(allCities).find(([state]) => slugify(state) === STATE_SLUG)
+
+  if (!stateData) return []
+
+  const [, cities] = stateData
+  return Object.keys(cities).map((city) => ({
+    city: slugify(city),
+  }))
 }
 
 /* ---------- Metadata ---------- */
-/* ---------- Metadata ---------- */
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const { state, city } = await params
-  const cityInfo = getCityInfoFromSlugs(state, city)
+  const { city } = await params
+  const cityInfo = getCityInfoFromSlugs(STATE_SLUG, city)
 
   if (!cityInfo) {
     return { title: 'City Not Found' }
@@ -46,14 +53,14 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   return generatePageMetadata({
     title,
     description,
-    canonical: `/${state}/${city}`,
+    canonical: `/${STATE_SLUG}/${city}`,
   })
 }
 
 /* ---------- Page ---------- */
 export default async function CityPage({ params }: CityPageProps) {
-  const { state, city } = await params
-  const cityInfo = getCityInfoFromSlugs(state, city)
+  const { city } = await params
+  const cityInfo = getCityInfoFromSlugs(STATE_SLUG, city)
 
   if (!cityInfo) {
     notFound()
@@ -66,13 +73,14 @@ export default async function CityPage({ params }: CityPageProps) {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', item: '/' },
     { name: 'Locations', item: '/available-locations' },
-    { name: cityInfo.city, item: `/${state}/${city}` },
+    { name: STATE_NAME, item: `/${STATE_SLUG}` },
+    { name: cityInfo.city, item: `/${STATE_SLUG}/${city}` },
   ])
 
   const localBusinessSchema = generateLocalBusinessSchema({
     name: `Bulk Chai Supplier in ${cityInfo.city} - BulkCTC`,
     description: `Premium wholesale bulk CTC tea supplier serving ${cityInfo.city}, ${cityInfo.state} and surrounding areas like ${cityInfo.nearbyAreas.join(', ')}.`,
-    url: `${siteMetadata.siteUrl}/${state}/${city}`,
+    url: `${siteMetadata.siteUrl}/${STATE_SLUG}/${city}`,
     address: {
       addressLocality: cityInfo.city,
       addressRegion: cityInfo.state,
@@ -113,6 +121,12 @@ export default async function CityPage({ params }: CityPageProps) {
             </Link>
           </li>
           <li>/</li>
+          <li>
+            <Link href={`/${STATE_SLUG}`} className="hover:text-primary-600">
+              {STATE_NAME}
+            </Link>
+          </li>
+          <li>/</li>
           <li className="font-medium text-gray-900 dark:text-gray-100">{cityInfo.city}</li>
         </ol>
       </nav>
@@ -126,7 +140,7 @@ export default async function CityPage({ params }: CityPageProps) {
       <div className="prose prose-lg dark:prose-invert mb-10">
         <p>
           Businesses in <strong>{cityInfo.city}</strong> rely on consistent bulk CTC tea supply for
-          daily operations across cafés, offices, and retail outlets. We serve major localities such
+          daily operations across cafes, offices, and retail outlets. We serve major localities such
           as {cityInfo.nearbyAreas.slice(0, 3).join(', ')} and surrounding regions.
         </p>
 
@@ -137,7 +151,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </p>
       </div>
 
-      {/* ✅ Anti-spam local context (IMPORTANT) */}
+      {/* Anti-spam local context */}
       <section className="mb-12">
         <h2 className="mb-4 text-2xl font-bold">Bulk Chai Preferences in {cityInfo.city}</h2>
         <div className="prose dark:prose-invert">
