@@ -58,14 +58,6 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
     script.async = true
     script.defer = true
 
-    // Timeout fallback if Turnstile fails to load
-    const timeout = setTimeout(() => {
-      if (!turnstileToken) {
-        console.warn('Turnstile failed to load, allowing submission without verification')
-        setTurnstileReady(true)
-      }
-    }, 5000)
-
     script.onload = () => {
       if (window.turnstile && turnstileRef.current) {
         widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
@@ -73,36 +65,32 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           callback: (token: string) => {
             setTurnstileToken(token)
             setTurnstileReady(true)
-            clearTimeout(timeout)
           },
           'error-callback': () => {
+            console.error('Turnstile error - check your sitekey and domain settings')
             setTurnstileToken(null)
-            setTurnstileReady(true) // Allow submission on error
-            clearTimeout(timeout)
           },
           'expired-callback': () => {
             setTurnstileToken(null)
+            setTurnstileReady(false)
           },
         })
       }
     }
 
     script.onerror = () => {
-      console.warn('Failed to load Turnstile script')
-      setTurnstileReady(true)
-      clearTimeout(timeout)
+      console.error('Failed to load Turnstile script')
     }
 
     document.head.appendChild(script)
 
     return () => {
-      clearTimeout(timeout)
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current)
       }
       script.remove()
     }
-  }, [siteKey, turnstileToken])
+  }, [siteKey])
 
   const calculateFreight = () => {
     const baseRate = 40
