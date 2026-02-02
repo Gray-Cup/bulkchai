@@ -34,6 +34,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
   const [companyName, setCompanyName] = useState('')
   const [message, setMessage] = useState('')
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+  const [turnstileReady, setTurnstileReady] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
@@ -44,12 +45,26 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
   useEffect(() => {
-    if (!siteKey || !turnstileRef.current) return
+    // If no siteKey, mark as ready immediately (no Turnstile required)
+    if (!siteKey) {
+      setTurnstileReady(true)
+      return
+    }
+
+    if (!turnstileRef.current) return
 
     const script = document.createElement('script')
     script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
     script.async = true
     script.defer = true
+
+    // Timeout fallback if Turnstile fails to load
+    const timeout = setTimeout(() => {
+      if (!turnstileToken) {
+        console.warn('Turnstile failed to load, allowing submission without verification')
+        setTurnstileReady(true)
+      }
+    }, 5000)
 
     script.onload = () => {
       if (window.turnstile && turnstileRef.current) {
@@ -57,9 +72,13 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           sitekey: siteKey,
           callback: (token: string) => {
             setTurnstileToken(token)
+            setTurnstileReady(true)
+            clearTimeout(timeout)
           },
           'error-callback': () => {
             setTurnstileToken(null)
+            setTurnstileReady(true) // Allow submission on error
+            clearTimeout(timeout)
           },
           'expired-callback': () => {
             setTurnstileToken(null)
@@ -68,15 +87,22 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
       }
     }
 
+    script.onerror = () => {
+      console.warn('Failed to load Turnstile script')
+      setTurnstileReady(true)
+      clearTimeout(timeout)
+    }
+
     document.head.appendChild(script)
 
     return () => {
+      clearTimeout(timeout)
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current)
       }
       script.remove()
     }
-  }, [siteKey])
+  }, [siteKey, turnstileToken])
 
   const calculateFreight = () => {
     const baseRate = 40
@@ -132,6 +158,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
 
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.reset(widgetIdRef.current)
+        setTurnstileReady(false)
       }
       setTurnstileToken(null)
     } catch (err) {
@@ -339,7 +366,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
         <div className="flex flex-col gap-3 sm:flex-row">
           <button
             type="submit"
-            disabled={isSubmitting || (!!siteKey && !turnstileToken)}
+            disabled={isSubmitting || !turnstileReady}
             className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 flex-1 rounded-md px-6 py-3 font-semibold text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
           >
             {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
