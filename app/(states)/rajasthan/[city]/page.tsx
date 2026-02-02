@@ -9,9 +9,8 @@ import {
 } from '@/lib/seo-utils'
 import siteMetadata from '@/data/siteMetadata'
 
-import FreightCalculator from '@/components/local/FreightCalculator'
+import QuoteForm from '@/components/local/QuoteForm'
 import ContactCTA from '@/components/local/ContactCTA'
-import CityMap from '@/components/local/CityMap'
 import LocationIntro from '@/components/local/LocationIntro'
 import HowBulkSupplyWorks from '@/components/local/HowBulkSupplyWorks'
 import LocalContextSection from '@/components/local/LocalContextSection'
@@ -137,9 +136,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </nav>
 
       {/* H1 */}
-      <h1 className="mb-6 text-4xl font-bold">
-        Bulk Tea & Chai Supply in {cityInfo.city}
-      </h1>
+      <h1 className="mb-6 text-4xl font-bold">Bulk Tea & Chai Supply in {cityInfo.city}</h1>
 
       {/* Location Intro */}
       <LocationIntro
@@ -178,9 +175,9 @@ export default async function CityPage({ params }: CityPageProps) {
         transitDays={cityInfo.transitDays}
       />
 
-      {/* Freight Calculator */}
+      {/* Quote Form */}
       <section className="mb-12">
-        <FreightCalculator defaultCity={cityInfo.city} defaultState={cityInfo.state} />
+        <QuoteForm defaultCity={cityInfo.city} defaultState={cityInfo.state} />
       </section>
 
       {/* FAQ Section with JSON-LD */}
@@ -194,11 +191,6 @@ export default async function CityPage({ params }: CityPageProps) {
       {/* CTA */}
       <section className="mb-12">
         <ContactCTA />
-      </section>
-
-      {/* Map */}
-      <section className="mb-12">
-        <CityMap city={cityInfo.city} state={cityInfo.state} />
       </section>
 
       {/* Related Cities & Internal Linking */}
@@ -225,7 +217,7 @@ export default async function CityPage({ params }: CityPageProps) {
         <div className="mt-6 text-center">
           <Link
             href="/available-locations"
-            className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400"
+            className="text-primary-600 hover:text-primary-700 dark:text-primary-400 text-sm font-medium"
           >
             View all delivery locations →
           </Link>
