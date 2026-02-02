@@ -1,8 +1,8 @@
 -- Price Quotes Table Schema for BulkChai
 -- Run this SQL in your Supabase SQL Editor to create the table
 
--- Create the price_quotes table
-CREATE TABLE IF NOT EXISTS price_quotes (
+-- Create the bulk_chai_price_quotes table
+CREATE TABLE IF NOT EXISTS bulk_chai_price_quotes (
     id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
     updated_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
@@ -27,30 +27,29 @@ CREATE TABLE IF NOT EXISTS price_quotes (
     notes TEXT,
 
     -- Metadata
-    source_page VARCHAR(255),
-    turnstile_token VARCHAR(2048)
+    source_page VARCHAR(255)
 );
 
 -- Create index for faster queries on unresolved quotes
-CREATE INDEX IF NOT EXISTS idx_price_quotes_resolved ON price_quotes(resolved);
-CREATE INDEX IF NOT EXISTS idx_price_quotes_created_at ON price_quotes(created_at DESC);
-CREATE INDEX IF NOT EXISTS idx_price_quotes_city_state ON price_quotes(city, state);
+CREATE INDEX IF NOT EXISTS idx_bulk_chai_price_quotes_resolved ON bulk_chai_price_quotes(resolved);
+CREATE INDEX IF NOT EXISTS idx_bulk_chai_price_quotes_created_at ON bulk_chai_price_quotes(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_bulk_chai_price_quotes_city_state ON bulk_chai_price_quotes(city, state);
 
 -- Enable Row Level Security (RLS)
-ALTER TABLE price_quotes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE bulk_chai_price_quotes ENABLE ROW LEVEL SECURITY;
 
 -- Create a policy that allows inserts from anonymous users (for the public form)
-CREATE POLICY "Allow anonymous inserts" ON price_quotes
+CREATE POLICY "Allow anonymous inserts" ON bulk_chai_price_quotes
     FOR INSERT
     WITH CHECK (true);
 
 -- Create a policy that allows reads only for authenticated users (admin dashboard)
-CREATE POLICY "Allow authenticated reads" ON price_quotes
+CREATE POLICY "Allow authenticated reads" ON bulk_chai_price_quotes
     FOR SELECT
     USING (auth.role() = 'authenticated');
 
 -- Create a policy that allows updates only for authenticated users
-CREATE POLICY "Allow authenticated updates" ON price_quotes
+CREATE POLICY "Allow authenticated updates" ON bulk_chai_price_quotes
     FOR UPDATE
     USING (auth.role() = 'authenticated')
     WITH CHECK (auth.role() = 'authenticated');
@@ -65,9 +64,9 @@ END;
 $$ language 'plpgsql';
 
 -- Trigger to auto-update updated_at on row updates
-DROP TRIGGER IF EXISTS update_price_quotes_updated_at ON price_quotes;
-CREATE TRIGGER update_price_quotes_updated_at
-    BEFORE UPDATE ON price_quotes
+DROP TRIGGER IF EXISTS update_bulk_chai_price_quotes_updated_at ON bulk_chai_price_quotes;
+CREATE TRIGGER update_bulk_chai_price_quotes_updated_at
+    BEFORE UPDATE ON bulk_chai_price_quotes
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
 
@@ -85,14 +84,13 @@ END;
 $$ language 'plpgsql';
 
 -- Trigger to auto-set resolved_at
-DROP TRIGGER IF EXISTS set_price_quotes_resolved_at ON price_quotes;
-CREATE TRIGGER set_price_quotes_resolved_at
-    BEFORE UPDATE ON price_quotes
+DROP TRIGGER IF EXISTS set_bulk_chai_price_quotes_resolved_at ON bulk_chai_price_quotes;
+CREATE TRIGGER set_bulk_chai_price_quotes_resolved_at
+    BEFORE UPDATE ON bulk_chai_price_quotes
     FOR EACH ROW
     EXECUTE FUNCTION set_resolved_at();
 
 -- Comments for documentation
-COMMENT ON TABLE price_quotes IS 'Stores price quote requests from the BulkChai website';
-COMMENT ON COLUMN price_quotes.resolved IS 'Whether the quote has been addressed/resolved by staff';
-COMMENT ON COLUMN price_quotes.quantity_kg IS 'Requested quantity in kilograms (minimum 50kg)';
-COMMENT ON COLUMN price_quotes.turnstile_token IS 'Cloudflare Turnstile verification token for spam protection';
+COMMENT ON TABLE bulk_chai_price_quotes IS 'Stores price quote requests from the BulkChai website';
+COMMENT ON COLUMN bulk_chai_price_quotes.resolved IS 'Whether the quote has been addressed/resolved by staff';
+COMMENT ON COLUMN bulk_chai_price_quotes.quantity_kg IS 'Requested quantity in kilograms (minimum 50kg)';

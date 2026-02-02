@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
 
     // Insert into Supabase
     const { data, error } = await client
-      .from('price_quotes')
+      .from('bulk_chai_price_quotes')
       .insert({
         name,
         email,
@@ -101,7 +101,6 @@ export async function POST(request: NextRequest) {
         estimated_amount: estimated_amount || null,
         message: message || null,
         source_page: source_page || null,
-        turnstile_token: turnstile_token || null,
       })
       .select()
       .single()

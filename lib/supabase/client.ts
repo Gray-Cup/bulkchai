@@ -28,7 +28,6 @@ export type PriceQuote = {
   resolved_by: string | null
   notes: string | null
   source_page: string | null
-  turnstile_token: string | null
 }
 
 export type PriceQuoteInsert = Omit<
