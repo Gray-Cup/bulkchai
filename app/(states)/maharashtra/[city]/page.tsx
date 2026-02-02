@@ -12,6 +12,11 @@ import siteMetadata from '@/data/siteMetadata'
 import FreightCalculator from '@/components/local/FreightCalculator'
 import ContactCTA from '@/components/local/ContactCTA'
 import CityMap from '@/components/local/CityMap'
+import LocationIntro from '@/components/local/LocationIntro'
+import HowBulkSupplyWorks from '@/components/local/HowBulkSupplyWorks'
+import LocalContextSection from '@/components/local/LocalContextSection'
+import WhyChooseSection from '@/components/local/WhyChooseSection'
+import LocationFAQ from '@/components/local/LocationFAQ'
 
 interface CityPageProps {
   params: Promise<{
@@ -47,8 +52,8 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     return { title: 'City Not Found' }
   }
 
-  const title = `Bulk CTC Tea Supplier in ${cityInfo.city}, ${cityInfo.state} | BulkCTC`
-  const description = `Wholesale bulk CTC tea supply for businesses in ${cityInfo.city}, ${cityInfo.state}. GST billing, consistent quality, and reliable delivery across nearby areas.`
+  const title = `Bulk Tea & Chai Supply in ${cityInfo.city} | BulkChai`
+  const description = `Wholesale bulk tea and chai supply for businesses in ${cityInfo.city}, ${cityInfo.state}. GST billing, consistent quality, and reliable delivery for cafés, offices, canteens, and retailers.`
 
   return generatePageMetadata({
     title,
@@ -78,8 +83,8 @@ export default async function CityPage({ params }: CityPageProps) {
   ])
 
   const localBusinessSchema = generateLocalBusinessSchema({
-    name: `Bulk Chai Supplier in ${cityInfo.city} - BulkCTC`,
-    description: `Premium wholesale bulk CTC tea supplier serving ${cityInfo.city}, ${cityInfo.state} and surrounding areas like ${cityInfo.nearbyAreas.join(', ')}.`,
+    name: `Bulk Chai Supplier in ${cityInfo.city} - BulkChai`,
+    description: `Premium wholesale bulk tea and chai supplier serving ${cityInfo.city}, ${cityInfo.state} and surrounding areas like ${cityInfo.nearbyAreas.join(', ')}.`,
     url: `${siteMetadata.siteUrl}/${STATE_SLUG}/${city}`,
     address: {
       addressLocality: cityInfo.city,
@@ -133,58 +138,58 @@ export default async function CityPage({ params }: CityPageProps) {
 
       {/* H1 */}
       <h1 className="mb-6 text-4xl font-bold">
-        Bulk CTC Tea Supplier in {cityInfo.city}, {cityInfo.state}
+        Bulk Tea & Chai Supply in {cityInfo.city}
       </h1>
 
-      {/* Intro */}
-      <div className="prose prose-lg dark:prose-invert mb-10">
-        <p>
-          Businesses in <strong>{cityInfo.city}</strong> rely on consistent bulk CTC tea supply for
-          daily operations across cafes, offices, and retail outlets. We serve major localities such
-          as {cityInfo.nearbyAreas.slice(0, 3).join(', ')} and surrounding regions.
-        </p>
+      {/* Location Intro - 120-150 words unique intro */}
+      <LocationIntro
+        city={cityInfo.city}
+        state={cityInfo.state}
+        locationDescriptor={cityInfo.locationDescriptor}
+        primaryBuyerTypes={cityInfo.primaryBuyerTypes}
+        industries={cityInfo.industries}
+        nearbyAreas={cityInfo.nearbyAreas}
+      />
 
-        <p>
-          Orders are fulfilled with GST billing, quality checks, and a minimum order quantity of{' '}
-          <strong>50 kg</strong>, ensuring stable supply for growing businesses across{' '}
-          {cityInfo.state}.
-        </p>
-      </div>
+      {/* How Bulk Supply Works Section */}
+      <HowBulkSupplyWorks
+        city={cityInfo.city}
+        state={cityInfo.state}
+        transitDays={cityInfo.transitDays}
+        stateLogistics={cityInfo.stateLogistics}
+        supplyChain={cityInfo.supplyChain}
+      />
 
-      {/* Anti-spam local context */}
-      <section className="mb-12">
-        <h2 className="mb-4 text-2xl font-bold">Bulk Chai Preferences in {cityInfo.city}</h2>
-        <div className="prose dark:prose-invert">
-          <p>{cityInfo.cityContext}</p>
-          <p>{cityInfo.usageFocus}</p>
-          <p>{cityInfo.educationAngle}</p>
-          <p className="text-sm text-gray-600">{cityInfo.localNote}</p>
-        </div>
-      </section>
+      {/* Local Context Section */}
+      <LocalContextSection
+        city={cityInfo.city}
+        localContext={cityInfo.localContext}
+        cityContext={cityInfo.cityContext}
+        usageFocus={cityInfo.usageFocus}
+        educationAngle={cityInfo.educationAngle}
+        localNote={cityInfo.localNote}
+      />
 
-      {/* Logistics */}
-      <section className="mb-12">
-        <h2 className="mb-4 text-2xl font-bold">Delivery & Logistics in {cityInfo.state}</h2>
-        <div className="rounded-lg border bg-gray-50 p-6 dark:bg-gray-800">
-          <p>{cityInfo.stateLogistics}</p>
-
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            <div className="rounded bg-white p-4 dark:bg-gray-900">
-              <p className="text-sm">Estimated Delivery</p>
-              <p className="text-lg font-semibold">{cityInfo.transitDays}</p>
-            </div>
-            <div className="rounded bg-white p-4 dark:bg-gray-900">
-              <p className="text-sm">Minimum Order</p>
-              <p className="text-lg font-semibold">50 kg</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Why Businesses Choose BulkChai */}
+      <WhyChooseSection
+        city={cityInfo.city}
+        whyChooseUs={cityInfo.whyChooseUs}
+        industries={cityInfo.industries}
+        transitDays={cityInfo.transitDays}
+      />
 
       {/* Freight Calculator */}
       <section className="mb-12">
         <FreightCalculator defaultCity={cityInfo.city} defaultState={cityInfo.state} />
       </section>
+
+      {/* FAQ Section with JSON-LD */}
+      <LocationFAQ
+        city={cityInfo.city}
+        state={cityInfo.state}
+        faqs={cityInfo.faqs}
+        transitDays={cityInfo.transitDays}
+      />
 
       {/* CTA */}
       <section className="mb-12">
@@ -214,6 +219,16 @@ export default async function CityPage({ params }: CityPageProps) {
               <div className="text-xs text-gray-500 dark:text-gray-400">{related.state}</div>
             </Link>
           ))}
+        </div>
+
+        {/* Internal Link to All Locations */}
+        <div className="mt-6 text-center">
+          <Link
+            href="/available-locations"
+            className="text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400"
+          >
+            View all delivery locations →
+          </Link>
         </div>
       </section>
     </div>

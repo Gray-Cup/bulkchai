@@ -8,7 +8,47 @@
       "cityContext": "Mumbai has extremely high daily chai consumption driven by offices, transport hubs, and dense commercial areas.",
       "usageFocus": "Buyers prioritise fast brewing and consistency due to high daily serving volumes.",
       "educationAngle": "Balanced CTC grades are preferred over very fine dust-heavy blends.",
-      "localNote": "Bulk orders are commonly placed weekly to manage limited storage space."
+      "localNote": "Bulk orders are commonly placed weekly to manage limited storage space.",
+      "locationDescriptor": "India's commercial capital and busiest metropolitan region",
+      "primaryBuyerTypes": ["corporate cafeteria managers", "chai franchise operators", "railway station vendors", "hotel F&B procurement teams"],
+      "supplyChain": {
+        "deliveryMethod": "Direct delivery via dedicated freight partners covering Mumbai Metropolitan Region including Thane, Navi Mumbai, and extended suburbs",
+        "packagingOptions": ["25kg moisture-sealed bags", "50kg bulk packs", "10kg trial packs for quality testing"],
+        "minOrderQty": "50 kg",
+        "paymentTerms": "100% advance with GST invoice for new buyers; credit terms available for repeat orders above 500kg/month",
+        "reorderCycle": "Weekly restocking recommended given high consumption and limited storage in commercial spaces"
+      },
+      "localContext": {
+        "businessHubs": "Major demand centres include BKC corporate district with 100+ office towers, Andheri-Kurla industrial corridor, Powai tech parks, and the emerging Navi Mumbai business zones where daily chai consumption often exceeds 500 cups per floor.",
+        "teaCulture": "Mumbai's iconic cutting chai culture requires tea that brews strong in small 80ml servings. Roadside vendors, office pantries, and canteens all demand quick-brewing CTC that delivers consistent taste across 8-10 brewing rounds daily without bitterness.",
+        "industrialRelevance": "As India's busiest port city and financial hub, Mumbai offers logistics advantages with multiple freight corridors. Warehousing options in Bhiwandi and Taloja support bulk storage for distributors serving the wider MMR region.",
+        "buyerChallenges": "Commercial real estate costs make large storage impractical for most businesses. Cafeteria managers and chai vendors typically need reliable weekly deliveries of 50-100kg rather than monthly bulk storage."
+      },
+      "whyChooseUs": [
+        "Scheduled weekly delivery slots across all Mumbai zones from Colaba to Borivali, including Navi Mumbai and Thane extensions",
+        "Small-batch quality testing ensures every 25kg bag matches your existing chai taste profile",
+        "Flexible packaging designed for space-constrained commercial kitchens without pallet minimums",
+        "Local sales support fluent in Hindi, Marathi, and English for quick issue resolution",
+        "GST-compliant invoicing with proper HSN codes for seamless corporate procurement and input tax credit claims"
+      ],
+      "faqs": [
+        {
+          "question": "What is the minimum order quantity for bulk tea delivery in Mumbai?",
+          "answer": "We deliver bulk CTC tea starting from 50kg per order across Mumbai. First-time buyers can request 10kg trial packs to verify quality before committing to larger orders. Regular buyers in Mumbai typically order 100-200kg weekly based on their consumption."
+        },
+        {
+          "question": "How quickly can you deliver bulk tea to Mumbai offices and cafes?",
+          "answer": "Standard delivery to Mumbai takes 2-3 days from order confirmation. We offer priority delivery within 24 hours for orders placed before 2 PM, covering all areas from South Mumbai to Borivali and across Navi Mumbai."
+        },
+        {
+          "question": "Do you provide GST invoices for bulk tea purchases in Mumbai?",
+          "answer": "Yes, all bulk tea orders include proper GST invoices with HSN code 0902. This is essential for Mumbai businesses claiming input tax credit. We also provide delivery challans and quality certificates for corporate procurement compliance."
+        },
+        {
+          "question": "Which CTC tea grade works best for Mumbai's cutting chai vendors?",
+          "answer": "For Mumbai's fast-paced cutting chai service, we recommend our BOP (Broken Orange Pekoe) grade that brews strong in 2-3 minutes and handles the city's variable water quality well. It maintains colour and strength consistency across multiple brewing cycles throughout the day."
+        }
+      ]
     },
     "Pune": {
       "nearbyAreas": ["Hinjewadi", "Baner", "Wakad", "Kothrud"],
@@ -104,14 +144,54 @@
 
   "Karnataka": {
     "Bengaluru": {
-      "nearbyAreas": ["Whitefield", "Electronic City", "Indiranagar"],
-      "industries": ["corporate offices", "cafés", "canteens"],
+      "nearbyAreas": ["Whitefield", "Electronic City", "Indiranagar", "Koramangala", "HSR Layout"],
+      "industries": ["corporate offices", "cafés", "canteens", "co-working spaces"],
       "transitDays": "3-4 days",
-      "stateLogistics": "Bengaluru is Karnataka’s main logistics hub for bulk tea.",
+      "stateLogistics": "Bengaluru is Karnataka's main logistics hub for bulk tea.",
       "cityContext": "Office campuses drive high daily chai consumption.",
       "usageFocus": "Smooth taste and consistency are preferred.",
       "educationAngle": "Balanced CTC grades reduce bitterness.",
-      "localNote": "Monthly planning is common."
+      "localNote": "Monthly planning is common.",
+      "locationDescriptor": "India's IT capital and startup hub",
+      "primaryBuyerTypes": ["tech park cafeteria operators", "co-working space managers", "specialty café owners", "corporate campus F&B teams"],
+      "supplyChain": {
+        "deliveryMethod": "Hub-based delivery via Bengaluru distribution centre covering all tech corridors including Whitefield, Electronic City, Outer Ring Road, and Sarjapur",
+        "packagingOptions": ["25kg sealed bags", "50kg bulk packs", "5kg sample packs for café testing"],
+        "minOrderQty": "50 kg",
+        "paymentTerms": "Advance payment with GST invoice; monthly credit facility available for orders above 300kg",
+        "reorderCycle": "Bi-weekly to monthly depending on campus size and consumption patterns"
+      },
+      "localContext": {
+        "businessHubs": "Key demand zones include Whitefield tech corridor housing Infosys, Wipro and 50+ IT parks, Electronic City with TCS and Biocon campuses, Outer Ring Road stretch from Marathahalli to Sarjapur, and the emerging North Bengaluru tech cluster around Manyata.",
+        "teaCulture": "Bengaluru's workforce prefers milder, less astringent chai compared to North Indian markets. The city's café culture has created demand for premium CTC grades that work well in milk tea and filter coffee blends served at corporate pantries.",
+        "buyerChallenges": "Bengaluru's traffic congestion makes delivery timing critical for campus cafeterias with fixed break schedules. Many buyers face pressure to maintain consistent taste across multiple cafeteria locations within the same company.",
+        "seasonalFactors": "Demand remains relatively stable year-round due to the pleasant climate, though consumption spikes during monsoon months when employees prefer hot beverages."
+      },
+      "whyChooseUs": [
+        "Dedicated delivery routes serving Whitefield, Electronic City, and ORR tech parks with predictable timing",
+        "Multi-location billing for companies with cafeterias across different Bengaluru campuses",
+        "CTC grades specifically selected for Bengaluru's soft water that preserves smooth taste without excess bitterness",
+        "English and Kannada speaking support team familiar with corporate procurement processes",
+        "Flexible scaling from startup-size orders (50kg) to enterprise volumes (500kg+) as your business grows"
+      ],
+      "faqs": [
+        {
+          "question": "What bulk tea quantities are suitable for Bengaluru tech park cafeterias?",
+          "answer": "Tech park cafeterias in Bengaluru typically start with 100-150kg monthly orders. Large campuses with 5000+ employees often require 300-500kg monthly. We recommend starting with a 50kg trial order to calibrate taste preferences before scaling up."
+        },
+        {
+          "question": "How does delivery work for companies with multiple Bengaluru office locations?",
+          "answer": "We offer consolidated billing with split deliveries across multiple locations in Bengaluru. Orders can be split between Whitefield, Electronic City, and central Bengaluru offices with a single invoice for your procurement team."
+        },
+        {
+          "question": "Which CTC grade is best for Bengaluru's water quality?",
+          "answer": "Bengaluru's relatively soft water works well with our medium-grade CTC (BOP and BOPSM) that produces smooth, non-bitter chai. We specifically avoid very fine dust grades that can turn harsh in Bengaluru's water conditions."
+        },
+        {
+          "question": "Can you match the chai taste profile of our existing supplier in Bengaluru?",
+          "answer": "Yes, send us a 100g sample of your current tea and we'll match the taste profile within our CTC range. Many Bengaluru cafeterias have successfully switched to BulkChai while maintaining the same taste their employees expect."
+        }
+      ]
     },
     "Mysuru": {
       "nearbyAreas": ["VV Mohalla", "Hebbal"],
@@ -230,14 +310,54 @@
 
   "Telangana": {
     "Hyderabad": {
-      "nearbyAreas": ["Gachibowli", "Madhapur", "Secunderabad"],
-      "industries": ["corporate offices", "cafés", "canteens"],
+      "nearbyAreas": ["Gachibowli", "Madhapur", "Secunderabad", "Hitech City", "Kondapur"],
+      "industries": ["corporate offices", "cafés", "canteens", "hotels"],
       "transitDays": "3-4 days",
       "stateLogistics": "Hyderabad is a major logistics hub for Telangana.",
       "cityContext": "Corporate offices and IT parks drive high chai demand.",
       "usageFocus": "Smooth taste with consistent colour is preferred.",
       "educationAngle": "Balanced CTC grades reduce bitterness.",
-      "localNote": "Demand is stable throughout the week."
+      "localNote": "Demand is stable throughout the week.",
+      "locationDescriptor": "India's pharma and IT hub in the Deccan region",
+      "primaryBuyerTypes": ["IT park facility managers", "Irani café owners", "pharmaceutical campus canteens", "hotel chains along Banjara Hills"],
+      "supplyChain": {
+        "deliveryMethod": "Direct delivery from Hyderabad distribution point covering HITEC City corridor, Gachibowli, Secunderabad, and greater Hyderabad including Shamshabad",
+        "packagingOptions": ["25kg moisture-protected bags", "50kg commercial packs", "10kg trial quantities"],
+        "minOrderQty": "50 kg",
+        "paymentTerms": "Full advance with GST invoice; credit terms negotiable for pharma companies with purchase orders",
+        "reorderCycle": "Bi-weekly for IT campuses; monthly for retail and hotel buyers"
+      },
+      "localContext": {
+        "businessHubs": "Primary demand comes from the HITEC City-Gachibowli IT corridor housing Microsoft, Google, Amazon and 200+ tech companies, the Genome Valley pharma cluster, and the traditional commercial centres of Secunderabad and Abids with established Irani cafés.",
+        "teaCulture": "Hyderabad has a unique chai heritage shaped by its Irani café culture. Buyers here prefer CTC that produces a reddish-gold colour and smooth body without the bitter notes common in North Indian preparations. The iconic Irani chai demands specific grade consistency.",
+        "industrialRelevance": "Hyderabad's position as a pharma and biotech hub creates demand for compliant suppliers with proper documentation. Many pharmaceutical companies require detailed batch certificates and quality reports for canteen procurement.",
+        "buyerChallenges": "The city's rapid IT expansion has created new demand pockets in areas like Kokapet and Financial District where delivery logistics are still developing. Traffic on the Gachibowli-Madhapur stretch makes timing-sensitive deliveries challenging."
+      },
+      "whyChooseUs": [
+        "Delivery coverage across the entire HITEC City-Gachibowli corridor with time-slot scheduling to avoid peak traffic",
+        "CTC grades tested for Hyderabad's hard water that maintain the signature reddish-gold Irani chai colour",
+        "Complete documentation package including batch certificates for pharma company compliance requirements",
+        "Telugu and Hindi speaking support team with experience serving both IT and traditional Hyderabad markets",
+        "Scalable supply for fast-growing campuses in new development zones like Financial District and Kokapet"
+      ],
+      "faqs": [
+        {
+          "question": "What tea grade produces the authentic Irani chai colour for Hyderabad cafés?",
+          "answer": "For Hyderabad's signature Irani chai with its characteristic reddish-gold hue, we recommend our BOP grade with controlled dust content. This produces the smooth body and colour that Hyderabad chai lovers expect without excessive bitterness from over-extraction."
+        },
+        {
+          "question": "Do you deliver to Hyderabad IT parks like HITEC City and Gachibowli?",
+          "answer": "Yes, we have dedicated delivery routes covering the entire IT corridor from HITEC City through Madhapur, Kondapur, and Gachibowli. We schedule deliveries during off-peak hours to avoid the area's traffic congestion and ensure predictable arrival times."
+        },
+        {
+          "question": "Can you provide quality documentation for pharma company procurement in Hyderabad?",
+          "answer": "Yes, all orders include GST invoices with HSN codes, and we provide detailed batch certificates, FSSAI compliance documentation, and quality reports on request. This meets the procurement requirements of pharmaceutical companies in Genome Valley and other Hyderabad pharma hubs."
+        },
+        {
+          "question": "What is the typical order size for Hyderabad corporate cafeterias?",
+          "answer": "IT campus cafeterias in Hyderabad typically order 150-300kg monthly depending on employee count. We recommend starting with a 50kg trial to establish taste preferences, then scaling based on actual consumption data from your cafeteria operations."
+        }
+      ]
     },
     "Warangal": {
       "nearbyAreas": ["Hanamkonda", "Kazipet"],
@@ -422,14 +542,54 @@
 
   "Rajasthan": {
     "Jaipur": {
-      "nearbyAreas": ["Vaishali Nagar", "Malviya Nagar"],
-      "industries": ["retailers", "hospitality"],
+      "nearbyAreas": ["Vaishali Nagar", "Malviya Nagar", "C-Scheme", "MI Road", "Mansarovar"],
+      "industries": ["retailers", "hospitality", "heritage hotels", "tourist restaurants"],
       "transitDays": "4-5 days",
       "stateLogistics": "Jaipur is supplied through central Rajasthan routes.",
       "cityContext": "Retail and hospitality drive chai demand.",
       "usageFocus": "Balanced strength is preferred.",
       "educationAngle": "Medium-sized CTC grades are common.",
-      "localNote": "Seasonal demand variations occur."
+      "localNote": "Seasonal demand variations occur.",
+      "locationDescriptor": "Rajasthan's Pink City and premier tourist destination",
+      "primaryBuyerTypes": ["heritage hotel F&B managers", "tourist-facing restaurant owners", "railway station vendors", "retail tea shop owners"],
+      "supplyChain": {
+        "deliveryMethod": "Direct delivery from Jaipur distribution hub covering the walled city, new Jaipur, and extending to Ajmer and Alwar districts",
+        "packagingOptions": ["25kg bags", "50kg bulk packs", "10kg packs for smaller hospitality units"],
+        "minOrderQty": "50 kg",
+        "paymentTerms": "Advance payment with GST invoice; hotel chains may avail credit on submission of purchase orders",
+        "reorderCycle": "Monthly for most buyers; more frequent during October-March tourist season"
+      },
+      "localContext": {
+        "businessHubs": "Primary demand comes from the heritage hotel cluster around Amer and City Palace, tourist restaurants along MI Road and Johari Bazaar, railway station area vendors, and the growing hospitality sector in areas like Vaishali Nagar and Mansarovar.",
+        "teaCulture": "Jaipur's hospitality sector serves millions of tourists annually who expect quality chai as part of the Rajasthani experience. Hotels and restaurants need tea that appeals to both domestic tourists familiar with North Indian chai and international visitors trying Indian tea.",
+        "buyerChallenges": "The stark seasonality of Jaipur's tourism creates feast-or-famine demand cycles. Hotels and restaurants need suppliers who can scale up quickly during peak season (October-March) without forcing them to hold excess inventory during lean months.",
+        "seasonalFactors": "Tourist season from October to March sees 2-3x normal chai consumption at hotels and restaurants. Summer months (April-June) see significantly reduced footfall, while monsoon brings moderate domestic tourism."
+      },
+      "whyChooseUs": [
+        "Flexible order quantities that scale with Jaipur's seasonal tourism patterns without locking you into fixed volumes",
+        "CTC grades that produce the strong, milky chai tourists expect as part of authentic Rajasthani hospitality",
+        "Reliable supply during peak season when many vendors face stock shortages",
+        "Hindi-speaking team familiar with heritage hotel procurement processes and government guest house requirements",
+        "Quick turnaround for urgent orders during unexpected tourism surges or festival periods"
+      ],
+      "faqs": [
+        {
+          "question": "How do you handle seasonal demand variations for Jaipur hotels?",
+          "answer": "We understand Jaipur's tourism seasonality. You can order smaller quantities (50-100kg) during summer lean months and scale to 200-400kg during peak October-March season. We don't require annual volume commitments that would burden you during slow periods."
+        },
+        {
+          "question": "What tea grade do Jaipur heritage hotels typically use?",
+          "answer": "Heritage hotels in Jaipur typically use our BOP grade that produces rich, aromatic chai suitable for both masala chai and plain milk tea. This grade meets the expectations of discerning tourists while being cost-effective for high-volume service."
+        },
+        {
+          "question": "Do you deliver to hotels in the walled city and Amer area?",
+          "answer": "Yes, we deliver to all Jaipur areas including the congested walled city zone and the heritage hotel cluster near Amer Fort. For narrow-access locations, we coordinate delivery timing to work around tourist traffic and local restrictions."
+        },
+        {
+          "question": "Can you supply government guest houses and RTDC properties in Jaipur?",
+          "answer": "Yes, we supply government establishments with full GST documentation and can work with tender-based procurement processes. Our quality certifications and consistent supply track record meet government procurement requirements."
+        }
+      ]
     },
     "Jodhpur": {
       "nearbyAreas": ["Ratanada", "Paota"],
@@ -518,14 +678,54 @@
 
   "Madhya Pradesh": {
     "Indore": {
-      "nearbyAreas": ["Vijay Nagar", "Palasia"],
-      "industries": ["retailers", "offices"],
+      "nearbyAreas": ["Vijay Nagar", "Palasia", "Rajwada", "Sapna Sangeeta", "AB Road"],
+      "industries": ["retailers", "offices", "food courts", "wholesale distributors"],
       "transitDays": "4-5 days",
       "stateLogistics": "Indore is a central MP logistics hub.",
       "cityContext": "Retail and office demand both contribute.",
       "usageFocus": "Balanced taste is preferred.",
       "educationAngle": "Medium CTC grades are common.",
-      "localNote": "Orders are steady."
+      "localNote": "Orders are steady.",
+      "locationDescriptor": "Central India's cleanest city and emerging commercial hub",
+      "primaryBuyerTypes": ["street food vendors at Sarafa Bazaar", "chai tapri owners", "wholesale tea distributors", "commercial establishment canteens"],
+      "supplyChain": {
+        "deliveryMethod": "Hub delivery from Indore distribution centre serving the city and surrounding districts including Dewas, Ujjain, and Dhar",
+        "packagingOptions": ["25kg bags", "50kg distributor packs", "10kg retail-friendly packs"],
+        "minOrderQty": "50 kg",
+        "paymentTerms": "Advance payment with GST invoice; distributor credit terms available for volumes above 200kg",
+        "reorderCycle": "Monthly for most buyers; weekly for high-turnover street food areas"
+      },
+      "localContext": {
+        "businessHubs": "Demand centres include the famous Sarafa Bazaar night food market area, Rajwada commercial zone, Vijay Nagar's office complexes, and the wholesale markets along AB Road. The IT sector in Super Corridor is creating new corporate canteen demand.",
+        "teaCulture": "Indore's renowned street food culture drives significant chai consumption alongside the city's famous chaats and namkeens. Tapris and food stalls need tea that brews quickly and consistently to serve customers alongside food items throughout the day and night.",
+        "industrialRelevance": "As Central India's commercial capital, Indore serves as a redistribution hub for tea reaching smaller towns across Madhya Pradesh. Wholesale buyers here often supply retailers in Dewas, Ujjain, Dhar, and beyond.",
+        "seasonalFactors": "Winter months see significantly higher chai consumption in Indore. The Sarafa Bazaar night market operates year-round but chai demand peaks during the cooler October-February period."
+      },
+      "whyChooseUs": [
+        "Direct supply to Indore eliminates middlemen that add cost for retailers and distributors",
+        "Quick-brewing CTC grades ideal for high-turnover tapris and street food stalls",
+        "Distributor-friendly packaging and pricing for buyers serving the wider MP region",
+        "Hindi-speaking support team familiar with Indore's wholesale and retail market dynamics",
+        "Consistent supply even during peak winter demand when chai consumption doubles"
+      ],
+      "faqs": [
+        {
+          "question": "What tea grade suits Indore's chai tapris and street food vendors?",
+          "answer": "For Indore's busy tapris and Sarafa area vendors, we recommend medium-fine CTC grades that brew in 2-3 minutes and produce strong colour. These grades handle the fast-paced serving requirements where a fresh batch needs to be ready every few minutes."
+        },
+        {
+          "question": "Do you supply to wholesale tea distributors in Indore?",
+          "answer": "Yes, we work with Indore-based distributors who supply retailers across Madhya Pradesh. We offer distributor pricing for volumes above 200kg with extended credit terms and larger packaging options suited for redistribution."
+        },
+        {
+          "question": "How does Indore's water quality affect chai preparation?",
+          "answer": "Indore has moderately hard water that can make some teas taste flat. Our recommended CTC grades are selected to perform well in Indore's water, producing strong colour and flavour without requiring excessive tea quantity per cup."
+        },
+        {
+          "question": "Can you deliver to areas around Sarafa Bazaar and Rajwada?",
+          "answer": "Yes, we deliver to all Indore areas including the congested old city zones like Sarafa, Rajwada, and Khajuri Bazaar. For narrow-lane areas, we coordinate delivery timing to ensure smooth access without disrupting your business hours."
+        }
+      ]
     },
     "Bhopal": {
       "nearbyAreas": ["MP Nagar", "Arera Colony"],

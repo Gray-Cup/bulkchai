@@ -1,7 +1,30 @@
 import citiesData from '../cities.json'
 
-// Types
+// Types for enhanced SEO content
+export interface SupplyChainInfo {
+  deliveryMethod: string
+  packagingOptions: string[]
+  minOrderQty: string
+  paymentTerms: string
+  reorderCycle: string
+}
+
+export interface LocalContextInfo {
+  businessHubs?: string
+  teaCulture?: string
+  industrialRelevance?: string
+  buyerChallenges?: string
+  seasonalFactors?: string
+}
+
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
+// Core city data structure
 export interface CityData {
+  // Existing fields
   nearbyAreas: string[]
   industries: string[]
   transitDays: string
@@ -10,6 +33,14 @@ export interface CityData {
   usageFocus: string
   educationAngle: string
   localNote: string
+
+  // New SEO-optimized fields (optional for backward compatibility)
+  locationDescriptor?: string
+  primaryBuyerTypes?: string[]
+  supplyChain?: SupplyChainInfo
+  localContext?: LocalContextInfo
+  whyChooseUs?: string[]
+  faqs?: FAQItem[]
 }
 
 export interface StateData {
@@ -29,15 +60,19 @@ export interface CityInfo {
   transitDays: string
   stateLogistics: string
 
-  // ✅ Anti-spam / local context fields
+  // Anti-spam / local context fields
   cityContext: string
   usageFocus: string
   educationAngle: string
   localNote: string
 
-  // SEO fields
-  population?: string // e.g. "1.5 Million"
-  industrySize?: string // e.g. "High"
+  // Enhanced SEO fields
+  locationDescriptor?: string
+  primaryBuyerTypes?: string[]
+  supplyChain?: SupplyChainInfo
+  localContext?: LocalContextInfo
+  whyChooseUs?: string[]
+  faqs?: FAQItem[]
 }
 
 // Convert string to URL-safe slug
@@ -99,6 +134,13 @@ export function getCityInfoFromSlugs(stateSlug: string, citySlug: string): CityI
             usageFocus: data.usageFocus,
             educationAngle: data.educationAngle,
             localNote: data.localNote,
+            // Enhanced SEO fields
+            locationDescriptor: data.locationDescriptor,
+            primaryBuyerTypes: data.primaryBuyerTypes,
+            supplyChain: data.supplyChain,
+            localContext: data.localContext,
+            whyChooseUs: data.whyChooseUs,
+            faqs: data.faqs,
           }
         }
       }
@@ -130,6 +172,13 @@ export function getRelatedCities(currentCitySlug: string, count: number = 6): Ci
         usageFocus: data.usageFocus,
         educationAngle: data.educationAngle,
         localNote: data.localNote,
+        // Enhanced SEO fields
+        locationDescriptor: data.locationDescriptor,
+        primaryBuyerTypes: data.primaryBuyerTypes,
+        supplyChain: data.supplyChain,
+        localContext: data.localContext,
+        whyChooseUs: data.whyChooseUs,
+        faqs: data.faqs,
       })
     }
   }
