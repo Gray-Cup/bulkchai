@@ -1,29 +1,12 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { contactInfo } from '@/lib/cityData'
+import { Turnstile, useTurnstile } from '@/components/ui/turnstile'
 
 interface QuoteFormProps {
   defaultCity: string
   defaultState: string
-}
-
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        container: string | HTMLElement,
-        options: {
-          sitekey: string
-          callback: (token: string) => void
-          'error-callback'?: () => void
-          'expired-callback'?: () => void
-        }
-      ) => string
-      reset: (widgetId: string) => void
-      remove: (widgetId: string) => void
-    }
-  }
 }
 
 export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps) {
@@ -33,64 +16,12 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
   const [phone, setPhone] = useState('')
   const [companyName, setCompanyName] = useState('')
   const [message, setMessage] = useState('')
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
-  const [turnstileReady, setTurnstileReady] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const turnstileRef = useRef<HTMLDivElement>(null)
-  const widgetIdRef = useRef<string | null>(null)
-
+  const turnstile = useTurnstile()
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
-
-  useEffect(() => {
-    // If no siteKey, mark as ready immediately (no Turnstile required)
-    if (!siteKey) {
-      setTurnstileReady(true)
-      return
-    }
-
-    if (!turnstileRef.current) return
-
-    const script = document.createElement('script')
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
-    script.async = true
-    script.defer = true
-
-    script.onload = () => {
-      if (window.turnstile && turnstileRef.current) {
-        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-          sitekey: siteKey,
-          callback: (token: string) => {
-            setTurnstileToken(token)
-            setTurnstileReady(true)
-          },
-          'error-callback': () => {
-            console.error('Turnstile error - check your sitekey and domain settings')
-            setTurnstileToken(null)
-          },
-          'expired-callback': () => {
-            setTurnstileToken(null)
-            setTurnstileReady(false)
-          },
-        })
-      }
-    }
-
-    script.onerror = () => {
-      console.error('Failed to load Turnstile script')
-    }
-
-    document.head.appendChild(script)
-
-    return () => {
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.remove(widgetIdRef.current)
-      }
-      script.remove()
-    }
-  }, [siteKey])
 
   const calculateFreight = () => {
     const baseRate = 40
@@ -126,7 +57,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           estimated_amount: total,
           message: message || null,
           source_page: typeof window !== 'undefined' ? window.location.pathname : null,
-          turnstile_token: turnstileToken,
+          turnstile_token: turnstile.token,
         }),
       })
 
@@ -143,12 +74,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
       setCompanyName('')
       setMessage('')
       setQuantity(100)
-
-      if (widgetIdRef.current && window.turnstile) {
-        window.turnstile.reset(widgetIdRef.current)
-        setTurnstileReady(false)
-      }
-      setTurnstileToken(null)
+      turnstile.reset()
     } catch (err) {
       setSubmitStatus('error')
       setErrorMessage(err instanceof Error ? err.message : 'Something went wrong')
@@ -162,6 +88,9 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
     const whatsappUrl = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank')
   }
+
+  // Check if form can be submitted (either no Turnstile required or verified)
+  const canSubmit = !siteKey || turnstile.isVerified
 
   if (submitStatus === 'success') {
     return (
@@ -343,7 +272,18 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           />
         </div>
 
-        {siteKey && <div ref={turnstileRef} className="flex justify-center" />}
+        <Turnstile
+          onVerify={turnstile.handleVerify}
+          onError={turnstile.handleError}
+          onExpire={turnstile.handleExpire}
+          className="flex justify-center"
+        />
+
+        {turnstile.error && (
+          <div className="rounded-md bg-yellow-50 p-3 text-sm text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300">
+            Verification failed. Please try again.
+          </div>
+        )}
 
         {submitStatus === 'error' && (
           <div className="rounded-md bg-red-50 p-3 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-300">
@@ -354,7 +294,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
         <div className="flex flex-col gap-3 sm:flex-row">
           <button
             type="submit"
-            disabled={isSubmitting || !turnstileReady}
+            disabled={isSubmitting || !canSubmit}
             className="bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 flex-1 rounded-md px-6 py-3 font-semibold text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
           >
             {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}

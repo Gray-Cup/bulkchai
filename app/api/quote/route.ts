@@ -17,7 +17,7 @@ function getSupabaseClient(): SupabaseClient | null {
   return supabase
 }
 
-async function verifyTurnstile(token: string): Promise<boolean> {
+async function verifyTurnstile(token: string, remoteip?: string): Promise<boolean> {
   const secretKey = process.env.TURNSTILE_SECRET_KEY
 
   if (!secretKey) {
@@ -25,15 +25,21 @@ async function verifyTurnstile(token: string): Promise<boolean> {
     return true
   }
 
+  const body = new URLSearchParams({
+    secret: secretKey,
+    response: token,
+  })
+
+  if (remoteip) {
+    body.append('remoteip', remoteip)
+  }
+
   const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: new URLSearchParams({
-      secret: secretKey,
-      response: token,
-    }),
+    body,
   })
 
   const data = await response.json()
@@ -79,7 +85,13 @@ export async function POST(request: NextRequest) {
 
     // Verify Turnstile token
     if (turnstile_token) {
-      const isValid = await verifyTurnstile(turnstile_token)
+      // Extract client IP from headers (works with Vercel, Cloudflare, and most proxies)
+      const forwardedFor = request.headers.get('x-forwarded-for')
+      const realIp = request.headers.get('x-real-ip')
+      const cfConnectingIp = request.headers.get('cf-connecting-ip')
+      const remoteip = cfConnectingIp || realIp || forwardedFor?.split(',')[0]?.trim()
+
+      const isValid = await verifyTurnstile(turnstile_token, remoteip || undefined)
       if (!isValid) {
         return NextResponse.json({ error: 'Bot verification failed' }, { status: 400 })
       }
