@@ -3,7 +3,6 @@ import type { LocalContextInfo } from '@/lib/cityData'
 interface LocalContextSectionProps {
   city: string
   localContext?: LocalContextInfo
-  // Fallback fields for backward compatibility
   cityContext: string
   usageFocus: string
   educationAngle: string
@@ -18,7 +17,6 @@ export default function LocalContextSection({
   educationAngle,
   localNote,
 }: LocalContextSectionProps) {
-  // Build context items from either new or legacy data
   const contextItems: { title: string; content: string }[] = []
 
   if (localContext) {
@@ -29,10 +27,7 @@ export default function LocalContextSection({
       })
     }
     if (localContext.teaCulture) {
-      contextItems.push({
-        title: 'Local Chai Culture',
-        content: localContext.teaCulture,
-      })
+      contextItems.push({ title: 'Local Chai Culture', content: localContext.teaCulture })
     }
     if (localContext.industrialRelevance) {
       contextItems.push({
@@ -41,20 +36,13 @@ export default function LocalContextSection({
       })
     }
     if (localContext.buyerChallenges) {
-      contextItems.push({
-        title: 'Common Buyer Challenges',
-        content: localContext.buyerChallenges,
-      })
+      contextItems.push({ title: 'Common Buyer Challenges', content: localContext.buyerChallenges })
     }
     if (localContext.seasonalFactors) {
-      contextItems.push({
-        title: 'Seasonal Considerations',
-        content: localContext.seasonalFactors,
-      })
+      contextItems.push({ title: 'Seasonal Considerations', content: localContext.seasonalFactors })
     }
   }
 
-  // Fallback to legacy format if no new localContext
   if (contextItems.length === 0) {
     contextItems.push(
       { title: 'Market Overview', content: cityContext },
@@ -69,26 +57,20 @@ export default function LocalContextSection({
         Understanding the {city} Market
       </h2>
 
-      <div className="space-y-6">
+      <div className="space-y-5">
         {contextItems.map((item, index) => (
-          <div
-            key={index}
-            className="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800"
-          >
-            <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-gray-100">
+          <div key={index}>
+            <p className="mb-1 text-sm font-semibold tracking-widest text-gray-400 uppercase dark:text-gray-500">
               {item.title}
-            </h3>
+            </p>
             <p className="leading-relaxed text-gray-700 dark:text-gray-300">{item.content}</p>
           </div>
         ))}
 
-        {/* Local Note - always show if available */}
         {localNote && (
-          <div className="rounded-lg border-l-4 border-amber-400 bg-amber-50 p-5 dark:bg-amber-900/20">
-            <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
-              <span className="font-semibold">Local Insight:</span> {localNote}
-            </p>
-          </div>
+          <p className="border-l-2 border-gray-300 pl-4 text-sm leading-relaxed text-gray-500 dark:border-gray-600 dark:text-gray-400">
+            {localNote}
+          </p>
         )}
       </div>
     </section>

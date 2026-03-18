@@ -25,7 +25,7 @@ export default function Footer() {
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
         </div>
-        <div className="mb-8 flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+        <div className="mb-8 flex items-center space-x-2 py-2 text-xs text-gray-500 dark:text-gray-400">
           <Link href="https://graycup.org/" className="hover:underline" target="_blank">
             Company Website
           </Link>

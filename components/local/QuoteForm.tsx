@@ -23,17 +23,6 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
   const turnstile = useTurnstile()
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
-  const calculateFreight = () => {
-    const baseRate = 40
-    const gstRate = 0.05
-    const subtotal = quantity * baseRate
-    const gst = subtotal * gstRate
-    const total = subtotal + gst
-    return { subtotal, gst, total }
-  }
-
-  const { subtotal, gst, total } = calculateFreight()
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -54,7 +43,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           city: defaultCity,
           state: defaultState,
           quantity_kg: quantity,
-          estimated_amount: total,
+          estimated_amount: null,
           message: message || null,
           source_page: typeof window !== 'undefined' ? window.location.pathname : null,
           turnstile_token: turnstile.token,
@@ -84,7 +73,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
   }
 
   const handleWhatsApp = () => {
-    const whatsappMessage = `Hi, I need a quote for ${quantity}kg of bulk CTC tea for ${defaultCity}, ${defaultState}. Expected amount: ₹${total.toLocaleString('en-IN')}`
+    const whatsappMessage = `Hi, I need a quote for ${quantity}kg of bulk CTC tea for ${defaultCity}, ${defaultState}.`
     const whatsappUrl = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank')
   }
@@ -230,30 +219,9 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
           </div>
         </div>
 
-        <div className="space-y-2 rounded-md bg-gray-50 p-4 dark:bg-gray-800">
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-600 dark:text-gray-400">Base Price:</span>
-            <span className="font-medium text-gray-900 dark:text-gray-100">
-              ₹{subtotal.toLocaleString('en-IN')}
-            </span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-600 dark:text-gray-400">GST (5%):</span>
-            <span className="font-medium text-gray-900 dark:text-gray-100">
-              ₹{gst.toLocaleString('en-IN')}
-            </span>
-          </div>
-          <div className="border-t border-gray-300 pt-2 dark:border-gray-600">
-            <div className="flex justify-between">
-              <span className="font-semibold text-gray-900 dark:text-gray-100">
-                Estimated Total:
-              </span>
-              <span className="text-primary-600 dark:text-primary-400 text-lg font-bold">
-                ₹{total.toLocaleString('en-IN')}
-              </span>
-            </div>
-          </div>
-        </div>
+        <p className="text-xs text-gray-400 dark:text-gray-500">
+          We operate under GST guidelines — 5% GST applies to all bulk tea orders.
+        </p>
 
         <div>
           <label

@@ -67,8 +67,8 @@ export default function ${stateName.replace(/[^a-zA-Z]/g, '')}Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
-        <ol className="flex items-center space-x-2">
+      <nav className="text-sm text-gray-600 dark:text-gray-400 my-5">
+        <ol className="flex items-center space-x-2 py-2">
           <li>
             <Link href="/" className="hover:text-primary-600">
               Home
@@ -303,8 +303,8 @@ export default async function CityPage({ params }: CityPageProps) {
       />
 
       {/* Breadcrumbs */}
-      <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
-        <ol className="flex items-center space-x-2">
+      <nav className="text-sm text-gray-600 dark:text-gray-400 my-5">
+        <ol className="flex items-center space-x-2 py-2">
           <li>
             <Link href="/" className="hover:text-primary-600">
               Home

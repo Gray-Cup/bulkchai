@@ -25,13 +25,13 @@ export default function GujaratPage() {
   ])
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12">
+    <div className="px-0 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+      <nav className="my-5 text-sm text-gray-600 dark:text-gray-400">
         <ol className="flex items-center space-x-2">
           <li>
             <Link href="/" className="hover:text-primary-600">

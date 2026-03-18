@@ -99,7 +99,7 @@ export default async function CityPage({ params }: CityPageProps) {
   })
 
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="">
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -111,8 +111,8 @@ export default async function CityPage({ params }: CityPageProps) {
       />
 
       {/* Breadcrumbs */}
-      <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
-        <ol className="flex items-center space-x-2">
+      <nav className="my-5 text-sm text-gray-600 dark:text-gray-400">
+        <ol className="flex items-center space-x-2 py-2">
           <li>
             <Link href="/" className="hover:text-primary-600">
               Home
