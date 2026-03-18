@@ -202,8 +202,8 @@ export function getRelatedCities(currentCitySlug: string, count: number = 6): Ci
 
 // Business contact details
 export const contactInfo = {
-  phone: '+91 98765 43210',
-  whatsapp: '+919876543210',
+  phone: '+91 85279 14317',
+  whatsapp: '+918527914317',
   email: 'bulk@bulkctc.com',
   businessHours: 'Mon-Sat: 9:00 AM - 6:00 PM',
   moq: '50 kg',

@@ -167,7 +167,7 @@ export default function QuoteForm({ defaultCity, defaultState }: QuoteFormProps)
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="focus:border-primary-500 focus:ring-primary-500 w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:ring-2 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100"
-              placeholder="+91 98765 43210"
+              placeholder="+91 85279 14317"
             />
           </div>
 
