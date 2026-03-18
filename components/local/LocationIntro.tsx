@@ -31,6 +31,7 @@ export default function LocationIntro({
     : `${city}, ${state},`
 
   const whatsappLink = `https://wa.me/${contactInfo.whatsapp}`
+  const sampleLink = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(`Hi, I'd like to request a sample of your bulk CTC tea. I'm based in ${city}, ${state}. Please let me know the process.`)}`
 
   return (
     <div className="mb-10">
@@ -95,6 +96,14 @@ export default function LocationIntro({
           Get Bulk Quote on WhatsApp
         </a>
         <QuoteFormDialog city={city} state={state} />
+        <a
+          href={sampleLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-sm border border-gray-300 bg-white px-6 py-3 text-sm font-semibold tracking-wide text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800"
+        >
+          Request Sample
+        </a>
         <a
           href="tel:+918527914317"
           className="inline-flex items-center gap-2 rounded-sm border border-gray-300 bg-white px-6 py-3 text-sm font-semibold tracking-wide text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:hover:bg-gray-800"
