@@ -1,0 +1,2227 @@
+{
+  "Maharashtra": {
+    "Mumbai": {
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "nearbyAreas": ["Thane", "Navi Mumbai", "Kalyan"],
+      "industries": ["Hotels & Hospitality", "FMCG", "Corporate Offices", "Retail Chains"],
+      "transitDays": "3-4 days",
+      "cityContext": "India's commercial capital with the highest concentration of hotels, restaurants, and corporate offices driving consistent bulk CTC tea demand year-round.",
+      "usageFocus": "Hotel chains, restaurant groups, corporate cafeterias, and institutional FMCG buyers form the primary bulk tea demand in Mumbai.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Mumbai?",
+          "answer": "Minimum order is 50 kg per SKU for Mumbai. Regular institutional buyers can request flexible MOQs starting at 25 kg."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Mumbai?",
+          "answer": "We deliver across Mumbai, Thane, and Navi Mumbai within 3–4 days from dispatch. Door delivery available for orders above 100 kg."
+        },
+        {
+          "question": "Which CTC tea grades are most used in Mumbai?",
+          "answer": "BP1, PF1, and PD grades dominate Mumbai's HORECA and institutional segments. We supply all major Assam CTC grades."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 19.076, "lng": 72.8777 } }
+    },
+    "Pune": {
+      "city": "Pune",
+      "state": "Maharashtra",
+      "nearbyAreas": ["Pimpri-Chinchwad", "Lonavala", "Nashik"],
+      "industries": ["IT & Tech Parks", "Manufacturing", "Hospitality", "Educational Institutions"],
+      "transitDays": "3-4 days",
+      "cityContext": "Pune's IT corridor and sprawling manufacturing belt create steady bulk CTC demand from large corporate campuses and factory canteens.",
+      "usageFocus": "Tech parks, auto manufacturing units, educational institutions, and a growing hotel sector drive bulk CTC procurement in Pune.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Pune?",
+          "answer": "Minimum order is 50 kg per SKU. Large campus buyers in Pune's IT parks often order 500 kg+ monthly."
+        },
+        {
+          "question": "How quickly is bulk CTC tea delivered in Pune?",
+          "answer": "Delivery to Pune takes 3–4 days from dispatch, covering Pimpri-Chinchwad and surrounding industrial areas."
+        },
+        {
+          "question": "Which industries in Pune buy bulk CTC tea?",
+          "answer": "IT companies, auto manufacturers like Tata Motors and Bajaj, engineering colleges, and hotel chains are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 18.5204, "lng": 73.8567 } }
+    },
+    "Nagpur": {
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "nearbyAreas": ["Wardha", "Amravati", "Yavatmal"],
+      "industries": ["Government", "Healthcare", "Manufacturing", "Retail Distribution"],
+      "transitDays": "3-5 days",
+      "cityContext": "Nagpur's central location makes it a key distribution hub for bulk CTC tea across the Vidarbha region.",
+      "usageFocus": "Government offices, hospitals, educational institutions, and retail distributors servicing central India form the primary buyer segment.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Nagpur?",
+          "answer": "Minimum order is 50 kg. Nagpur distributors often order in bulk to service the surrounding Vidarbha market."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Nagpur?",
+          "answer": "Delivery to Nagpur takes 3–5 days from dispatch, with coverage extending to Wardha and Amravati."
+        },
+        {
+          "question": "Why is Nagpur a key bulk tea distribution point?",
+          "answer": "Nagpur's central geography makes it a natural re-distribution hub for bulk CTC tea across Maharashtra and MP."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 21.1458, "lng": 79.0882 } }
+    }
+  },
+  "Tamil Nadu": {
+    "Chennai": {
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "nearbyAreas": ["Tambaram", "Ambattur", "Kancheepuram"],
+      "industries": ["Manufacturing", "Automotive", "IT", "Hospitality"],
+      "transitDays": "5-6 days",
+      "cityContext": "Chennai's manufacturing economy and growing IT sector drive bulk CTC tea demand from large corporate campuses and factory floors.",
+      "usageFocus": "Auto manufacturing plants, IT parks, government offices, and hotel chains are the main institutional buyers of bulk CTC tea in Chennai.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Chennai?",
+          "answer": "Minimum order is 50 kg per SKU. Large manufacturing campuses in Chennai often order 200–500 kg monthly."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Chennai?",
+          "answer": "Delivery to Chennai and surrounding areas takes 5–6 days from dispatch hubs in Assam/Dooars."
+        },
+        {
+          "question": "Which CTC tea grades are popular in Chennai?",
+          "answer": "PF1 and BP1 grades are most popular for office and manufacturing canteens across Chennai."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 13.0827, "lng": 80.2707 } }
+    },
+    "Coimbatore": {
+      "city": "Coimbatore",
+      "state": "Tamil Nadu",
+      "nearbyAreas": ["Tiruppur", "Erode", "Pollachi"],
+      "industries": ["Textiles", "Manufacturing", "Educational Institutions", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Coimbatore's textile and engineering manufacturing economy fuels consistent bulk CTC tea demand from large factory floors.",
+      "usageFocus": "Textile mills, engineering firms, hospital canteens, and academic campuses in Coimbatore are the primary bulk CTC buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Coimbatore?",
+          "answer": "Minimum order is 50 kg. Textile industry canteens in Coimbatore typically order 100–300 kg per cycle."
+        },
+        {
+          "question": "How quickly is bulk CTC delivered in Coimbatore?",
+          "answer": "Delivery takes 5–6 days from dispatch, covering Tiruppur, Erode, and Pollachi areas."
+        },
+        {
+          "question": "Which industries in Coimbatore need bulk CTC tea?",
+          "answer": "Hosiery and textile mills, auto component firms, hospitals, and engineering colleges are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 11.0168, "lng": 76.9558 } }
+    },
+    "Madurai": {
+      "city": "Madurai",
+      "state": "Tamil Nadu",
+      "nearbyAreas": ["Dindigul", "Sivakasi", "Theni"],
+      "industries": ["Tourism", "Temple Trusts", "Retail", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Madurai's religious tourism and growing commercial activity create steady demand for bulk CTC tea across hotels and institutions.",
+      "usageFocus": "Temple trust canteens, tourist hotels, government hospitals, and retail distributors in Madurai drive bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Madurai?",
+          "answer": "Minimum order is 50 kg. Temple trusts and large hotels in Madurai often require regular monthly supply."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Madurai?",
+          "answer": "Delivery to Madurai takes 5–6 days covering Dindigul, Sivakasi, and surrounding districts."
+        },
+        {
+          "question": "Why is bulk CTC tea popular in Madurai's hospitality sector?",
+          "answer": "Madurai's high tourist footfall means hotels and pilgrimage canteens require large, consistent bulk CTC supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 9.9252, "lng": 78.1198 } }
+    }
+  },
+  "Uttar Pradesh": {
+    "Noida": {
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "nearbyAreas": ["Greater Noida", "Ghaziabad", "Delhi"],
+      "industries": ["IT & Tech", "Manufacturing", "Corporate Offices", "Real Estate"],
+      "transitDays": "2-3 days",
+      "cityContext": "Noida's thriving IT and corporate sector creates high per-capita bulk CTC demand from large office campuses and tech parks.",
+      "usageFocus": "IT parks, corporate offices, manufacturing units, and real estate offices are the main institutional bulk tea buyers in Noida.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Noida?",
+          "answer": "Minimum order is 50 kg. Corporate campuses in Noida's Sector 62 and 63 IT hubs often order 200–400 kg monthly."
+        },
+        {
+          "question": "How quickly is bulk CTC delivered in Noida?",
+          "answer": "Delivery to Noida takes 2–3 days, with coverage across Greater Noida and Ghaziabad."
+        },
+        {
+          "question": "Which CTC tea grades are preferred in Noida's offices?",
+          "answer": "PF1 and BP1 are most preferred for office vending machines and corporate canteens across Noida."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.5355, "lng": 77.391 } }
+    },
+    "Lucknow": {
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "nearbyAreas": ["Kanpur", "Unnao", "Barabanki"],
+      "industries": ["Government", "Healthcare", "Hospitality", "Retail"],
+      "transitDays": "2-3 days",
+      "cityContext": "Lucknow's deep chai culture and large government sector create reliable bulk CTC demand across offices and institutions.",
+      "usageFocus": "State government offices, medical colleges, hotel chains, and retail distributors form the primary buyer segment in Lucknow.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Lucknow?",
+          "answer": "Minimum order is 50 kg. Government departments and hospital networks in Lucknow often order in large quarterly batches."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Lucknow?",
+          "answer": "Delivery takes 2–3 days, covering Kanpur, Unnao, and wider Awadh region."
+        },
+        {
+          "question": "Which industries in Lucknow buy bulk CTC tea?",
+          "answer": "State secretariat offices, KGMU and medical colleges, hotel chains, and FMCG distributors are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.8467, "lng": 80.9462 } }
+    },
+    "Kanpur": {
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "nearbyAreas": ["Lucknow", "Unnao", "Fatehpur"],
+      "industries": ["Leather & Textiles", "Manufacturing", "Healthcare", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Kanpur's large industrial workforce creates massive bulk tea demand from factory canteens and institutional buyers.",
+      "usageFocus": "Leather factories, textile mills, industrial canteens, and government institutions are the primary bulk buyers in Kanpur.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Kanpur?",
+          "answer": "Minimum order is 50 kg. Kanpur's large leather and textile factories often require monthly orders of 300–500 kg."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Kanpur?",
+          "answer": "Delivery takes 2–3 days, covering Unnao, Fatehpur, and surrounding industrial areas."
+        },
+        {
+          "question": "Why is bulk CTC popular with Kanpur's industries?",
+          "answer": "Large factory workforces require high-volume, consistent supply of affordable CTC tea for canteen operations."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.4499, "lng": 80.3319 } }
+    }
+  },
+  "Karnataka": {
+    "Bengaluru": {
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "nearbyAreas": ["Tumkur", "Mysuru", "Hosur"],
+      "industries": ["IT & Tech", "Corporate Offices", "Hospitality", "Retail Chains"],
+      "transitDays": "4-5 days",
+      "cityContext": "Bengaluru's massive IT workforce and vibrant cafe culture drive large-scale bulk CTC tea procurement from campuses and cafeterias.",
+      "usageFocus": "Tech companies, co-working spaces, hotels, and large corporate campuses are the main institutional CTC buyers in Bengaluru.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Bengaluru?",
+          "answer": "Minimum order is 50 kg. Large IT campuses in Whitefield and Electronic City often order 500 kg+ monthly."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Bengaluru?",
+          "answer": "Delivery takes 4–5 days from Assam/Dooars dispatch, covering Electronic City, Whitefield, and Tumkur Road areas."
+        },
+        {
+          "question": "Which CTC grades are popular in Bengaluru's offices?",
+          "answer": "BP1 and PF1 are standard for office vending and corporate canteens; premium grades suit hospitality buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 12.9716, "lng": 77.5946 } }
+    },
+    "Mysuru": {
+      "city": "Mysuru",
+      "state": "Karnataka",
+      "nearbyAreas": ["Mandya", "Hassan", "Chamarajanagar"],
+      "industries": ["Tourism", "Manufacturing", "Government", "Education"],
+      "transitDays": "4-5 days",
+      "cityContext": "Mysuru's cultural tourism and government sector create consistent bulk CTC demand from hotels and institutions year-round.",
+      "usageFocus": "Hotels, government offices, educational institutions, and Dasara tourism infrastructure drive seasonal bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Mysuru?",
+          "answer": "Minimum order is 50 kg. Mysuru's hotel sector sees seasonal demand spikes during Dasara festival."
+        },
+        {
+          "question": "How is bulk CTC delivered in Mysuru?",
+          "answer": "Delivery to Mysuru takes 4–5 days, covering Mandya, Hassan, and Chamrajanagar districts."
+        },
+        {
+          "question": "Which sectors in Mysuru use bulk CTC tea?",
+          "answer": "Heritage hotels, government offices, silk weaving mills, and educational campuses are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 12.2958, "lng": 76.6394 } }
+    },
+    "Mangaluru": {
+      "city": "Mangaluru",
+      "state": "Karnataka",
+      "nearbyAreas": ["Udupi", "Kasaragod", "Puttur"],
+      "industries": ["Ports & Trade", "Hospitality", "Healthcare", "Education"],
+      "transitDays": "4-5 days",
+      "cityContext": "Mangaluru's port economy and educational institutions create steady demand for bulk CTC tea supply across the coastal region.",
+      "usageFocus": "Port workers, hospital networks, engineering colleges, and coastal hotels are the primary bulk buyers in Mangaluru.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Mangaluru?",
+          "answer": "Minimum order is 50 kg. Port and hospital buyers in Mangaluru often need regular monthly replenishment."
+        },
+        {
+          "question": "How is bulk CTC delivered in Mangaluru?",
+          "answer": "Delivery to Mangaluru takes 4–5 days, extending to Udupi and Kasaragod districts."
+        },
+        {
+          "question": "Which industries in Mangaluru need bulk CTC tea?",
+          "answer": "Port authority canteens, Kasturba Hospital, engineering colleges, and tourist hotels are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 12.9141, "lng": 74.856 } }
+    }
+  },
+  "Gujarat": {
+    "Ahmedabad": {
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "nearbyAreas": ["Gandhinagar", "Anand", "Mehsana"],
+      "industries": ["Textiles", "Pharmaceuticals", "FMCG", "Manufacturing"],
+      "transitDays": "4-5 days",
+      "cityContext": "Ahmedabad's textile and pharma economy drives strong bulk CTC demand from large manufacturing campuses and commercial offices.",
+      "usageFocus": "Textile factories, pharma companies, corporate offices, and hotel chains are the primary institutional buyers in Ahmedabad.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Ahmedabad?",
+          "answer": "Minimum order is 50 kg. Pharma and textile companies in Ahmedabad typically order 200–500 kg monthly."
+        },
+        {
+          "question": "How is bulk CTC delivered in Ahmedabad?",
+          "answer": "Delivery takes 4–5 days, covering Gandhinagar, Anand, and the Ahmedabad textile belt."
+        },
+        {
+          "question": "Which CTC grades suit Ahmedabad's manufacturing sector?",
+          "answer": "PF1 and BP1 are the most consumed grades in Ahmedabad's large factory canteens."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.0225, "lng": 72.5714 } }
+    },
+    "Surat": {
+      "city": "Surat",
+      "state": "Gujarat",
+      "nearbyAreas": ["Bharuch", "Navsari", "Valsad"],
+      "industries": ["Diamond Industry", "Textiles", "Manufacturing", "Retail"],
+      "transitDays": "4-5 days",
+      "cityContext": "Surat's diamond and textile industries support large workforces requiring consistent bulk CTC tea supply for canteens.",
+      "usageFocus": "Diamond polishing units, textile mills, industrial canteens, and retail distributors drive bulk CTC orders in Surat.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Surat?",
+          "answer": "Minimum order is 50 kg. Diamond industry units in Surat employ thousands and need reliable daily tea supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Surat?",
+          "answer": "Delivery takes 4–5 days, covering Bharuch, Navsari, and South Gujarat coastal areas."
+        },
+        {
+          "question": "Which sectors in Surat consume the most bulk CTC tea?",
+          "answer": "Diamond polishing workshops, synthetic textile factories, and retail distributors are the biggest buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 21.1702, "lng": 72.8311 } }
+    },
+    "Vadodara": {
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "nearbyAreas": ["Anand", "Bharuch", "Dahod"],
+      "industries": ["Petrochemicals", "Engineering", "Education", "Healthcare"],
+      "transitDays": "4-5 days",
+      "cityContext": "Vadodara's petrochemical and engineering industries create strong bulk CTC demand from large plant canteens and campuses.",
+      "usageFocus": "Chemical plants, engineering firms, university campuses, and hospital cafeterias are the primary bulk buyers in Vadodara.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Vadodara?",
+          "answer": "Minimum order is 50 kg. GAIL and IPCL plant canteens in Vadodara require large monthly bulk orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Vadodara?",
+          "answer": "Delivery takes 4–5 days, with coverage extending to Anand and Bharuch petrochemical zones."
+        },
+        {
+          "question": "Which industries in Vadodara need bulk CTC tea?",
+          "answer": "Petrochemical plants, MS University campuses, Baroda Medical College, and engineering firms are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.3072, "lng": 73.1812 } }
+    }
+  },
+  "West Bengal": {
+    "Kolkata": {
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "nearbyAreas": ["Howrah", "Salt Lake", "Barasat"],
+      "industries": ["Trade & Commerce", "Jute", "Government", "Hospitality"],
+      "transitDays": "1-2 days",
+      "cityContext": "Kolkata's deep-rooted chai culture and proximity to Assam tea gardens make it a top-volume bulk CTC buyer in India.",
+      "usageFocus": "Street vendors, restaurants, government offices, trade houses, and FMCG distributors drive high-volume bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Kolkata?",
+          "answer": "Minimum order is 25 kg due to Kolkata's proximity to tea gardens and high local volumes."
+        },
+        {
+          "question": "How quickly is bulk CTC delivered in Kolkata?",
+          "answer": "Being closest to Assam gardens, Kolkata receives delivery in 1–2 days — fastest in India."
+        },
+        {
+          "question": "Which CTC grades are most consumed in Kolkata?",
+          "answer": "All grades including BP, PF, PD, and fannings are consumed in large volumes given the city's chai culture."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars, Darjeeling",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.5726, "lng": 88.3639 } }
+    },
+    "Howrah": {
+      "city": "Howrah",
+      "state": "West Bengal",
+      "nearbyAreas": ["Kolkata", "Uluberia", "Liluah"],
+      "industries": ["Manufacturing", "Railways", "Engineering", "Retail"],
+      "transitDays": "1-2 days",
+      "cityContext": "Howrah's large industrial workforce and railway hub status create strong bulk CTC demand across canteens year-round.",
+      "usageFocus": "Industrial canteens, railway staff facilities, engineering workshops, and local distributors are key buyers in Howrah.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Howrah?",
+          "answer": "Minimum order is 25 kg. Howrah's proximity to Kolkata means fast fulfillment with flexible MOQs."
+        },
+        {
+          "question": "How is bulk CTC delivered in Howrah?",
+          "answer": "Delivery takes 1–2 days, with Howrah sharing the same fast supply chain as Kolkata."
+        },
+        {
+          "question": "Which industries in Howrah use bulk CTC tea?",
+          "answer": "Steel factories, railway workshops, jute mills, and large engineering firms are the top consumers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.5958, "lng": 88.2636 } }
+    },
+    "Durgapur": {
+      "city": "Durgapur",
+      "state": "West Bengal",
+      "nearbyAreas": ["Asansol", "Burdwan", "Bankura"],
+      "industries": ["Steel & Mining", "Chemicals", "Manufacturing", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Durgapur's steel and industrial economy supports high bulk CTC demand from large factory workers and institutional buyers.",
+      "usageFocus": "Steel plant canteens, chemical units, engineering colleges, and mining companies drive institutional orders in Durgapur.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Durgapur?",
+          "answer": "Minimum order is 50 kg. DSP (Durgapur Steel Plant) and allied industries require large regular bulk supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Durgapur?",
+          "answer": "Delivery takes 2–3 days, covering Asansol and Burdwan industrial zones."
+        },
+        {
+          "question": "Which sectors in Durgapur are the largest bulk CTC buyers?",
+          "answer": "SAIL's Durgapur Steel Plant, WBPDCL power stations, NIT Durgapur, and chemical plants are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.5204, "lng": 87.3119 } }
+    }
+  },
+  "Rajasthan": {
+    "Jaipur": {
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "nearbyAreas": ["Ajmer", "Alwar", "Dausa"],
+      "industries": ["Tourism", "Textiles", "Handicrafts", "Government"],
+      "transitDays": "3-4 days",
+      "cityContext": "Jaipur's tourism industry and government sector create significant bulk CTC tea demand from hotels and institutions.",
+      "usageFocus": "Heritage hotels, government offices, textile mills, and health institutions are the primary bulk buyers in Jaipur.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Jaipur?",
+          "answer": "Minimum order is 50 kg. Jaipur's hotel sector sees high seasonal demand during tourism peak months."
+        },
+        {
+          "question": "How is bulk CTC tea delivered in Jaipur?",
+          "answer": "Delivery to Jaipur takes 3–4 days, with coverage extending to Ajmer and Alwar."
+        },
+        {
+          "question": "Which industries in Jaipur use bulk CTC tea?",
+          "answer": "Heritage and budget hotels, state government offices, gem polishing units, and hospitals are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.9124, "lng": 75.7873 } }
+    },
+    "Udaipur": {
+      "city": "Udaipur",
+      "state": "Rajasthan",
+      "nearbyAreas": ["Bhilwara", "Chittorgarh", "Rajsamand"],
+      "industries": ["Tourism & Hotels", "Textiles", "Zinc Mining", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Udaipur's premium hospitality sector and tourism drive consistent bulk CTC procurement from hotels and resorts.",
+      "usageFocus": "Luxury hotels, tourist resorts, zinc mining canteens, and institutional catering are the primary bulk buyers in Udaipur.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Udaipur?",
+          "answer": "Minimum order is 50 kg. Udaipur's luxury hotel market is a high-value buyer of premium CTC grades."
+        },
+        {
+          "question": "How is bulk CTC delivered in Udaipur?",
+          "answer": "Delivery takes 3–4 days, covering Bhilwara, Chittorgarh, and the Mewar region."
+        },
+        {
+          "question": "Which CTC grades suit Udaipur's hospitality sector?",
+          "answer": "Premium BP1 and BOPSM grades are preferred by Udaipur's luxury hotels for guest room and restaurant service."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 24.5854, "lng": 73.7125 } }
+    },
+    "Kota": {
+      "city": "Kota",
+      "state": "Rajasthan",
+      "nearbyAreas": ["Bundi", "Baran", "Jhalawar"],
+      "industries": ["Coaching Institutes", "Manufacturing", "Healthcare", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Kota's unique coaching economy creates massive bulk CTC demand from student hostels and institutional canteens.",
+      "usageFocus": "Coaching institutes, student hostel canteens, hospitals, and manufacturing units are the main institutional buyers in Kota.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Kota?",
+          "answer": "Minimum order is 50 kg. Kota's 2 lakh+ student population creates extremely high daily CTC consumption."
+        },
+        {
+          "question": "How is bulk CTC delivered in Kota?",
+          "answer": "Delivery takes 3–4 days, covering Bundi, Baran, and surrounding Hadoti region."
+        },
+        {
+          "question": "Why is Kota a large bulk CTC tea market?",
+          "answer": "Kota's massive coaching institute ecosystem feeds hundreds of hostels and mess halls needing daily bulk tea supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 25.2138, "lng": 75.8648 } }
+    }
+  },
+  "Telangana": {
+    "Hyderabad": {
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "nearbyAreas": ["Secunderabad", "Ranga Reddy", "Medchal"],
+      "industries": ["IT & Pharma", "Corporate Offices", "Hospitality", "Healthcare"],
+      "transitDays": "4-5 days",
+      "cityContext": "Hyderabad's tech and pharma sectors create substantial bulk CTC demand from large corporate campuses and hospitals.",
+      "usageFocus": "IT companies, pharma firms, hotel chains, and large hospital networks are the primary bulk CTC buyers in Hyderabad.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Hyderabad?",
+          "answer": "Minimum order is 50 kg. HITEC City IT parks often consolidate orders of 500 kg+ monthly."
+        },
+        {
+          "question": "How is bulk CTC delivered in Hyderabad?",
+          "answer": "Delivery takes 4–5 days, covering Secunderabad, Ranga Reddy, and HITEC City areas."
+        },
+        {
+          "question": "Which industries in Hyderabad consume most bulk CTC tea?",
+          "answer": "HITEC City IT parks, pharma companies, Apollo and Yashoda hospital networks, and Taj hotels are top buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 17.385, "lng": 78.4867 } }
+    },
+    "Warangal": {
+      "city": "Warangal",
+      "state": "Telangana",
+      "nearbyAreas": ["Hanamkonda", "Karimnagar", "Khammam"],
+      "industries": ["Textiles", "Education", "Healthcare", "Government"],
+      "transitDays": "4-5 days",
+      "cityContext": "Warangal's textile and education sectors drive steady bulk CTC demand from institutions and factory canteens.",
+      "usageFocus": "Textile units, universities, district hospitals, and government offices are the main institutional buyers in Warangal.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Warangal?",
+          "answer": "Minimum order is 50 kg. NIT Warangal and regional hospitals are among the larger institutional buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Warangal?",
+          "answer": "Delivery takes 4–5 days, covering Hanamkonda and Karimnagar districts."
+        },
+        {
+          "question": "What industries in Warangal use bulk CTC tea?",
+          "answer": "Handloom weaving units, NIT Warangal, MGM Hospital, and district collector offices are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 17.9784, "lng": 79.5941 } }
+    },
+    "Karimnagar": {
+      "city": "Karimnagar",
+      "state": "Telangana",
+      "nearbyAreas": ["Warangal", "Nizamabad", "Adilabad"],
+      "industries": ["Agriculture", "Cement", "Education", "Healthcare"],
+      "transitDays": "4-5 days",
+      "cityContext": "Karimnagar's agricultural economy and institutional sector create reliable bulk CTC tea demand in Northern Telangana.",
+      "usageFocus": "Agri processing units, cement plant canteens, colleges, and district hospitals drive bulk CTC procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Karimnagar?",
+          "answer": "Minimum order is 50 kg. Cement and agri processing industries in Karimnagar are regular bulk buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Karimnagar?",
+          "answer": "Delivery takes 4–5 days, with coverage to Nizamabad and Adilabad districts."
+        },
+        {
+          "question": "Which sectors in Karimnagar need bulk CTC tea?",
+          "answer": "Cement plant canteens, paddy processing mills, district hospital cafeterias, and government colleges are buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 18.4386, "lng": 79.1288 } }
+    }
+  },
+  "Andhra Pradesh": {
+    "Visakhapatnam": {
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "nearbyAreas": ["Vizianagaram", "Kakinada", "Rajahmundry"],
+      "industries": ["Ports & Steel", "Naval", "Healthcare", "Tourism"],
+      "transitDays": "4-5 days",
+      "cityContext": "Vizag's port and steel industries support large workforces with significant bulk CTC tea requirements year-round.",
+      "usageFocus": "Steel plant canteens, port workers, naval base facilities, and hospital networks are the primary buyers in Visakhapatnam.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Visakhapatnam?",
+          "answer": "Minimum order is 50 kg. RINL Vizag Steel and port workers drive large institutional orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Visakhapatnam?",
+          "answer": "Delivery takes 4–5 days, covering Vizianagaram, Kakinada, and the Northern Andhra coast."
+        },
+        {
+          "question": "Which industries in Vizag consume bulk CTC tea?",
+          "answer": "RINL Steel plant, HPCL refinery, naval station canteens, and KGH hospital network are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 17.6868, "lng": 83.2185 } }
+    },
+    "Vijayawada": {
+      "city": "Vijayawada",
+      "state": "Andhra Pradesh",
+      "nearbyAreas": ["Guntur", "Tenali", "Krishna"],
+      "industries": ["Trade & Commerce", "Agriculture", "Education", "Transport"],
+      "transitDays": "4-5 days",
+      "cityContext": "Vijayawada's commercial hub status and transport links drive consistent bulk CTC demand across the region.",
+      "usageFocus": "Commercial establishments, transport hubs, colleges, and government offices are the primary bulk buyers in Vijayawada.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Vijayawada?",
+          "answer": "Minimum order is 50 kg. Vijayawada's role as an AP commercial hub means large wholesale distribution orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Vijayawada?",
+          "answer": "Delivery takes 4–5 days, covering Guntur, Tenali, and the Krishna-Godavari delta."
+        },
+        {
+          "question": "Which sectors in Vijayawada drive bulk CTC demand?",
+          "answer": "AP Secretariat offices, Vijayawada railway division, wholesale markets, and colleges are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 16.5062, "lng": 80.648 } }
+    },
+    "Guntur": {
+      "city": "Guntur",
+      "state": "Andhra Pradesh",
+      "nearbyAreas": ["Vijayawada", "Tenali", "Narasaraopet"],
+      "industries": ["Agriculture", "Tobacco", "Education", "Healthcare"],
+      "transitDays": "4-5 days",
+      "cityContext": "Guntur's agricultural trade economy and institutional sector create steady bulk CTC tea procurement needs.",
+      "usageFocus": "Agri markets, tobacco processing units, medical colleges, and government offices drive bulk orders in Guntur.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Guntur?",
+          "answer": "Minimum order is 50 kg. Guntur's large agri-trade market creates steady institutional demand."
+        },
+        {
+          "question": "How is bulk CTC delivered in Guntur?",
+          "answer": "Delivery takes 4–5 days, with coverage to Vijayawada, Tenali, and surrounding delta areas."
+        },
+        {
+          "question": "Which industries in Guntur consume bulk CTC tea?",
+          "answer": "Tobacco processing yards, Guntur Medical College, APMC market canteens, and government offices are buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 16.3067, "lng": 80.4365 } }
+    }
+  },
+  "Madhya Pradesh": {
+    "Indore": {
+      "city": "Indore",
+      "state": "Madhya Pradesh",
+      "nearbyAreas": ["Ujjain", "Dewas", "Pithampur"],
+      "industries": ["Manufacturing", "Pharmaceuticals", "FMCG", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Indore's clean city status and manufacturing growth drive increasing bulk CTC demand from businesses and institutions.",
+      "usageFocus": "Pharma companies, auto manufacturers, FMCG distributors, and educational campuses are primary buyers in Indore.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Indore?",
+          "answer": "Minimum order is 50 kg. Indore's growing pharma park and FMCG sector are reliable bulk buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Indore?",
+          "answer": "Delivery takes 3–4 days, covering Ujjain, Dewas, and the Pithampur industrial zone."
+        },
+        {
+          "question": "Which industries in Indore use bulk CTC tea?",
+          "answer": "Pithampur auto zone, pharma companies, IIM Indore campus, and retail FMCG distributors are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.7196, "lng": 75.8577 } }
+    },
+    "Bhopal": {
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "nearbyAreas": ["Raisen", "Vidisha", "Sehore"],
+      "industries": ["Government", "Healthcare", "Education", "Manufacturing"],
+      "transitDays": "3-4 days",
+      "cityContext": "Bhopal's large government sector and institutions create reliable bulk CTC tea demand throughout the year.",
+      "usageFocus": "State government offices, AIIMS Bhopal, engineering colleges, and PSUs are the primary institutional buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Bhopal?",
+          "answer": "Minimum order is 50 kg. Government secretariats in Bhopal procure bulk CTC tea through regular tender processes."
+        },
+        {
+          "question": "How is bulk CTC delivered in Bhopal?",
+          "answer": "Delivery takes 3–4 days, covering Raisen, Vidisha, and Sehore districts."
+        },
+        {
+          "question": "Which sectors in Bhopal are major bulk CTC consumers?",
+          "answer": "MP Secretariat offices, AIIMS Bhopal, BHEL Bhopal canteens, and HCL college campuses are buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.2599, "lng": 77.4126 } }
+    },
+    "Gwalior": {
+      "city": "Gwalior",
+      "state": "Madhya Pradesh",
+      "nearbyAreas": ["Morena", "Bhind", "Shivpuri"],
+      "industries": ["Manufacturing", "Education", "Tourism", "Military"],
+      "transitDays": "3-4 days",
+      "cityContext": "Gwalior's manufacturing base and military presence create consistent bulk CTC demand from institutions and canteens.",
+      "usageFocus": "Defence canteens, factories, heritage hotels, and educational institutions are the primary bulk buyers in Gwalior.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Gwalior?",
+          "answer": "Minimum order is 50 kg. Defence establishments in Gwalior have large regulated canteen bulk tea requirements."
+        },
+        {
+          "question": "How is bulk CTC delivered in Gwalior?",
+          "answer": "Delivery takes 3–4 days, covering Morena, Bhind, and the Chambal region."
+        },
+        {
+          "question": "Which industries in Gwalior need bulk CTC tea?",
+          "answer": "CSD canteens, BHEL factory, Scindia School, and heritage hotel chains around the fort are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.2183, "lng": 78.1828 } }
+    }
+  },
+  "Kerala": {
+    "Kochi": {
+      "city": "Kochi",
+      "state": "Kerala",
+      "nearbyAreas": ["Ernakulam", "Thrissur", "Alappuzha"],
+      "industries": ["Ports & Logistics", "IT", "Tourism", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Kochi's port economy and growing IT hub create unique bulk CTC demand from large campuses and hospitality sector.",
+      "usageFocus": "Port workers, IT companies, backwater hotels, and hospital networks are the primary bulk CTC tea buyers in Kochi.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Kochi?",
+          "answer": "Minimum order is 50 kg. Kochi's port and IT sectors are reliable institutional buyers with monthly requirements."
+        },
+        {
+          "question": "How is bulk CTC delivered in Kochi?",
+          "answer": "Delivery takes 5–6 days, covering Ernakulam, Thrissur, and Alappuzha districts."
+        },
+        {
+          "question": "Which industries in Kochi use bulk CTC tea?",
+          "answer": "Cochin Port Trust, Infopark IT campus, backwater resorts, and Amrita Hospital are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 9.9312, "lng": 76.2673 } }
+    },
+    "Thiruvananthapuram": {
+      "city": "Thiruvananthapuram",
+      "state": "Kerala",
+      "nearbyAreas": ["Kollam", "Nagercoil", "Attingal"],
+      "industries": ["Government", "IT", "Tourism", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "The state capital's government sector and growing IT presence drive steady bulk CTC procurement year-round.",
+      "usageFocus": "Government secretariats, IT corridors, hotel chains, and medical institutions are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Thiruvananthapuram?",
+          "answer": "Minimum order is 50 kg. Government offices here often procure through centralized bulk tender processes."
+        },
+        {
+          "question": "How is bulk CTC delivered in Thiruvananthapuram?",
+          "answer": "Delivery takes 5–6 days, covering Kollam, Nagercoil, and Southern Kerala."
+        },
+        {
+          "question": "Which sectors in Thiruvananthapuram consume bulk CTC tea?",
+          "answer": "Kerala secretariat, Technopark IT campus, KIMS Hospital, and tourism resorts are the main buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 8.5241, "lng": 76.9366 } }
+    },
+    "Kozhikode": {
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "nearbyAreas": ["Malappuram", "Kannur", "Palakkad"],
+      "industries": ["Timber", "Retail Trade", "Healthcare", "Education"],
+      "transitDays": "5-6 days",
+      "cityContext": "Kozhikode's trade history and business culture support strong bulk CTC demand from commercial and institutional buyers.",
+      "usageFocus": "Timber yards, wholesale markets, hospitals, and educational institutions drive bulk CTC procurement in Kozhikode.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Kozhikode?",
+          "answer": "Minimum order is 50 kg. Kozhikode's wholesale market and hospital networks are regular institutional buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Kozhikode?",
+          "answer": "Delivery takes 5–6 days, extending to Malappuram, Kannur, and Palakkad districts."
+        },
+        {
+          "question": "Which industries in Kozhikode use bulk CTC tea?",
+          "answer": "Timber trading yards, MIMS Hospital, Farook and Calicut University campuses, and wholesale traders buy in bulk."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 11.2588, "lng": 75.7804 } }
+    }
+  },
+  "Delhi (NCT)": {
+    "New Delhi": {
+      "city": "New Delhi",
+      "state": "Delhi (NCT)",
+      "nearbyAreas": ["Gurgaon", "Noida", "Faridabad"],
+      "industries": ["Government", "Corporate", "Hospitality", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Delhi's massive government sector and commercial economy drive some of India's highest bulk CTC volumes per sq km.",
+      "usageFocus": "Central government offices, corporate HQs, five-star hotels, and hospital networks are primary bulk CTC buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in New Delhi?",
+          "answer": "Minimum order is 50 kg. Central government ministries often procure through bulk tenders of 500 kg+."
+        },
+        {
+          "question": "How is bulk CTC delivered in New Delhi?",
+          "answer": "Delivery takes 2–3 days, with easy coverage to Gurgaon, Noida, and Faridabad."
+        },
+        {
+          "question": "Which sectors in Delhi are the biggest bulk CTC buyers?",
+          "answer": "CPWD-managed government offices, Taj and ITC hotel chains, AIIMS Delhi, and ITO commercial complex."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.6139, "lng": 77.209 } }
+    },
+    "Gurgaon": {
+      "city": "Gurgaon",
+      "state": "Delhi (NCT)",
+      "nearbyAreas": ["New Delhi", "Faridabad", "Manesar"],
+      "industries": ["IT & Corporate", "Real Estate", "Hospitality", "Retail Chains"],
+      "transitDays": "2-3 days",
+      "cityContext": "Gurgaon's corporate density creates extremely high bulk CTC demand from MNC offices and business parks.",
+      "usageFocus": "MNC campuses, business parks, premium hotels, and retail chain suppliers are the main bulk CTC buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Gurgaon?",
+          "answer": "Minimum order is 50 kg. Gurgaon's MNC campuses often consolidate large monthly corporate bulk orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Gurgaon?",
+          "answer": "Delivery takes 2–3 days with coverage to Manesar, Sohna Road, and Cyber City."
+        },
+        {
+          "question": "Which companies in Gurgaon buy bulk CTC tea?",
+          "answer": "IT parks in Cyber Hub, Marriott and Hyatt hotel chains, DLF corporate parks, and catering contractors."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.4595, "lng": 77.0266 } }
+    },
+    "Noida": {
+      "city": "Noida",
+      "state": "Delhi (NCT)",
+      "nearbyAreas": ["Greater Noida", "Ghaziabad", "Delhi"],
+      "industries": ["IT", "Media", "Manufacturing", "Corporate Offices"],
+      "transitDays": "2-3 days",
+      "cityContext": "Noida's media and IT boom creates strong bulk CTC demand from large corporate and production studio campuses.",
+      "usageFocus": "IT companies, media houses, manufacturing units, and educational institutions are primary bulk CTC buyers in Noida.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Noida?",
+          "answer": "Minimum order is 50 kg. Noida's Sector 63 IT belt and media companies are consistent large buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Noida?",
+          "answer": "Delivery takes 2–3 days, covering Greater Noida, Film City, and Ghaziabad."
+        },
+        {
+          "question": "Which media and IT companies in Noida buy bulk CTC tea?",
+          "answer": "TV studios in Sector 16A, IT parks in Sectors 62–63, Jaypee Hospital, and manufacturing units buy regularly."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.5355, "lng": 77.391 } }
+    }
+  },
+  "Haryana": {
+    "Gurgaon": {
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "nearbyAreas": ["Faridabad", "Manesar", "Rewari"],
+      "industries": ["IT & Corporate", "Real Estate", "Manufacturing", "Retail"],
+      "transitDays": "2-3 days",
+      "cityContext": "Haryana's Gurgaon district is India's primary corporate hub with massive bulk CTC demand from Fortune 500 offices.",
+      "usageFocus": "Fortune 500 campuses, luxury hotels, co-working spaces, and retail distributors drive large bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Gurgaon (Haryana)?",
+          "answer": "Minimum order is 50 kg. Corporate campuses on NH-48 often consolidate 300–600 kg monthly bulk orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Gurgaon?",
+          "answer": "Delivery takes 2–3 days, covering Manesar IMT, Rewari, and Faridabad."
+        },
+        {
+          "question": "What makes Gurgaon's bulk CTC market unique?",
+          "answer": "The density of multinational corporations means very high per-office tea consumption requiring regular bulk supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.4595, "lng": 77.0266 } }
+    },
+    "Faridabad": {
+      "city": "Faridabad",
+      "state": "Haryana",
+      "nearbyAreas": ["Ballabhgarh", "Palwal", "NIT"],
+      "industries": ["Manufacturing", "Automotive", "Healthcare", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Faridabad's industrial economy supports bulk CTC demand from large factory canteens and institutions.",
+      "usageFocus": "Auto ancillary units, chemical plants, hospital canteens, and college mess halls drive bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Faridabad?",
+          "answer": "Minimum order is 50 kg. Faridabad's auto ancillary belt requires regular bulk supply for shift workers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Faridabad?",
+          "answer": "Delivery takes 2–3 days, covering Ballabhgarh, NIT, and Palwal industrial areas."
+        },
+        {
+          "question": "Which industries in Faridabad buy bulk CTC tea?",
+          "answer": "Auto component makers, JCB India plant, Escorts factory, and Faridabad Medical College are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.4089, "lng": 77.3178 } }
+    },
+    "Panipat": {
+      "city": "Panipat",
+      "state": "Haryana",
+      "nearbyAreas": ["Karnal", "Sonipat", "Jind"],
+      "industries": ["Textiles", "Steel", "Oil Refinery", "Agriculture"],
+      "transitDays": "2-3 days",
+      "cityContext": "Panipat's refinery and textile industries create consistent bulk CTC demand from large industrial canteens.",
+      "usageFocus": "IOCL refinery workers, textile mills, and the recycling industry are primary bulk tea buyers in Panipat.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Panipat?",
+          "answer": "Minimum order is 50 kg. Panipat's IOCL refinery and textile units are high-volume institutional buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Panipat?",
+          "answer": "Delivery takes 2–3 days, covering Karnal, Sonipat, and Jind districts."
+        },
+        {
+          "question": "Why is Panipat a significant bulk CTC market?",
+          "answer": "The city's massive textile recycling sector employs tens of thousands of workers, creating large daily tea demand."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 29.3909, "lng": 76.9635 } }
+    }
+  },
+  "Bihar": {
+    "Patna": {
+      "city": "Patna",
+      "state": "Bihar",
+      "nearbyAreas": ["Hajipur", "Danapur", "Vaishali"],
+      "industries": ["Government", "Healthcare", "Education", "Retail Distribution"],
+      "transitDays": "2-3 days",
+      "cityContext": "Patna's growing commercial economy and government institutions create high bulk CTC tea demand across the city.",
+      "usageFocus": "State government offices, medical colleges, coaching institutes, and FMCG distributors are primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Patna?",
+          "answer": "Minimum order is 50 kg. Patna's retail distribution network serves Bihar's large tea-consuming population."
+        },
+        {
+          "question": "How is bulk CTC delivered in Patna?",
+          "answer": "Delivery takes 2–3 days, with coverage to Hajipur and Vaishali across the Ganga plains."
+        },
+        {
+          "question": "Which sectors in Patna drive bulk CTC demand?",
+          "answer": "Bihar secretariat, PMCH hospital, coaching institute hostels, and FMCG wholesale traders are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 25.5941, "lng": 85.1376 } }
+    },
+    "Gaya": {
+      "city": "Gaya",
+      "state": "Bihar",
+      "nearbyAreas": ["Bodh Gaya", "Aurangabad", "Jehanabad"],
+      "industries": ["Tourism & Pilgrimage", "Hospitality", "Agriculture", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Gaya's Buddhist pilgrimage economy drives significant hotel and institutional bulk CTC tea demand year-round.",
+      "usageFocus": "Pilgrim hotels, tourist resorts, temple trusts, and institutional canteens are the primary bulk buyers in Gaya.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Gaya?",
+          "answer": "Minimum order is 50 kg. Bodh Gaya's Buddhist tourism creates strong seasonal hospitality demand for bulk CTC."
+        },
+        {
+          "question": "How is bulk CTC delivered in Gaya?",
+          "answer": "Delivery takes 2–3 days, covering Bodh Gaya, Aurangabad, and Jehanabad."
+        },
+        {
+          "question": "What is unique about Gaya's bulk tea market?",
+          "answer": "International pilgrim visitors to Bodh Gaya create high-volume hospitality demand requiring reliable bulk supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 24.7955, "lng": 85.0002 } }
+    },
+    "Muzaffarpur": {
+      "city": "Muzaffarpur",
+      "state": "Bihar",
+      "nearbyAreas": ["Sitamarhi", "Hajipur", "Sheohar"],
+      "industries": ["Agriculture", "Retail Distribution", "Education", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Muzaffarpur's role as a major agri-distribution hub creates solid bulk CTC demand from trade and institutional networks.",
+      "usageFocus": "Wholesale traders, mandi networks, educational institutions, and district hospitals drive bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Muzaffarpur?",
+          "answer": "Minimum order is 50 kg. Muzaffarpur serves as a distribution hub for bulk CTC across North Bihar."
+        },
+        {
+          "question": "How is bulk CTC delivered in Muzaffarpur?",
+          "answer": "Delivery takes 2–3 days from dispatch, with coverage to Sitamarhi and Sheohar districts."
+        },
+        {
+          "question": "Which sectors in Muzaffarpur need bulk CTC tea?",
+          "answer": "Wholesale fruit traders, SKMCH hospital, Brahmapur University, and government offices are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.1209, "lng": 85.3647 } }
+    }
+  },
+  "Punjab": {
+    "Ludhiana": {
+      "city": "Ludhiana",
+      "state": "Punjab",
+      "nearbyAreas": ["Jalandhar", "Moga", "Ferozepur"],
+      "industries": ["Textile & Hosiery", "Bicycle Manufacturing", "Healthcare", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Ludhiana's manufacturing belt and industrial workforce create strong bulk CTC demand from factory canteens.",
+      "usageFocus": "Hosiery units, bicycle plants, hospital networks, and educational institutions are primary buyers in Ludhiana.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Ludhiana?",
+          "answer": "Minimum order is 50 kg. Ludhiana's large textile factories often order 200–500 kg monthly for canteen supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Ludhiana?",
+          "answer": "Delivery takes 3–4 days, covering Jalandhar, Moga, and the Ferozepur corridor."
+        },
+        {
+          "question": "Which industries in Ludhiana buy bulk CTC tea?",
+          "answer": "Hero Cycles, hosiery factories, CMC hospital, and PAU Ludhiana campus are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 30.901, "lng": 75.8573 } }
+    },
+    "Amritsar": {
+      "city": "Amritsar",
+      "state": "Punjab",
+      "nearbyAreas": ["Tarn Taran", "Gurdaspur", "Pathankot"],
+      "industries": ["Tourism & Pilgrimage", "Food Processing", "Hospitality", "Retail"],
+      "transitDays": "3-4 days",
+      "cityContext": "Amritsar's Golden Temple tourism creates massive institutional demand for bulk CTC tea year-round.",
+      "usageFocus": "Langar halls, pilgrim hotels, Wagah border area vendors, and food processors are the key bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Amritsar?",
+          "answer": "Minimum order is 50 kg. The Golden Temple langar alone serves 100,000+ visitors daily with chai."
+        },
+        {
+          "question": "How is bulk CTC delivered in Amritsar?",
+          "answer": "Delivery takes 3–4 days, covering Tarn Taran, Gurdaspur, and Pathankot."
+        },
+        {
+          "question": "What makes Amritsar's bulk CTC market distinctive?",
+          "answer": "The Golden Temple's free community kitchen (langar) is one of India's single largest daily bulk CTC consumers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 31.634, "lng": 74.8723 } }
+    },
+    "Jalandhar": {
+      "city": "Jalandhar",
+      "state": "Punjab",
+      "nearbyAreas": ["Ludhiana", "Kapurthala", "Hoshiarpur"],
+      "industries": ["Sports Goods", "Leather", "Manufacturing", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Jalandhar's sports goods and leather industries support bulk CTC demand from industrial canteens and institutions.",
+      "usageFocus": "Sports goods factories, leather units, polytechnic colleges, and NRI-sector hotels drive bulk CTC orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Jalandhar?",
+          "answer": "Minimum order is 50 kg. Sports goods factories in Jalandhar employ large workforces needing daily canteen supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Jalandhar?",
+          "answer": "Delivery takes 3–4 days, covering Kapurthala, Hoshiarpur, and the Doaba region."
+        },
+        {
+          "question": "Which sectors in Jalandhar are bulk CTC tea buyers?",
+          "answer": "Sports goods export factories, leather units, Lyallpur Khalsa College, and Joshi's Hospital are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 31.326, "lng": 75.5762 } }
+    }
+  },
+  "Odisha": {
+    "Bhubaneswar": {
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "nearbyAreas": ["Cuttack", "Puri", "Khordha"],
+      "industries": ["Government", "IT", "Healthcare", "Tourism"],
+      "transitDays": "2-3 days",
+      "cityContext": "Bhubaneswar's government and growing IT sector create increasing bulk CTC demand from institutions and offices.",
+      "usageFocus": "State government offices, IT parks, temple town hotels near Puri, and medical colleges drive procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Bhubaneswar?",
+          "answer": "Minimum order is 50 kg. Bhubaneswar's government complex and KIIT/KISS campuses are large buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Bhubaneswar?",
+          "answer": "Delivery takes 2–3 days, covering Cuttack, Puri, and Khordha."
+        },
+        {
+          "question": "Which sectors in Bhubaneswar consume bulk CTC tea?",
+          "answer": "Odisha Secretariat, Infocity IT park, AIIMS Bhubaneswar, and KIIT University campus are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 20.2961, "lng": 85.8245 } }
+    },
+    "Cuttack": {
+      "city": "Cuttack",
+      "state": "Odisha",
+      "nearbyAreas": ["Bhubaneswar", "Jajpur", "Kendrapara"],
+      "industries": ["Trade & Commerce", "Judiciary", "Healthcare", "Manufacturing"],
+      "transitDays": "2-3 days",
+      "cityContext": "Cuttack's commercial role and judicial hub status create consistent bulk CTC demand from institutions.",
+      "usageFocus": "Court complexes, wholesale markets, hospitals, and manufacturing units are the primary bulk buyers in Cuttack.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Cuttack?",
+          "answer": "Minimum order is 50 kg. Cuttack's Orissa High Court complex and Silver City wholesale market are regular buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Cuttack?",
+          "answer": "Delivery takes 2–3 days, covering Jajpur, Kendrapara, and surrounding districts."
+        },
+        {
+          "question": "Which sectors in Cuttack buy bulk CTC tea?",
+          "answer": "Orissa High Court, SCB Medical College, wholesale market traders, and Mahanadi Coalfields offices."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 20.4625, "lng": 85.883 } }
+    },
+    "Rourkela": {
+      "city": "Rourkela",
+      "state": "Odisha",
+      "nearbyAreas": ["Sundargarh", "Jharsuguda", "Sambalpur"],
+      "industries": ["Steel", "Mining", "Manufacturing", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Rourkela's steel city economy creates high bulk CTC demand from large plant canteens and workers.",
+      "usageFocus": "RSP plant canteens, mining companies, engineering colleges, and PSU workers drive bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Rourkela?",
+          "answer": "Minimum order is 50 kg. SAIL's Rourkela Steel Plant employs 20,000+ workers with large canteen requirements."
+        },
+        {
+          "question": "How is bulk CTC delivered in Rourkela?",
+          "answer": "Delivery takes 2–3 days, covering Sundargarh, Jharsuguda, and the western Odisha mining belt."
+        },
+        {
+          "question": "Why is Rourkela a major bulk CTC market?",
+          "answer": "SAIL RSP, NALCO, and Bhushan Steel create a steel township with massive daily institutional tea consumption."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.2604, "lng": 84.8536 } }
+    }
+  },
+  "Assam": {
+    "Guwahati": {
+      "city": "Guwahati",
+      "state": "Assam",
+      "nearbyAreas": ["Kamrup", "Nalbari", "Barpeta"],
+      "industries": ["Trade & Commerce", "Tea Industry", "Government", "Healthcare"],
+      "transitDays": "1-2 days",
+      "cityContext": "Guwahati as the gateway to Northeast India is a primary distribution point for fresh Assam CTC tea.",
+      "usageFocus": "Tea wholesalers, government offices, hospitals, and NE distribution networks are key bulk buyers in Guwahati.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Guwahati?",
+          "answer": "Minimum order is 25 kg. Being source-adjacent, Guwahati gets the freshest CTC at lowest transit time."
+        },
+        {
+          "question": "How quickly is bulk CTC available in Guwahati?",
+          "answer": "Guwahati receives same-day or next-day supply from nearby Assam garden dispatch points."
+        },
+        {
+          "question": "Why buy bulk CTC tea through Guwahati?",
+          "answer": "Guwahati offers the freshest garden-direct Assam CTC supply with minimal transit, ideal for quality buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam (Local)",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 26.1445, "lng": 91.7362 } }
+    },
+    "Dibrugarh": {
+      "city": "Dibrugarh",
+      "state": "Assam",
+      "nearbyAreas": ["Tinsukia", "Jorhat", "Sivasagar"],
+      "industries": ["Tea Industry", "Oil & Gas", "Healthcare", "Education"],
+      "transitDays": "1-2 days",
+      "cityContext": "Dibrugarh, the tea capital of the world, is the primary source point for premium Assam CTC tea supply.",
+      "usageFocus": "Tea garden offices, ONGC units, hospital networks, and educational institutions are primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Dibrugarh?",
+          "answer": "Minimum order is 25 kg. Direct garden access in Dibrugarh means highly competitive pricing on bulk CTC."
+        },
+        {
+          "question": "What makes Dibrugarh's CTC tea different?",
+          "answer": "Dibrugarh-origin CTC is known for strong malty liquor and golden cup color — ideal for institutional chai."
+        },
+        {
+          "question": "Who buys bulk CTC tea in Dibrugarh?",
+          "answer": "ONGC Duliajan offices, Oil India Limited, Assam Medical College, and tea estate administration offices."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam (Local — Upper Assam Gardens)",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 27.4728, "lng": 94.912 } }
+    },
+    "Silchar": {
+      "city": "Silchar",
+      "state": "Assam",
+      "nearbyAreas": ["Cachar", "Hailakandi", "Karimganj"],
+      "industries": ["Agriculture", "Tea", "Government", "Education"],
+      "transitDays": "1-2 days",
+      "cityContext": "Silchar's position in Barak Valley drives local bulk CTC demand from institutions and regional trade networks.",
+      "usageFocus": "Local distributors, government offices, colleges, and hospitals in South Assam drive bulk CTC procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Silchar?",
+          "answer": "Minimum order is 25 kg. Silchar's proximity to Barak Valley tea estates means fast and affordable supply."
+        },
+        {
+          "question": "How is bulk CTC distributed from Silchar?",
+          "answer": "Silchar serves as a secondary distribution hub for Barak Valley tea across Cachar and Hailakandi."
+        },
+        {
+          "question": "Which institutions in Silchar buy bulk CTC tea?",
+          "answer": "Silchar Medical College, Cachar College, district government offices, and wholesale traders are buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Barak Valley, Assam",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 24.8333, "lng": 92.7789 } }
+    }
+  },
+  "Jharkhand": {
+    "Ranchi": {
+      "city": "Ranchi",
+      "state": "Jharkhand",
+      "nearbyAreas": ["Ramgarh", "Hazaribagh", "Bokaro"],
+      "industries": ["Government", "Mining", "Healthcare", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Ranchi's state capital status and mining economy create steady bulk CTC demand from institutions.",
+      "usageFocus": "State government offices, mining companies, RIMS hospital, and universities drive institutional CTC orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Ranchi?",
+          "answer": "Minimum order is 50 kg. Government offices and mining PSUs in Ranchi are regular institutional buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Ranchi?",
+          "answer": "Delivery takes 2–3 days, covering Ramgarh, Hazaribagh, and Bokaro."
+        },
+        {
+          "question": "Which industries in Ranchi buy bulk CTC tea?",
+          "answer": "RINPAS hospital, HEC factory, CCL mining offices, and Ranchi University campus are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.3441, "lng": 85.3096 } }
+    },
+    "Jamshedpur": {
+      "city": "Jamshedpur",
+      "state": "Jharkhand",
+      "nearbyAreas": ["Dhanbad", "Seraikela", "Singhbhum"],
+      "industries": ["Steel & Metal", "Manufacturing", "Automotive", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Jamshedpur's TATA Steel economy creates massive bulk CTC demand from plant workers and township canteens.",
+      "usageFocus": "TATA Steel canteens, auto component factories, NIT Jamshedpur, and township residents drive bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Jamshedpur?",
+          "answer": "Minimum order is 50 kg. Tata Steel employs 35,000+ workers with large canteen requirements needing bulk supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Jamshedpur?",
+          "answer": "Delivery takes 2–3 days, covering Dhanbad, Seraikela, and East Singhbhum."
+        },
+        {
+          "question": "What makes Jamshedpur a unique bulk CTC market?",
+          "answer": "Tata township's planned industrial city has large institutional canteens serving thousands of workers daily."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.8046, "lng": 86.2029 } }
+    },
+    "Dhanbad": {
+      "city": "Dhanbad",
+      "state": "Jharkhand",
+      "nearbyAreas": ["Bokaro", "Jamshedpur", "Giridih"],
+      "industries": ["Coal Mining", "Steel", "Education", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Dhanbad's coal mining economy supports massive bulk CTC demand from mine workers and institutions.",
+      "usageFocus": "BCCL canteens, coal mine offices, IIT(ISM) Dhanbad, and district hospitals are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Dhanbad?",
+          "answer": "Minimum order is 50 kg. Coal India subsidiary BCCL's mine canteens require very large regular bulk orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Dhanbad?",
+          "answer": "Delivery takes 2–3 days, covering Bokaro, Sindri, and the coalfield belt."
+        },
+        {
+          "question": "Why do coal mines create high bulk CTC demand?",
+          "answer": "Mining operations run 24/7 with three shifts, requiring continuous large-scale canteen tea supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.7957, "lng": 86.4304 } }
+    }
+  },
+  "Chhattisgarh": {
+    "Raipur": {
+      "city": "Raipur",
+      "state": "Chhattisgarh",
+      "nearbyAreas": ["Durg", "Bhilai", "Birgaon"],
+      "industries": ["Steel", "Manufacturing", "Healthcare", "Government"],
+      "transitDays": "3-4 days",
+      "cityContext": "Raipur's growing steel and commercial hub status drives bulk CTC demand from industries and institutions.",
+      "usageFocus": "Steel plants, AIIMS Raipur, government offices, and manufacturing units are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Raipur?",
+          "answer": "Minimum order is 50 kg. Raipur's industrial expansion and new AIIMS campus are driving new bulk CTC demand."
+        },
+        {
+          "question": "How is bulk CTC delivered in Raipur?",
+          "answer": "Delivery takes 3–4 days, covering Durg, Bhilai, and surrounding Chhattisgarh districts."
+        },
+        {
+          "question": "Which industries in Raipur buy bulk CTC tea?",
+          "answer": "Raipur steel cluster, AIIMS Raipur, NIT Raipur, Chhattisgarh secretariat, and power plant canteens."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 21.2514, "lng": 81.6296 } }
+    },
+    "Bhilai": {
+      "city": "Bhilai",
+      "state": "Chhattisgarh",
+      "nearbyAreas": ["Raipur", "Durg", "Rajnandgaon"],
+      "industries": ["Steel", "Manufacturing", "Education", "Healthcare"],
+      "transitDays": "3-4 days",
+      "cityContext": "Bhilai Steel Plant's massive workforce creates one of Chhattisgarh's highest bulk CTC demand zones.",
+      "usageFocus": "BSP township canteens, ancillary units, NIT Raipur, and hospital networks are primary institutional buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Bhilai?",
+          "answer": "Minimum order is 50 kg. Bhilai Steel Plant's 50,000+ employee township creates large systematic bulk orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Bhilai?",
+          "answer": "Delivery takes 3–4 days, covering Durg, Rajnandgaon, and the Bhilai industrial zone."
+        },
+        {
+          "question": "What makes Bhilai's bulk CTC market significant?",
+          "answer": "BSP is one of India's largest steel plants; its township canteens require continuous, high-volume tea supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 21.1938, "lng": 81.3509 } }
+    },
+    "Bilaspur": {
+      "city": "Bilaspur",
+      "state": "Chhattisgarh",
+      "nearbyAreas": ["Korba", "Raigarh", "Mungeli"],
+      "industries": ["Railways", "Coal", "Healthcare", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Bilaspur's railway junction and coal economy create consistent bulk CTC demand from institutions.",
+      "usageFocus": "Railway divisions, coal company offices, district hospitals, and colleges are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Bilaspur?",
+          "answer": "Minimum order is 50 kg. South East Central Railway's Bilaspur division has large canteen procurement needs."
+        },
+        {
+          "question": "How is bulk CTC delivered in Bilaspur?",
+          "answer": "Delivery takes 3–4 days, covering Korba power city, Raigarh, and Mungeli."
+        },
+        {
+          "question": "Which sectors in Bilaspur buy bulk CTC tea?",
+          "answer": "Railways, SECL coal offices, CIMS hospital, and Bilaspur University are among the primary buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 22.0797, "lng": 82.1409 } }
+    }
+  },
+  "Uttarakhand": {
+    "Dehradun": {
+      "city": "Dehradun",
+      "state": "Uttarakhand",
+      "nearbyAreas": ["Haridwar", "Rishikesh", "Mussoorie"],
+      "industries": ["IT", "Education", "Government", "Tourism"],
+      "transitDays": "3-4 days",
+      "cityContext": "Dehradun's elite academic institutions and growing IT sector drive quality bulk CTC procurement.",
+      "usageFocus": "IIT/IMA campuses, government offices, hill resort hotels, and IT companies are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Dehradun?",
+          "answer": "Minimum order is 50 kg. Defence Academy (IMA) and ONGC headquarters in Dehradun are large buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Dehradun?",
+          "answer": "Delivery takes 3–4 days, covering Haridwar, Rishikesh, and Mussoorie hill areas."
+        },
+        {
+          "question": "Which institutions in Dehradun are major bulk CTC buyers?",
+          "answer": "IMA Dehradun, ONGC HQ, Doon School, Wadia Institute, and Forest Research Institute campus."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 30.3165, "lng": 78.0322 } }
+    },
+    "Haridwar": {
+      "city": "Haridwar",
+      "state": "Uttarakhand",
+      "nearbyAreas": ["Rishikesh", "Roorkee", "Dehradun"],
+      "industries": ["Pilgrimage & Tourism", "FMCG", "Manufacturing", "Ayurveda"],
+      "transitDays": "3-4 days",
+      "cityContext": "Haridwar's pilgrimage economy creates massive bulk CTC demand from ashrams and the hospitality sector.",
+      "usageFocus": "Ashrams, pilgrim hotels, FMCG manufacturing units, and Ayurveda companies drive bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Haridwar?",
+          "answer": "Minimum order is 50 kg. Major ashrams in Haridwar serve thousands of pilgrims daily requiring bulk CTC supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Haridwar?",
+          "answer": "Delivery takes 3–4 days, covering Rishikesh, Roorkee, and surrounding Garhwal areas."
+        },
+        {
+          "question": "What makes Haridwar a significant bulk tea market?",
+          "answer": "Patanjali's FMCG manufacturing, pilgrim ashrams, and Kumbh Mela events create unique high-volume demand."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 29.9457, "lng": 78.1642 } }
+    },
+    "Rudrapur": {
+      "city": "Rudrapur",
+      "state": "Uttarakhand",
+      "nearbyAreas": ["Kashipur", "Haldwani", "Pantnagar"],
+      "industries": ["Manufacturing", "Automotive", "Agri-processing", "Education"],
+      "transitDays": "3-4 days",
+      "cityContext": "Rudrapur's industrial estate and auto sector create strong bulk CTC demand from factory canteens.",
+      "usageFocus": "Auto plants, agri-processing units, Pantnagar University, and industrial workers drive bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Rudrapur?",
+          "answer": "Minimum order is 50 kg. SIDCUL industrial zone in Rudrapur houses 500+ factories needing canteen supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Rudrapur?",
+          "answer": "Delivery takes 3–4 days, covering Kashipur, Haldwani, and Pantnagar agri-university zone."
+        },
+        {
+          "question": "Which industries in Rudrapur buy bulk CTC tea?",
+          "answer": "Tata Motors plant, Mahindra factory, Pantnagar GBPUAT campus, and SIDCUL unit canteens are major buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 28.9744, "lng": 79.4019 } }
+    }
+  },
+  "Himachal Pradesh": {
+    "Shimla": {
+      "city": "Shimla",
+      "state": "Himachal Pradesh",
+      "nearbyAreas": ["Solan", "Baddi", "Mandi"],
+      "industries": ["Tourism & Hospitality", "Government", "Apple Industry", "Education"],
+      "transitDays": "4-5 days",
+      "cityContext": "Shimla's hill tourism and state government sector create steady bulk CTC demand from hotels and offices.",
+      "usageFocus": "Mountain hotels, state government secretariats, hill schools, and tourist lodges are the primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Shimla?",
+          "answer": "Minimum order is 50 kg. Shimla's hotel sector sees high seasonal demand during summer tourist season."
+        },
+        {
+          "question": "How is bulk CTC delivered in Shimla?",
+          "answer": "Delivery takes 4–5 days. Mountain terrain logistics are factored in; orders are dispatched to ensure timely arrival."
+        },
+        {
+          "question": "Which sectors in Shimla consume bulk CTC tea?",
+          "answer": "Himachal Pradesh Secretariat, Oberoi Cecil and other hotels, The Mall area restaurants, and Shimla schools."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 31.1048, "lng": 77.1734 } }
+    },
+    "Baddi": {
+      "city": "Baddi",
+      "state": "Himachal Pradesh",
+      "nearbyAreas": ["Solan", "Nalagarh", "Parwanoo"],
+      "industries": ["Pharmaceuticals", "Manufacturing", "FMCG", "Chemical"],
+      "transitDays": "3-4 days",
+      "cityContext": "Baddi's pharmaceutical hub status drives significant bulk CTC demand from large manufacturing campuses.",
+      "usageFocus": "Pharma plant canteens, chemical companies, manufacturing units, and local distributors drive bulk orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Baddi?",
+          "answer": "Minimum order is 50 kg. Baddi houses 400+ pharma units — factory canteens create very large daily bulk demand."
+        },
+        {
+          "question": "How is bulk CTC delivered in Baddi?",
+          "answer": "Delivery takes 3–4 days, covering Solan, Nalagarh, and Parwanoo SEZ areas."
+        },
+        {
+          "question": "Why is Baddi a top bulk CTC market in North India?",
+          "answer": "Baddi is Asia's largest pharmaceutical hub — its factory workers require massive daily canteen tea supply."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 30.956, "lng": 76.7905 } }
+    },
+    "Solan": {
+      "city": "Solan",
+      "state": "Himachal Pradesh",
+      "nearbyAreas": ["Baddi", "Parwanoo", "Shimla"],
+      "industries": ["Mushroom Farming", "Pharmaceuticals", "Breweries", "Education"],
+      "transitDays": "4-5 days",
+      "cityContext": "Solan's pharma corridor and educational institutions create consistent bulk CTC demand in the region.",
+      "usageFocus": "Pharma companies, university campuses, brewery canteens, and government offices are primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Solan?",
+          "answer": "Minimum order is 50 kg. Shimla Hills institutions and pharma units in Solan are regular buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Solan?",
+          "answer": "Delivery takes 4–5 days, covering Baddi industrial area, Parwanoo, and Shimla."
+        },
+        {
+          "question": "Which sectors in Solan consume bulk CTC tea?",
+          "answer": "Shoolini University campus, Mohan Meakin brewery, pharma companies, and district hospitals are buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 30.9045, "lng": 77.0967 } }
+    }
+  },
+  "Goa": {
+    "Panaji": {
+      "city": "Panaji",
+      "state": "Goa",
+      "nearbyAreas": ["Mapusa", "Ponda", "Old Goa"],
+      "industries": ["Tourism & Hospitality", "Government", "Retail", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Panaji's hospitality economy creates seasonal peaks in bulk CTC demand from beach hotels and state institutions.",
+      "usageFocus": "Government offices, boutique hotels, hospital canteens, and casino facilities drive bulk procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Panaji?",
+          "answer": "Minimum order is 50 kg. Goa's hotel sector sees peak demand from October through April tourist season."
+        },
+        {
+          "question": "How is bulk CTC delivered in Panaji?",
+          "answer": "Delivery takes 5–6 days, covering Mapusa, Ponda, and Old Goa heritage areas."
+        },
+        {
+          "question": "Which buyers in Panaji need bulk CTC tea?",
+          "answer": "Goa Secretariat offices, Goa Medical College, Taj Vivanta, and Casino Pride complex are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 15.4909, "lng": 73.8278 } }
+    },
+    "Margao": {
+      "city": "Margao",
+      "state": "Goa",
+      "nearbyAreas": ["Vasco da Gama", "Ponda", "Quepem"],
+      "industries": ["Tourism", "Agriculture", "Trade", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Margao's position as South Goa's commercial hub creates consistent bulk CTC demand from trade networks.",
+      "usageFocus": "Tourist hotels, wholesale markets, hospital canteens, and local institutions are the primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Margao?",
+          "answer": "Minimum order is 50 kg. Margao's Kadamba market wholesale traders and South Goa hotels are regular buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Margao?",
+          "answer": "Delivery takes 5–6 days, covering Vasco da Gama, Ponda, and South Goa coastal resorts."
+        },
+        {
+          "question": "Which sectors in Margao use bulk CTC tea?",
+          "answer": "South Goa hotels, Hospicio Hospital, wholesale traders, and government schools are primary buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 15.2832, "lng": 73.9862 } }
+    },
+    "Vasco da Gama": {
+      "city": "Vasco da Gama",
+      "state": "Goa",
+      "nearbyAreas": ["Margao", "Mormugao", "Cortalim"],
+      "industries": ["Ports & Shipping", "Tourism", "Mining", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Vasco da Gama's port economy and industrial area create steady bulk CTC demand from workers and institutions.",
+      "usageFocus": "Port workers, mining companies, hospital networks, and worker canteens drive bulk CTC procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Vasco da Gama?",
+          "answer": "Minimum order is 50 kg. Mormugao Port Trust workers and industrial canteens are regular buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Vasco da Gama?",
+          "answer": "Delivery takes 5–6 days, covering Mormugao harbor area, Margao, and South Goa."
+        },
+        {
+          "question": "Which industries in Vasco da Gama buy bulk CTC tea?",
+          "answer": "Mormugao Port Trust, Sesa Iron Ore, Goa Shipyard Limited canteens, and ESI hospital are key buyers."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 15.396, "lng": 73.8116 } }
+    }
+  },
+  "Jammu & Kashmir": {
+    "Srinagar": {
+      "city": "Srinagar",
+      "state": "Jammu & Kashmir",
+      "nearbyAreas": ["Budgam", "Ganderbal", "Pulwama"],
+      "industries": ["Tourism", "Handicrafts", "Horticulture", "Government"],
+      "transitDays": "5-6 days",
+      "cityContext": "Srinagar's tourism economy and institutional sector drive bulk CTC demand alongside the traditional kahwa tea culture.",
+      "usageFocus": "Houseboat hotels, government offices, handicraft exporters, and hospital networks are primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Srinagar?",
+          "answer": "Minimum order is 50 kg. Srinagar's growing tourism sector has expanded institutional bulk CTC demand significantly."
+        },
+        {
+          "question": "How is bulk CTC delivered in Srinagar?",
+          "answer": "Delivery takes 5–6 days via road through Jammu and Jawahar Tunnel, covering Budgam and Ganderbal."
+        },
+        {
+          "question": "How does bulk CTC coexist with kahwa in Srinagar?",
+          "answer": "While kahwa is traditional, institutions like government offices, hospitals, and hotels prefer CTC for daily mass consumption."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 34.0837, "lng": 74.7973 } }
+    },
+    "Jammu": {
+      "city": "Jammu",
+      "state": "Jammu & Kashmir",
+      "nearbyAreas": ["Kathua", "Udhampur", "Samba"],
+      "industries": ["Government", "Military", "Tourism", "Healthcare"],
+      "transitDays": "5-6 days",
+      "cityContext": "Jammu's military presence and government sector create significant bulk CTC demand from institutions.",
+      "usageFocus": "Defence canteens, government offices, pilgrimage hotels, and hospital cafeterias are the primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Jammu?",
+          "answer": "Minimum order is 50 kg. CSD canteens and military bases in Jammu are among the largest institutional buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Jammu?",
+          "answer": "Delivery takes 5–6 days, covering Kathua, Udhampur, and Samba districts."
+        },
+        {
+          "question": "Which sectors in Jammu drive bulk CTC demand?",
+          "answer": "Army canteens, J&K government offices, Vaishno Devi pilgrimage hotels, and GMC Jammu hospital."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 32.7266, "lng": 74.857 } }
+    },
+    "Anantnag": {
+      "city": "Anantnag",
+      "state": "Jammu & Kashmir",
+      "nearbyAreas": ["Kulgam", "Shopian", "Pulwama"],
+      "industries": ["Horticulture", "Tourism", "Agriculture", "Government"],
+      "transitDays": "5-6 days",
+      "cityContext": "Anantnag's apple and saffron economy and institutional sector create local bulk CTC tea demand.",
+      "usageFocus": "Government block offices, CRPF canteens, hospital networks, and seasonal tourist operations are primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Anantnag?",
+          "answer": "Minimum order is 50 kg. Government and paramilitary institutions in Anantnag are regular bulk buyers."
+        },
+        {
+          "question": "How is bulk CTC delivered in Anantnag?",
+          "answer": "Delivery takes 5–6 days, covering Kulgam, Shopian, and Pulwama districts of South Kashmir."
+        },
+        {
+          "question": "Which sectors in Anantnag consume bulk CTC tea?",
+          "answer": "CRPF and BSF camps, district government offices, Anantnag medical facilities, and tourist guesthouses."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam, Dooars",
+        "moq": "50 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 33.7309, "lng": 75.1521 } }
+    }
+  },
+  "Tripura": {
+    "Agartala": {
+      "city": "Agartala",
+      "state": "Tripura",
+      "nearbyAreas": ["Sepahijala", "Gomati", "Khowai"],
+      "industries": ["Government", "Tea Industry", "Retail", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Agartala as Tripura's capital and gateway to NE tea regions creates strong local bulk CTC demand.",
+      "usageFocus": "State government offices, local distributors, hospitals, and retail networks are the primary bulk buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Agartala?",
+          "answer": "Minimum order is 25 kg. Agartala's proximity to Tripura tea estates enables flexible MOQs and fast supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Agartala?",
+          "answer": "Delivery takes 2–3 days, covering Sepahijala, Gomati, and Khowai districts."
+        },
+        {
+          "question": "Why is Agartala strategic for NE bulk CTC supply?",
+          "answer": "Agartala borders Bangladesh and has direct access to Tripura tea estates, making it a key NE distribution hub."
+        }
+      ],
+      "supplyChain": {
+        "source": "Tripura, Assam",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.8315, "lng": 91.2868 } }
+    },
+    "Udaipur": {
+      "city": "Udaipur",
+      "state": "Tripura",
+      "nearbyAreas": ["Gomati", "Sepahijala", "Agartala"],
+      "industries": ["Tea Estates", "Agriculture", "Government", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Udaipur (Tripura) is surrounded by tea estates making it a key local CTC distribution and consumption point.",
+      "usageFocus": "Tea estate offices, government schools, district hospitals, and local wholesale markets drive orders.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Udaipur (Tripura)?",
+          "answer": "Minimum order is 25 kg. Being surrounded by tea gardens, Udaipur gets direct-fresh CTC supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Udaipur, Tripura?",
+          "answer": "Delivery takes 2–3 days, with local Gomati district supply chains supporting rapid replenishment."
+        },
+        {
+          "question": "What makes Udaipur (Tripura) unique for bulk tea buyers?",
+          "answer": "Direct access to Gomati district tea estates means buyers get garden-fresh CTC at competitive rates."
+        }
+      ],
+      "supplyChain": {
+        "source": "Tripura (Local), Assam",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 23.5317, "lng": 91.4861 } }
+    },
+    "Dharmanagar": {
+      "city": "Dharmanagar",
+      "state": "Tripura",
+      "nearbyAreas": ["North Tripura", "Dhalai", "Unakoti"],
+      "industries": ["Tea Industry", "Agriculture", "Government", "Education"],
+      "transitDays": "2-3 days",
+      "cityContext": "Dharmanagar's proximity to North Tripura tea growing areas creates a natural bulk CTC distribution base.",
+      "usageFocus": "Tea planter associations, government institutions, colleges, and local distributors are key buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Dharmanagar?",
+          "answer": "Minimum order is 25 kg. North Tripura's tea belt makes Dharmanagar a cost-efficient sourcing point."
+        },
+        {
+          "question": "How is bulk CTC delivered in Dharmanagar?",
+          "answer": "Delivery takes 2–3 days across North Tripura, Dhalai, and Unakoti districts."
+        },
+        {
+          "question": "Which buyers in Dharmanagar purchase bulk CTC tea?",
+          "answer": "Tea estate cooperatives, Dharmanagar government offices, local colleges, and district hospital network."
+        }
+      ],
+      "supplyChain": {
+        "source": "North Tripura, Assam",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 24.37, "lng": 92.17 } }
+    }
+  },
+  "Meghalaya": {
+    "Shillong": {
+      "city": "Shillong",
+      "state": "Meghalaya",
+      "nearbyAreas": ["Ri-Bhoi", "East Khasi Hills", "Nongthymmai"],
+      "industries": ["Government", "Education", "Tourism", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Shillong's cool climate and institutional economy create consistent bulk CTC demand from offices and hotels.",
+      "usageFocus": "State government offices, universities, hill resort hotels, and medical institutions drive bulk CTC procurement.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Shillong?",
+          "answer": "Minimum order is 25 kg. Shillong's NE proximity and government sector make it a steady bulk CTC market."
+        },
+        {
+          "question": "How is bulk CTC delivered in Shillong?",
+          "answer": "Delivery takes 2–3 days, with Guwahati as the nearby dispatch hub for Shillong and East Khasi Hills."
+        },
+        {
+          "question": "Which sectors in Shillong buy bulk CTC tea?",
+          "answer": "Meghalaya Secretariat, NEHU campus, NEIGRIHMS hospital, and Pine Ridge/Tripura Castle hotels."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam (via Guwahati)",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 25.5788, "lng": 91.8933 } }
+    },
+    "Tura": {
+      "city": "Tura",
+      "state": "Meghalaya",
+      "nearbyAreas": ["West Garo Hills", "East Garo Hills", "South Garo Hills"],
+      "industries": ["Agriculture", "Government", "Education", "Healthcare"],
+      "transitDays": "2-3 days",
+      "cityContext": "Tura's position as Garo Hills headquarters creates institutional bulk CTC demand from offices and colleges.",
+      "usageFocus": "District government offices, colleges, hospital canteens, and local distributors are the primary buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Tura?",
+          "answer": "Minimum order is 25 kg. Tura's institutional buyer base favors smaller but regular bulk CTC orders."
+        },
+        {
+          "question": "How is bulk CTC delivered in Tura?",
+          "answer": "Delivery takes 2–3 days from Assam dispatch, covering West and East Garo Hills."
+        },
+        {
+          "question": "Which institutions in Tura buy bulk CTC tea?",
+          "answer": "Garo Hills DC office, TURA Government College, Civil Hospital Tura, and local wholesale traders."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam (via Guwahati)",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 25.5197, "lng": 90.2167 } }
+    },
+    "Jowai": {
+      "city": "Jowai",
+      "state": "Meghalaya",
+      "nearbyAreas": ["West Jaintia Hills", "East Jaintia Hills", "Ri-Bhoi"],
+      "industries": ["Coal Mining", "Limestone", "Agriculture", "Government"],
+      "transitDays": "2-3 days",
+      "cityContext": "Jowai's mining economy and institutional sector create local bulk CTC demand in Jaintia Hills.",
+      "usageFocus": "Mining company canteens, government offices, colleges, and hospitals are the primary institutional buyers.",
+      "faqs": [
+        {
+          "question": "What is the minimum order for bulk CTC tea in Jowai?",
+          "answer": "Minimum order is 25 kg. Jowai's mining sector creates consistent canteen demand for bulk CTC supply."
+        },
+        {
+          "question": "How is bulk CTC delivered in Jowai?",
+          "answer": "Delivery takes 2–3 days via Guwahati dispatch, covering West and East Jaintia Hills."
+        },
+        {
+          "question": "Which sectors in Jowai consume bulk CTC tea?",
+          "answer": "Coal mining offices, limestone quarry workers, West Jaintia Hills DC office, and Jowai hospital."
+        }
+      ],
+      "supplyChain": {
+        "source": "Assam (via Guwahati)",
+        "moq": "25 kg",
+        "packagingSizes": ["25 kg", "50 kg", "100 kg"]
+      },
+      "localContext": { "coordinates": { "lat": 25.45, "lng": 92.2 } }
+    }
+  }
+}
