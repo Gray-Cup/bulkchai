@@ -43,7 +43,6 @@ BulkChai is operated by Gray Cup Enterprises Pvt. Ltd. We supply bulk CTC tea (m
 - [Blog](${siteUrl}/blog)
 - [About](${siteUrl}/about)
 - [Contact](${siteUrl}/contact-us)
-- [Products](${siteUrl}/products)
 - [Sitemap](${siteUrl}/sitemap.xml)
 
 ## Delivery Locations by State
