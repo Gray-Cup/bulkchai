@@ -6,8 +6,8 @@ import { getAllCities, slugify } from '@/lib/cityData'
 
 // Static metadata for Rajasthan
 export const metadata: Metadata = generatePageMetadata({
-  title: `Bulk Tea Supplier in Rajasthan | Wholesale Chai | BulkCTC`,
-  description: `Leading bulk CTC tea supplier in Rajasthan. We deliver premium wholesale chai to hotels, offices, and retailers across Rajasthan. Check our delivery locations.`,
+  title: `Bulk Chai Supplier in Rajasthan | Wholesale Tea for Hotels & Businesses | BulkChai`,
+  description: `Leading bulk chai and CTC tea supplier in Rajasthan. We deliver wholesale tea to heritage hotels, offices, chai stalls, and retailers across Jaipur, Jodhpur, Udaipur, Bikaner and all of Rajasthan. GST billing, 50kg minimum order.`,
   canonical: '/rajasthan',
 })
 
@@ -51,12 +51,13 @@ export default function RajasthanPage() {
 
       <div className="mb-12">
         <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-gray-100">
-          Bulk Tea Supply in Rajasthan
+          Bulk Chai Supplier in Rajasthan
         </h1>
         <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300">
-          Gray Cup Enterprises is a premier supplier of bulk CTC tea across{' '}
-          <strong>Rajasthan</strong>. We serve {cityCount} major cities in the region, providing
-          consistent quality assurance, GST billing, and reliable logistics for businesses.
+          Gray Cup Enterprises is a trusted <strong>bulk chai supplier in Rajasthan</strong>,
+          delivering wholesale CTC tea to hotels, restaurants, offices, and chai stalls across{' '}
+          <strong>{cityCount} major cities</strong> — Jaipur, Jodhpur, Udaipur, and Bikaner. GST
+          billing, consistent quality, and 50kg minimum order.
         </p>
       </div>
 
@@ -65,17 +66,20 @@ export default function RajasthanPage() {
         <div className="md:col-span-2">
           <section className="mb-10">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
-              Supply Network in Rajasthan
+              Bulk Chai Delivery Across Rajasthan
             </h2>
             <div className="prose dark:prose-invert">
               <p>
-                Our distribution network in Rajasthan is designed to meet the high-volume demands of
-                wholesalers, semi-wholesalers, and institutional buyers. Jaipur is supplied through
-                central Rajasthan routes.
+                Our distribution network covers all major cities in Rajasthan.{' '}
+                <strong>Jaipur</strong> is served through central Rajasthan routes with 4–5 day
+                delivery. <strong>Jodhpur</strong>, <strong>Udaipur</strong>, and{' '}
+                <strong>Bikaner</strong> are reached via western Rajasthan freight lanes in 5–6
+                days.
               </p>
               <p>
-                Whether you are running a chain of tea stalls, a large caf\u00e9, or an industrial
-                canteen, we ensure timely delivery of fresh stock directly to your doorstep.
+                Whether you run a heritage hotel in Jaipur, a restaurant in Udaipur, a chai stall in
+                Jodhpur, or an office canteen in Bikaner — we supply bulk CTC tea and wholesale chai
+                with GST invoices and no hidden charges.
               </p>
             </div>
           </section>

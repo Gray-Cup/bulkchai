@@ -51,8 +51,8 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     return { title: 'City Not Found' }
   }
 
-  const title = `Bulk Tea & Chai Supply in ${cityInfo.city} | BulkChai`
-  const description = `Wholesale bulk tea and chai supply for businesses in ${cityInfo.city}, ${cityInfo.state}. GST billing, consistent quality, and reliable delivery for cafés, offices, canteens, and retailers.`
+  const title = `Bulk Chai Supply in ${cityInfo.city}, Rajasthan | Wholesale Tea | BulkChai`
+  const description = `Buy bulk chai and wholesale CTC tea in ${cityInfo.city}, Rajasthan. Reliable delivery for hotels, offices, restaurants, and chai stalls across ${cityInfo.city}. GST billing, min order 50kg. Call +91 85279 14317.`
 
   return generatePageMetadata({
     title,
@@ -136,7 +136,7 @@ export default async function CityPage({ params }: CityPageProps) {
       </nav>
 
       {/* H1 */}
-      <h1 className="mb-6 text-4xl font-bold">Bulk Tea & Chai Supply in {cityInfo.city}</h1>
+      <h1 className="mb-6 text-4xl font-bold">Bulk Chai Supply in {cityInfo.city}, Rajasthan</h1>
 
       {/* Location Intro */}
       <LocationIntro

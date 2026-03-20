@@ -10,10 +10,19 @@
       "educationAngle": "Balanced CTC grades are preferred over very fine dust-heavy blends.",
       "localNote": "Bulk orders are commonly placed weekly to manage limited storage space.",
       "locationDescriptor": "India's commercial capital and busiest metropolitan region",
-      "primaryBuyerTypes": ["corporate cafeteria managers", "chai franchise operators", "railway station vendors", "hotel F&B procurement teams"],
+      "primaryBuyerTypes": [
+        "corporate cafeteria managers",
+        "chai franchise operators",
+        "railway station vendors",
+        "hotel F&B procurement teams"
+      ],
       "supplyChain": {
         "deliveryMethod": "Direct delivery via dedicated freight partners covering Mumbai Metropolitan Region including Thane, Navi Mumbai, and extended suburbs",
-        "packagingOptions": ["25kg moisture-sealed bags", "50kg bulk packs", "10kg trial packs for quality testing"],
+        "packagingOptions": [
+          "25kg moisture-sealed bags",
+          "50kg bulk packs",
+          "10kg trial packs for quality testing"
+        ],
         "minOrderQty": "50 kg",
         "paymentTerms": "100% advance with GST invoice for new buyers; credit terms available for repeat orders above 500kg/month",
         "reorderCycle": "Weekly restocking recommended given high consumption and limited storage in commercial spaces"
@@ -153,10 +162,19 @@
       "educationAngle": "Balanced CTC grades reduce bitterness.",
       "localNote": "Monthly planning is common.",
       "locationDescriptor": "India's IT capital and startup hub",
-      "primaryBuyerTypes": ["tech park cafeteria operators", "co-working space managers", "specialty café owners", "corporate campus F&B teams"],
+      "primaryBuyerTypes": [
+        "tech park cafeteria operators",
+        "co-working space managers",
+        "specialty café owners",
+        "corporate campus F&B teams"
+      ],
       "supplyChain": {
         "deliveryMethod": "Hub-based delivery via Bengaluru distribution centre covering all tech corridors including Whitefield, Electronic City, Outer Ring Road, and Sarjapur",
-        "packagingOptions": ["25kg sealed bags", "50kg bulk packs", "5kg sample packs for café testing"],
+        "packagingOptions": [
+          "25kg sealed bags",
+          "50kg bulk packs",
+          "5kg sample packs for café testing"
+        ],
         "minOrderQty": "50 kg",
         "paymentTerms": "Advance payment with GST invoice; monthly credit facility available for orders above 300kg",
         "reorderCycle": "Bi-weekly to monthly depending on campus size and consumption patterns"
@@ -319,10 +337,19 @@
       "educationAngle": "Balanced CTC grades reduce bitterness.",
       "localNote": "Demand is stable throughout the week.",
       "locationDescriptor": "India's pharma and IT hub in the Deccan region",
-      "primaryBuyerTypes": ["IT park facility managers", "Irani café owners", "pharmaceutical campus canteens", "hotel chains along Banjara Hills"],
+      "primaryBuyerTypes": [
+        "IT park facility managers",
+        "Irani café owners",
+        "pharmaceutical campus canteens",
+        "hotel chains along Banjara Hills"
+      ],
       "supplyChain": {
         "deliveryMethod": "Direct delivery from Hyderabad distribution point covering HITEC City corridor, Gachibowli, Secunderabad, and greater Hyderabad including Shamshabad",
-        "packagingOptions": ["25kg moisture-protected bags", "50kg commercial packs", "10kg trial quantities"],
+        "packagingOptions": [
+          "25kg moisture-protected bags",
+          "50kg commercial packs",
+          "10kg trial quantities"
+        ],
         "minOrderQty": "50 kg",
         "paymentTerms": "Full advance with GST invoice; credit terms negotiable for pharma companies with purchase orders",
         "reorderCycle": "Bi-weekly for IT campuses; monthly for retail and hotel buyers"
@@ -551,10 +578,19 @@
       "educationAngle": "Medium-sized CTC grades are common.",
       "localNote": "Seasonal demand variations occur.",
       "locationDescriptor": "Rajasthan's Pink City and premier tourist destination",
-      "primaryBuyerTypes": ["heritage hotel F&B managers", "tourist-facing restaurant owners", "railway station vendors", "retail tea shop owners"],
+      "primaryBuyerTypes": [
+        "heritage hotel F&B managers",
+        "tourist-facing restaurant owners",
+        "railway station vendors",
+        "retail tea shop owners"
+      ],
       "supplyChain": {
         "deliveryMethod": "Direct delivery from Jaipur distribution hub covering the walled city, new Jaipur, and extending to Ajmer and Alwar districts",
-        "packagingOptions": ["25kg bags", "50kg bulk packs", "10kg packs for smaller hospitality units"],
+        "packagingOptions": [
+          "25kg bags",
+          "50kg bulk packs",
+          "10kg packs for smaller hospitality units"
+        ],
         "minOrderQty": "50 kg",
         "paymentTerms": "Advance payment with GST invoice; hotel chains may avail credit on submission of purchase orders",
         "reorderCycle": "Monthly for most buyers; more frequent during October-March tourist season"
@@ -562,6 +598,7 @@
       "localContext": {
         "businessHubs": "Primary demand comes from the heritage hotel cluster around Amer and City Palace, tourist restaurants along MI Road and Johari Bazaar, railway station area vendors, and the growing hospitality sector in areas like Vaishali Nagar and Mansarovar.",
         "teaCulture": "Jaipur's hospitality sector serves millions of tourists annually who expect quality chai as part of the Rajasthani experience. Hotels and restaurants need tea that appeals to both domestic tourists familiar with North Indian chai and international visitors trying Indian tea.",
+        "industrialRelevance": "Jaipur's Sitapura Industrial Area and Mahindra SEZ house IT companies and manufacturing units with large canteen requirements. The city's growing corporate sector and government offices are steady bulk chai buyers year-round.",
         "buyerChallenges": "The stark seasonality of Jaipur's tourism creates feast-or-famine demand cycles. Hotels and restaurants need suppliers who can scale up quickly during peak season (October-March) without forcing them to hold excess inventory during lean months.",
         "seasonalFactors": "Tourist season from October to March sees 2-3x normal chai consumption at hotels and restaurants. Summer months (April-June) see significantly reduced footfall, while monsoon brings moderate domestic tourism."
       },
@@ -687,7 +724,12 @@
       "educationAngle": "Medium CTC grades are common.",
       "localNote": "Orders are steady.",
       "locationDescriptor": "Central India's cleanest city and emerging commercial hub",
-      "primaryBuyerTypes": ["street food vendors at Sarafa Bazaar", "chai tapri owners", "wholesale tea distributors", "commercial establishment canteens"],
+      "primaryBuyerTypes": [
+        "street food vendors at Sarafa Bazaar",
+        "chai tapri owners",
+        "wholesale tea distributors",
+        "commercial establishment canteens"
+      ],
       "supplyChain": {
         "deliveryMethod": "Hub delivery from Indore distribution centre serving the city and surrounding districts including Dewas, Ujjain, and Dhar",
         "packagingOptions": ["25kg bags", "50kg distributor packs", "10kg retail-friendly packs"],

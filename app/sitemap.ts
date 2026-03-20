@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
-import { getAllCityPages } from '@/lib/cityData'
+import { getAllCityPages, getAllStatesSlugs } from '@/lib/cityData'
 
 export const dynamic = 'force-static'
 
@@ -18,6 +18,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', 'blog', 'projects', 'tags', 'available-locations'].map((route) => ({
     url: `${siteUrl}/${route}`,
     lastModified: new Date().toISOString().split('T')[0],
+    priority: route === '' ? 1.0 : 0.8,
+  }))
+
+  // Add all state pages to sitemap
+  const stateSlugs = getAllStatesSlugs()
+  const stateRoutes = stateSlugs.map((stateSlug) => ({
+    url: `${siteUrl}/${stateSlug}`,
+    lastModified: new Date().toISOString().split('T')[0],
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }))
 
   // Add all city pages to sitemap
@@ -29,5 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...routes, ...blogRoutes, ...cityRoutes]
+  return [...routes, ...blogRoutes, ...stateRoutes, ...cityRoutes]
 }
