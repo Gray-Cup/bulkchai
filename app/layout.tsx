@@ -11,7 +11,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import HeaderTop from '@/components/HeaderTop'
 import { generateOrganizationSchema } from '@/lib/seo-utils'
-import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -105,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </SectionContainer>
         </ThemeProviders>
-        <Analytics />
+        <GoogleAnalytics gaId="G-CL2P6DDXDX" />
       </body>
     </html>
   )
