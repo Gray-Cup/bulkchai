@@ -11,7 +11,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import HeaderTop from '@/components/HeaderTop'
 import { generateOrganizationSchema } from '@/lib/seo-utils'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -105,7 +105,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </SectionContainer>
         </ThemeProviders>
-        <GoogleAnalytics gaId="G-CL2P6DDXDX" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CL2P6DDXDX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CL2P6DDXDX');
+          `}
+        </Script>
       </body>
     </html>
   )
