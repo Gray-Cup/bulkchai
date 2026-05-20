@@ -1,5 +1,6 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
+  { href: '/buy-chai', title: 'Buy Chai' },
   { href: '/blog', title: 'Blog' },
   { href: '/available-locations', title: 'Locations' },
   { href: 'https://b2b.graycup.in', title: 'Bulk Store' },
