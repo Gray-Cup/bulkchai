@@ -1,16 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
-
-let supabase: SupabaseClient | null = null
-
-function getSupabaseClient(): SupabaseClient | null {
-  if (supabase) return supabase
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
-  if (!url || !key) return null
-  supabase = createClient(url, key)
-  return supabase
-}
+import { db } from '@/db'
+import { chaiSampleOrders } from '@/db/schema'
 
 async function verifyTurnstile(token: string, remoteip?: string): Promise<boolean> {
   const secretKey = process.env.TURNSTILE_SECRET_KEY
@@ -58,8 +48,7 @@ export async function POST(request: NextRequest) {
     if (!name || !phone || !email || !address || !pincode || !products?.length) {
       return NextResponse.json(
         {
-          error:
-            'Name, phone, email, address, pincode and at least one product are required',
+          error: 'Name, phone, email, address, pincode and at least one product are required',
         },
         { status: 400 }
       )
@@ -88,8 +77,7 @@ export async function POST(request: NextRequest) {
     ;(tiers as { slug: string; tier: string }[]).forEach(({ tier }) => {
       tierCounts[tier] = (tierCounts[tier] ?? 0) + 1
     })
-    const dominantTier =
-      Object.entries(tierCounts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '3kg'
+    const dominantTier = Object.entries(tierCounts).sort((a, b) => b[1] - a[1])[0]?.[0] ?? '3kg'
 
     // Generate unique link ID
     const linkId = `bc_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`
@@ -98,28 +86,29 @@ export async function POST(request: NextRequest) {
     const productLabel = (products as string[]).slice(0, 3).join(', ')
     const purpose = `Bulk Chai — ${dominantTier} bags (${productLabel})`
 
-    // Save to Supabase (non-blocking on failure)
-    const client = getSupabaseClient()
-    if (client) {
-      const { error: dbError } = await client.from('chai_sample_orders').insert({
-        name,
-        phone: phoneDigits,
-        email: email || null,
-        address,
-        state: state || null,
-        pincode,
-        gst_or_tax_id: gstOrTaxId || null,
-        business_type: businessType || null,
-        customer_type: customerType || 'individual',
-        products: JSON.stringify(products),
-        tiers: JSON.stringify(tiers),
-        quantity_tier: dominantTier,
-        total_amount: totalAmount,
-        link_id: linkId,
-        payment_status: 'pending',
-      })
-      if (dbError) {
-        console.error('Supabase insert error:', dbError)
+    // Save to database via Drizzle
+    if (process.env.DATABASE_URL) {
+      try {
+        await db.insert(chaiSampleOrders).values({
+          name,
+          phone: phoneDigits,
+          email: email || null,
+          address,
+          state: state || null,
+          pincode,
+          gstOrTaxId: gstOrTaxId || null,
+          businessType: businessType || null,
+          customerType: customerType || 'individual',
+          products: JSON.stringify(products),
+          tiers: JSON.stringify(tiers),
+          quantityTier: dominantTier,
+          totalAmount,
+          linkId,
+          paymentStatus: 'pending',
+        })
+      } catch (dbErr) {
+        console.error('DB insert error:', dbErr)
+        // Continue — don't block payment for DB issues
       }
     }
 
