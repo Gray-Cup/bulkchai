@@ -26,6 +26,9 @@ export default function ContactPage() {
           <h2 className="mb-4 text-lg font-semibold text-neutral-800 dark:text-neutral-200">
             Gray Cup Enterprises Pvt. Ltd.
           </h2>
+          <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+            FF122, Rodeo Drive Mall, GT Road, TDI City, Kundli, Sonipat, Haryana 131030
+          </p>
           <dl className="space-y-3 text-sm">
             <div className="flex gap-3">
               <dt className="w-24 shrink-0 font-medium text-neutral-600 dark:text-neutral-400">
@@ -80,6 +83,12 @@ export default function ContactPage() {
                   www.bulkchai.com
                 </a>
               </dd>
+            </div>
+            <div className="flex gap-3">
+              <dt className="w-24 shrink-0 font-medium text-neutral-600 dark:text-neutral-400">
+                GST
+              </dt>
+              <dd className="font-mono text-neutral-800 dark:text-neutral-200">06AAMCG4985H1Z4</dd>
             </div>
           </dl>
         </div>

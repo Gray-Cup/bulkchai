@@ -25,7 +25,7 @@ export default function ProductsAndServicesPage() {
           Products &amp; Services
         </h1>
         <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          Bulk chai blends supplied by Gray Cup Enterprises Pvt. Ltd. · All prices in INR · 5% GST
+          Gray Cup Enterprises Pvt. Ltd. · GST: 06AAMCG4985H1Z4 · All prices in INR · 5% GST
           additional
         </p>
       </div>

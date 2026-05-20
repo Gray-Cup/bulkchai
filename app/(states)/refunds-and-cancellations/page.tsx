@@ -129,6 +129,12 @@ export default function RefundsAndCancellationsPage() {
           <address className="not-italic">
             <strong>Gray Cup Enterprises Pvt. Ltd.</strong>
             <br />
+            FF122, Rodeo Drive Mall, GT Road, TDI City,
+            <br />
+            Kundli, Sonipat, Haryana 131030
+            <br />
+            GST: 06AAMCG4985H1Z4
+            <br />
             Email: <a href="mailto:bulk@graycup.in">bulk@graycup.in</a>
             <br />
             WhatsApp:{' '}
