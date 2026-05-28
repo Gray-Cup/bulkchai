@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ProductsSection } from '@/components/ProductsSection'
 import type { Metadata } from 'next'
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo-utils'
 import StateNavigator from '@/components/seo/StateNavigator'
@@ -154,6 +155,7 @@ export default function MaharashtraPage() {
           </div>
         </div>
       </div>
+      <ProductsSection />
     </div>
   )
 }

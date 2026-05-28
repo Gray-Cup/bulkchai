@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ProductsSection } from '@/components/ProductsSection'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getCityInfoFromSlugs, getCityCoordinates, getRelatedCities, slugify } from '@/lib/cityData'
@@ -223,6 +224,7 @@ export default async function CityPage({ params }: CityPageProps) {
           </Link>
         </div>
       </section>
+      <ProductsSection />
     </div>
   )
 }
