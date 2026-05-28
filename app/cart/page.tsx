@@ -163,7 +163,7 @@ export default function CartPage() {
               href="/buy-chai"
               className="text-sm font-bold tracking-widest text-green-700 uppercase transition-colors hover:text-green-900 dark:text-green-500 dark:hover:text-green-400"
             >
-              ← Shop
+              Shop
             </Link>
           </div>
           <p className="mb-10 text-lg text-neutral-500 dark:text-neutral-400">
@@ -198,7 +198,7 @@ export default function CartPage() {
             href="/buy-chai"
             className="text-sm font-bold tracking-widest text-green-700 uppercase transition-colors hover:text-green-900 dark:text-green-500 dark:hover:text-green-400"
           >
-            ← Shop
+            Shop
           </Link>
         </div>
 
