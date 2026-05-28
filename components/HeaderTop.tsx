@@ -5,7 +5,7 @@ const HeaderTop = () => {
   return (
     <header className="flex w-full items-center justify-between px-8 py-3 sm:px-12">
       <span className="hidden text-xs font-semibold tracking-[0.2em] text-green-100/70 uppercase sm:block">
-        Bulk Chai — India
+        Namaste Jee
       </span>
       <div className="flex items-center gap-8">
         {headerTopNavLinks
