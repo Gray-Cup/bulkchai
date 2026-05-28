@@ -26,7 +26,7 @@ export const CHAI_PRODUCTS: ChaiProduct[] = [
     pricePerKg: 155,
     badge: 'Best Value',
     accent: 'bg-amber-500',
-    image: '/wholesale-chai.webp',
+    image: '/4-3-chai.webp',
   },
   {
     slug: 'kadak-chai',
@@ -47,7 +47,7 @@ export const CHAI_PRODUCTS: ChaiProduct[] = [
     grade: 'CTC Fannings',
     pricePerKg: 195,
     accent: 'bg-yellow-600',
-    image: '/wholesale-chai.webp',
+    image: '/4-3-chai.webp',
   },
   {
     slug: '3-star-hotel-chai',
@@ -68,7 +68,7 @@ export const CHAI_PRODUCTS: ChaiProduct[] = [
     pricePerKg: 320,
     badge: 'Premium',
     accent: 'bg-emerald-700',
-    image: '/wholesale-chai.webp',
+    image: '/4-3-chai.webp',
   },
 ]
 
