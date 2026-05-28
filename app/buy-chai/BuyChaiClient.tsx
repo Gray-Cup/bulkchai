@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import {
   CHAI_PRODUCTS,
   TIERS,
@@ -11,76 +11,183 @@ import {
   getProductBySlug,
 } from '@/data/chai-products'
 import CheckoutForm from '@/components/buy-chai/CheckoutForm'
+import { addToCart } from '@/lib/cart'
 
 type SelectedItem = { slug: string; tier: TierLabel }
 
-const LS_SELECTED = 'bc_selected'
-const LS_TIER = 'bc_tier'
 const DEFAULT_TIER: TierLabel = '3kg'
 
-export default function BuyChaiClient() {
-  const searchParams = useSearchParams()
+function fmt(n: number) {
+  return '₹' + n.toLocaleString('en-IN')
+}
 
+function WeightDropdown({
+  tier,
+  pricePerKg,
+  onChange,
+}: {
+  tier: TierLabel
+  pricePerKg: number
+  onChange: (t: TierLabel) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
+  const kg = TIERS.find((t) => t.label === tier)!.kg
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full cursor-pointer items-center justify-between gap-2 border border-gray-200 bg-white px-3 py-2 text-sm text-neutral-700 transition-colors hover:border-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-neutral-300"
+      >
+        <span className="font-medium">{tier}</span>
+        <span className="text-xs text-neutral-400">{fmt(pricePerKg * kg)}</span>
+        <svg
+          className={`h-3.5 w-3.5 shrink-0 text-neutral-400 transition-transform ${open ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute top-full right-0 left-0 z-20 mt-0.5 border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
+          {TIERS.map((t) => (
+            <button
+              key={t.label}
+              type="button"
+              onClick={() => {
+                onChange(t.label)
+                setOpen(false)
+              }}
+              className={`flex w-full cursor-pointer items-center justify-between px-3 py-2.5 text-sm transition-colors ${
+                t.label === tier
+                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
+                  : 'text-neutral-700 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-gray-800'
+              }`}
+            >
+              <span className="font-medium">{t.label}</span>
+              <span
+                className={`text-xs ${t.label === tier ? 'text-neutral-300 dark:text-neutral-600' : 'text-neutral-400'}`}
+              >
+                {fmt(pricePerKg * t.kg)}
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ProductCard({
+  product,
+  onBuyNow,
+}: {
+  product: (typeof CHAI_PRODUCTS)[number]
+  onBuyNow: (slug: string, tier: TierLabel) => void
+}) {
+  const [tier, setTier] = useState<TierLabel>(DEFAULT_TIER)
+  const [qty, setQty] = useState(1)
+  const [added, setAdded] = useState(false)
+
+  const kg = TIERS.find((t) => t.label === tier)!.kg
+  const price = calcBagPrice(product.pricePerKg, kg) * qty
+
+  function handleAdd() {
+    addToCart(product.slug, tier, qty)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2000)
+  }
+
+  return (
+    <div className="flex flex-col border border-gray-200 bg-white transition-all hover:border-gray-300 hover:shadow-sm dark:border-gray-700 dark:bg-gray-900 dark:hover:border-gray-600">
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
+        <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
+        {product.badge && (
+          <span className="absolute top-2 right-2 rounded-full bg-green-600 px-2 py-0.5 text-xs font-semibold text-white">
+            {product.badge}
+          </span>
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col gap-2.5 p-3">
+        <div>
+          <p className="text-sm leading-snug font-semibold text-neutral-900 dark:text-neutral-100">
+            {product.name}
+          </p>
+          <p className="mt-0.5 text-xs text-neutral-400">{product.grade}</p>
+        </div>
+
+        <WeightDropdown tier={tier} pricePerKg={product.pricePerKg} onChange={setTier} />
+
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setQty((q) => Math.max(1, q - 1))}
+            className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-200 text-lg font-medium text-neutral-600 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-neutral-400 dark:hover:bg-gray-800"
+          >
+            −
+          </button>
+          <span className="w-6 text-center text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+            {qty}
+          </span>
+          <button
+            type="button"
+            onClick={() => setQty((q) => q + 1)}
+            className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-200 text-lg font-medium text-neutral-600 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-neutral-400 dark:hover:bg-gray-800"
+          >
+            +
+          </button>
+          <p className="ml-auto text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+            {fmt(price)}
+          </p>
+        </div>
+
+        <div className="flex gap-1.5">
+          <button
+            type="button"
+            onClick={() => onBuyNow(product.slug, tier)}
+            className="flex-1 cursor-pointer bg-green-600 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-700"
+          >
+            Buy Now
+          </button>
+          <button
+            type="button"
+            onClick={handleAdd}
+            className={`flex-1 cursor-pointer py-2.5 text-sm font-medium transition-colors ${
+              added ? 'bg-green-600 text-white' : 'bg-blue-600 text-white hover:bg-blue-700'
+            }`}
+          >
+            {added ? 'Added ✓' : 'Add to Cart'}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function BuyChaiClient() {
   const [step, setStep] = useState<1 | 2>(1)
   const [selected, setSelected] = useState<SelectedItem[]>([])
-  const [activeTier, setActiveTier] = useState<TierLabel>(DEFAULT_TIER)
   const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
-    try {
-      const storedTier = localStorage.getItem(LS_TIER) as TierLabel | null
-      if (storedTier && TIERS.find((t) => t.label === storedTier)) {
-        setActiveTier(storedTier)
-      }
-
-      const storedSelected = localStorage.getItem(LS_SELECTED)
-      let parsed: SelectedItem[] = []
-      if (storedSelected) {
-        const raw = JSON.parse(storedSelected)
-        parsed = raw.map((s: string | SelectedItem) =>
-          typeof s === 'string' ? { slug: s, tier: DEFAULT_TIER } : s
-        )
-      }
-
-      const urlSlug = searchParams.get('product')
-      if (urlSlug && !parsed.find((s) => s.slug === urlSlug)) {
-        parsed = [...parsed, { slug: urlSlug, tier: storedTier ?? DEFAULT_TIER }]
-      }
-
-      setSelected(parsed)
-    } catch {
-      // ignore localStorage errors
-    }
     setHydrated(true)
-  }, [searchParams])
-
-  useEffect(() => {
-    if (!hydrated) return
-    localStorage.setItem(LS_SELECTED, JSON.stringify(selected))
-  }, [selected, hydrated])
-
-  useEffect(() => {
-    if (!hydrated) return
-    localStorage.setItem(LS_TIER, activeTier)
-  }, [activeTier, hydrated])
-
-  const isSelected = (slug: string) => selected.some((s) => s.slug === slug)
-
-  const getTier = (slug: string): TierLabel =>
-    selected.find((s) => s.slug === slug)?.tier ?? activeTier
-
-  const addProduct = (slug: string) => {
-    if (isSelected(slug)) return
-    setSelected((prev) => [...prev, { slug, tier: activeTier }])
-  }
-
-  const removeProduct = (slug: string) => {
-    setSelected((prev) => prev.filter((s) => s.slug !== slug))
-  }
-
-  const updateTier = (slug: string, tier: TierLabel) => {
-    setSelected((prev) => prev.map((s) => (s.slug === slug ? { ...s, tier } : s)))
-  }
+  }, [])
 
   const orderTotal = selected.reduce((sum, { slug, tier }) => {
     const product = getProductBySlug(slug)
@@ -89,150 +196,55 @@ export default function BuyChaiClient() {
     return sum + calcBagPrice(product.pricePerKg, tierData.kg)
   }, 0)
 
-  const proceedToCheckout = () => {
+  function handleBuyNow(slug: string, tier: TierLabel) {
+    setSelected([{ slug, tier }])
     setStep(2)
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
-  const backToSelection = () => {
+  function backToSelection() {
     setStep(1)
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   if (!hydrated) return null
 
-  // ─── Step 1: Product Selection ────────────────────────────────────────────
+  // ─── Step 1: Product Grid ─────────────────────────────────────────────────
   if (step === 1) {
     return (
-      <div className="pb-32">
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Order Chai</h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Select your chai blends and bag size. Shipped across India in 2–3 business days.
-          </p>
-        </div>
-
-        {/* Tier Tabs */}
-        <div className="mb-2 flex justify-center">
-          <div className="inline-flex rounded-lg border border-gray-200 bg-gray-100 p-1 dark:border-gray-700 dark:bg-gray-800">
-            {TIERS.map((t) => (
-              <button
-                key={t.label}
-                onClick={() => setActiveTier(t.label)}
-                className={`rounded-md px-4 py-2 text-sm font-medium transition-colors active:scale-95 ${
-                  activeTier === t.label
-                    ? 'bg-white text-gray-900 shadow dark:bg-gray-900 dark:text-gray-100'
-                    : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
+      <div>
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Order Chai</h1>
+            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+              Shipped across India in 2–3 business days.
+            </p>
           </div>
-        </div>
-        <p className="mb-6 text-center text-xs text-gray-500 dark:text-gray-400">
-          Bag size for new selections — you can change per-product in checkout
-        </p>
-
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {CHAI_PRODUCTS.map((product) => {
-            const sel = isSelected(product.slug)
-            const tier = sel ? getTier(product.slug) : activeTier
-            const tierData = TIERS.find((t) => t.label === tier)!
-            const price = calcBagPrice(product.pricePerKg, tierData.kg)
-
-            return (
-              <div
-                key={product.slug}
-                className={`relative rounded-xl border-2 p-5 transition-all ${
-                  sel
-                    ? 'border-green-500 bg-green-50 dark:bg-green-950/20'
-                    : 'border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900'
-                }`}
-              >
-                {product.badge && (
-                  <span className="absolute top-3 right-3 rounded-full bg-green-600 px-2 py-0.5 text-xs font-semibold text-white">
-                    {product.badge}
-                  </span>
-                )}
-                {sel && (
-                  <span className="absolute top-3 left-3 rounded-full bg-green-600 px-2 py-0.5 text-xs font-semibold text-white">
-                    ✓ Selected
-                  </span>
-                )}
-
-                <div className="-mx-5 -mt-5 mb-3 overflow-hidden rounded-t-xl">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-36 w-full object-cover"
-                  />
-                </div>
-
-                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  {product.name}
-                </h3>
-                <p className="mt-0.5 text-xs font-medium text-gray-500 dark:text-gray-400">
-                  {product.grade}
-                </p>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  {product.description}
-                </p>
-
-                <div className="mt-4 flex items-end justify-between">
-                  <div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                      {formatINR(price)}
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      {tier} bag · ₹{product.pricePerKg}/kg
-                    </div>
-                  </div>
-
-                  {sel ? (
-                    <button
-                      onClick={() => removeProduct(product.slug)}
-                      className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-sm font-medium text-red-600 transition-colors hover:bg-red-100 active:scale-95 dark:border-red-800 dark:bg-red-950/20 dark:text-red-400"
-                    >
-                      Remove
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => addProduct(product.slug)}
-                      className="rounded-lg bg-green-600 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-green-700 active:scale-95"
-                    >
-                      + Select
-                    </button>
-                  )}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Sticky Bottom Bar */}
-        <div
-          className={`fixed right-0 bottom-0 left-0 z-50 border-t border-gray-200 bg-white px-4 py-4 shadow-2xl transition-transform duration-300 dark:border-gray-700 dark:bg-gray-900 ${
-            selected.length > 0 ? 'translate-y-0' : 'translate-y-full'
-          }`}
-        >
-          <div className="mx-auto flex max-w-4xl items-center justify-between gap-4">
-            <div>
-              <p className="font-semibold text-gray-900 dark:text-gray-100">
-                {selected.length} blend{selected.length !== 1 ? 's' : ''} selected
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Total: {formatINR(orderTotal)}
-              </p>
-            </div>
-            <button
-              onClick={proceedToCheckout}
-              className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-green-700 active:scale-95"
+          <Link
+            href="/cart"
+            className="flex items-center gap-2 border border-gray-200 px-4 py-2 text-sm font-medium text-neutral-700 transition-colors hover:border-gray-400 dark:border-gray-700 dark:text-neutral-300"
+          >
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
             >
-              Proceed to Checkout →
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            View Cart
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CHAI_PRODUCTS.map((product) => (
+            <ProductCard key={product.slug} product={product} onBuyNow={handleBuyNow} />
+          ))}
         </div>
       </div>
     )
@@ -249,127 +261,46 @@ export default function BuyChaiClient() {
       </button>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-        {/* Left: Checkout Form */}
         <CheckoutForm selected={selected} orderTotal={orderTotal} />
 
-        {/* Right: Order Summary */}
         <div className="lg:sticky lg:top-8 lg:self-start">
-          <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900">
+          <div className="border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900">
             <h2 className="mb-4 text-lg font-bold text-gray-900 dark:text-gray-100">
               Order Summary
             </h2>
-
-            <div className="space-y-4">
+            <div className="space-y-3">
               {selected.map(({ slug, tier }) => {
                 const product = getProductBySlug(slug)
                 if (!product) return null
                 const tierData = TIERS.find((t) => t.label === tier)!
                 const price = calcBagPrice(product.pricePerKg, tierData.kg)
-
                 return (
-                  <div
-                    key={slug}
-                    className="rounded-lg border border-gray-100 p-3 dark:border-gray-800"
-                  >
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <p className="font-semibold text-gray-900 dark:text-gray-100">
-                          {product.name}
-                        </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                          {product.grade} · ₹{product.pricePerKg}/kg
-                        </p>
-                      </div>
-                      <button
-                        onClick={() => removeProduct(slug)}
-                        className="text-sm text-gray-400 hover:text-red-500 dark:hover:text-red-400"
-                        aria-label="Remove"
-                      >
-                        ✕
-                      </button>
-                    </div>
-
-                    {/* Per-product tier selector */}
-                    <div className="mt-2 flex gap-1">
-                      {TIERS.map((t) => (
-                        <button
-                          key={t.label}
-                          onClick={() => updateTier(slug, t.label)}
-                          className={`rounded px-2 py-1 text-xs font-medium transition-colors active:scale-95 ${
-                            tier === t.label
-                              ? 'bg-green-600 text-white'
-                              : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-400'
-                          }`}
-                        >
-                          {t.label}
-                        </button>
-                      ))}
-                    </div>
-
-                    <div className="mt-2 text-right font-semibold text-gray-900 dark:text-gray-100">
-                      {formatINR(price)}
+                  <div key={slug} className="flex items-center gap-3">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-12 w-12 shrink-0 object-cover"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                        {product.name}
+                      </p>
+                      <p className="text-xs text-neutral-400">
+                        {tier} · {fmt(price)}
+                      </p>
                     </div>
                   </div>
                 )
               })}
             </div>
-
-            {selected.length === 0 && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                No blends selected.{' '}
-                <button onClick={backToSelection} className="text-green-600 underline">
-                  Go back
-                </button>{' '}
-                to add some.
-              </p>
-            )}
-
-            <div className="mt-4 rounded-lg bg-gray-50 p-3 dark:bg-gray-800">
-              <div className="flex justify-between text-base font-bold text-gray-900 dark:text-gray-100">
-                <span>Total</span>
-                <span>{formatINR(orderTotal)}</span>
-              </div>
-              <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                + GST as applicable · All prices in INR
-              </p>
+            <div className="mt-4 flex justify-between border-t border-gray-100 pt-4 font-bold text-gray-900 dark:border-gray-800 dark:text-gray-100">
+              <span>Total</span>
+              <span>{formatINR(orderTotal)}</span>
             </div>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              + GST as applicable · All prices in INR
+            </p>
           </div>
-
-          {/* Add More Blends */}
-          {CHAI_PRODUCTS.filter((p) => !isSelected(p.slug)).length > 0 && (
-            <div className="mt-6">
-              <h3 className="mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                Add more blends
-              </h3>
-              <div className="grid grid-cols-1 gap-2">
-                {CHAI_PRODUCTS.filter((p) => !isSelected(p.slug)).map((product) => {
-                  const tierData = TIERS.find((t) => t.label === activeTier)!
-                  const price = calcBagPrice(product.pricePerKg, tierData.kg)
-                  return (
-                    <div
-                      key={product.slug}
-                      className="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-700"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                          {product.name}
-                        </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400">
-                          {formatINR(price)} / {activeTier} bag
-                        </p>
-                      </div>
-                      <button
-                        onClick={() => addProduct(product.slug)}
-                        className="rounded-lg bg-green-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-green-700 active:scale-95"
-                      >
-                        + Add
-                      </button>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
