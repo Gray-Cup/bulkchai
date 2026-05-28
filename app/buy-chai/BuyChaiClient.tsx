@@ -233,7 +233,7 @@ export default function BuyChaiClient() {
             href="/cart"
             className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-bold tracking-widest text-white uppercase transition-colors hover:bg-green-700"
           >
-            Cart →
+            Cart
           </Link>
         </div>
 

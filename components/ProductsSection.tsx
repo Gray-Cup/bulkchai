@@ -189,11 +189,11 @@ export function ProductsSection() {
           href="/cart"
           className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-bold tracking-widest text-white uppercase transition-colors hover:bg-green-700"
         >
-          Cart →
+          Cart
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {CHAI_PRODUCTS.slice(0, 3).map((product) => (
+        {CHAI_PRODUCTS.map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
       </div>
