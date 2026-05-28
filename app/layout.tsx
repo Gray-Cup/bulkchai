@@ -104,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <ThemeProviders>
-          <div className="sticky top-0 z-50 w-full border-b border-black bg-black">
+          <div className="sticky top-0 z-50 w-full bg-green-700">
             <HeaderTop />
           </div>
           <SectionContainer>

@@ -35,9 +35,9 @@ function WeightDropdown({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex cursor-pointer items-center justify-between gap-2 border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-neutral-800 transition-colors hover:border-black dark:border-gray-600 dark:bg-gray-900 dark:text-neutral-200 dark:hover:border-white"
+        className="flex cursor-pointer items-center justify-between gap-2 rounded-lg bg-gray-100 px-3 py-2 text-sm font-semibold text-neutral-800 transition-colors hover:bg-green-50 dark:bg-gray-800 dark:text-neutral-200 dark:hover:bg-green-950/40"
       >
-        <span className="font-medium">{tier}</span>
+        <span>{tier}</span>
         <svg
           className={`h-3.5 w-3.5 shrink-0 text-neutral-400 transition-transform ${open ? 'rotate-180' : ''}`}
           fill="none"
@@ -49,7 +49,7 @@ function WeightDropdown({
         </svg>
       </button>
       {open && (
-        <div className="absolute top-full left-0 z-20 mt-0.5 min-w-[130px] border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-900">
+        <div className="absolute top-full left-0 z-20 mt-1 min-w-[140px] overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-900">
           {TIERS.map((t) => (
             <button
               key={t.label}
@@ -60,13 +60,13 @@ function WeightDropdown({
               }}
               className={`flex w-full cursor-pointer items-center justify-between px-3 py-2.5 text-sm transition-colors ${
                 t.label === tier
-                  ? 'bg-black text-white dark:bg-white dark:text-black'
-                  : 'text-neutral-700 hover:bg-gray-50 dark:text-neutral-300 dark:hover:bg-gray-800'
+                  ? 'bg-green-600 text-white'
+                  : 'text-neutral-700 hover:bg-green-50 dark:text-neutral-300 dark:hover:bg-green-950/30'
               }`}
             >
               <span className="font-semibold">{t.label}</span>
               <span
-                className={`text-sm ${t.label === tier ? 'text-neutral-400 dark:text-neutral-600' : 'text-neutral-500'}`}
+                className={`text-sm ${t.label === tier ? 'text-green-100' : 'text-neutral-400'}`}
               >
                 {fmt(pricePerKg * t.kg)}
               </span>
@@ -150,9 +150,9 @@ export default function CartPage() {
     return (
       <div className="min-h-screen py-12">
         <div className="mx-auto max-w-5xl px-4 lg:px-6">
-          <div className="mb-10 flex items-end justify-between border-b border-gray-200 pb-8 dark:border-gray-800">
+          <div className="mb-10 flex items-end justify-between rounded-xl bg-green-50 px-8 py-8 dark:bg-green-950/20">
             <div>
-              <p className="text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+              <p className="text-xs font-bold tracking-[0.25em] text-green-600 uppercase dark:text-green-500">
                 Cart
               </p>
               <h1 className="mt-2 text-4xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
@@ -161,7 +161,7 @@ export default function CartPage() {
             </div>
             <Link
               href="/buy-chai"
-              className="text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+              className="text-sm font-bold tracking-widest text-green-700 uppercase transition-colors hover:text-green-900 dark:text-green-500 dark:hover:text-green-400"
             >
               ← Shop
             </Link>
@@ -170,7 +170,7 @@ export default function CartPage() {
             Your cart is empty.
           </p>
 
-          <div className="grid grid-cols-1 gap-px bg-gray-200 sm:grid-cols-2 md:grid-cols-3 dark:bg-gray-700">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {CHAI_PRODUCTS.map((product) => (
               <SuggestedCard key={product.slug} product={product} onAdd={addOther} />
             ))}
@@ -185,9 +185,9 @@ export default function CartPage() {
   return (
     <div className="min-h-screen py-12">
       <div className="mx-auto max-w-5xl px-4 lg:px-6">
-        <div className="mb-10 flex items-end justify-between border-b border-gray-200 pb-8 dark:border-gray-800">
+        <div className="mb-10 flex items-end justify-between rounded-xl bg-green-50 px-8 py-8 dark:bg-green-950/20">
           <div>
-            <p className="text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+            <p className="text-xs font-bold tracking-[0.25em] text-green-600 uppercase dark:text-green-500">
               Checkout
             </p>
             <h1 className="mt-2 text-4xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
@@ -196,16 +196,16 @@ export default function CartPage() {
           </div>
           <Link
             href="/buy-chai"
-            className="text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+            className="text-sm font-bold tracking-widest text-green-700 uppercase transition-colors hover:text-green-900 dark:text-green-500 dark:hover:text-green-400"
           >
             ← Shop
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_380px]">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_380px]">
           {/* Cart items */}
-          <div className="border border-gray-200 dark:border-gray-700">
-            {enriched.map((item, i) => {
+          <div className="flex flex-col gap-3">
+            {enriched.map((item) => {
               const price = calcBagPrice(
                 item.product.pricePerKg,
                 TIERS.find((t) => t.label === item.tier)!.kg
@@ -213,9 +213,9 @@ export default function CartPage() {
               return (
                 <div
                   key={`${item.slug}-${item.tier}`}
-                  className={`flex gap-5 p-5 ${i < enriched.length - 1 ? 'border-b border-gray-100 dark:border-gray-800' : ''}`}
+                  className="flex gap-5 rounded-xl bg-white p-5 shadow-sm dark:bg-gray-900"
                 >
-                  <div className="relative h-24 w-20 shrink-0 overflow-hidden bg-neutral-50">
+                  <div className="relative h-24 w-20 shrink-0 overflow-hidden rounded-lg bg-neutral-50">
                     <img
                       src={item.product.image}
                       alt={item.product.name}
@@ -229,14 +229,14 @@ export default function CartPage() {
                         <p className="text-base font-bold text-neutral-900 dark:text-neutral-100">
                           {item.product.name}
                         </p>
-                        <p className="mt-0.5 text-xs font-medium tracking-wider text-neutral-400 uppercase">
+                        <p className="mt-0.5 text-xs font-semibold tracking-wider text-green-600 uppercase dark:text-green-500">
                           {item.product.grade}
                         </p>
                       </div>
                       <button
                         type="button"
                         onClick={() => removeItem(item.slug, item.tier)}
-                        className="mt-0.5 shrink-0 cursor-pointer text-sm font-bold text-gray-300 transition-colors hover:text-black dark:hover:text-white"
+                        className="mt-0.5 shrink-0 cursor-pointer rounded-full bg-gray-100 p-1.5 text-xs text-gray-400 transition-colors hover:bg-red-50 hover:text-red-500 dark:bg-gray-800"
                       >
                         ✕
                       </button>
@@ -257,7 +257,7 @@ export default function CartPage() {
                               ? updateItem(item.slug, item.tier, { quantity: item.quantity - 1 })
                               : removeItem(item.slug, item.tier)
                           }
-                          className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-300 text-neutral-600 transition-colors hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-400 dark:hover:border-white dark:hover:bg-white dark:hover:text-black"
+                          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg bg-gray-100 text-neutral-600 transition-colors hover:bg-green-100 hover:text-green-800 dark:bg-gray-800 dark:text-neutral-400 dark:hover:bg-green-950/40 dark:hover:text-green-400"
                         >
                           −
                         </button>
@@ -269,7 +269,7 @@ export default function CartPage() {
                           onClick={() =>
                             updateItem(item.slug, item.tier, { quantity: item.quantity + 1 })
                           }
-                          className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-300 text-neutral-600 transition-colors hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-400 dark:hover:border-white dark:hover:bg-white dark:hover:text-black"
+                          className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg bg-gray-100 text-neutral-600 transition-colors hover:bg-green-100 hover:text-green-800 dark:bg-gray-800 dark:text-neutral-400 dark:hover:bg-green-950/40 dark:hover:text-green-400"
                         >
                           +
                         </button>
@@ -284,18 +284,14 @@ export default function CartPage() {
               )
             })}
 
-            <div className="flex justify-between border-t border-gray-200 bg-gray-50 px-5 py-4 dark:border-gray-700 dark:bg-gray-800/50">
-              <p className="text-base font-black tracking-tight text-neutral-900 uppercase dark:text-neutral-100">
-                Total
-              </p>
-              <p className="text-base font-black text-neutral-900 dark:text-neutral-100">
-                {fmt(total)}
-              </p>
+            <div className="flex justify-between rounded-xl bg-green-600 px-6 py-4 text-base font-black text-white">
+              <span>Total</span>
+              <span>{fmt(total)}</span>
             </div>
           </div>
 
           {/* Checkout panel */}
-          <div className="sticky top-8 border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900">
+          <div className="sticky top-8 rounded-xl bg-green-50 p-6 dark:bg-green-950/20">
             <CheckoutForm selected={checkoutSelected} orderTotal={total} />
           </div>
         </div>
@@ -303,13 +299,13 @@ export default function CartPage() {
         {/* Other products */}
         {otherProducts.length > 0 && (
           <div className="mt-20">
-            <p className="mb-2 text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+            <p className="mb-2 text-xs font-bold tracking-[0.25em] text-green-600 uppercase dark:text-green-500">
               Also Consider
             </p>
             <h2 className="mb-8 text-2xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
               You might also want
             </h2>
-            <div className="grid grid-cols-1 gap-px bg-gray-200 sm:grid-cols-2 md:grid-cols-3 dark:bg-gray-700">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
               {otherProducts.map((product) => (
                 <SuggestedCard key={product.slug} product={product} onAdd={addOther} />
               ))}
@@ -339,16 +335,16 @@ function SuggestedCard({
   }
 
   return (
-    <div className="flex flex-col border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+    <div className="flex flex-col rounded-xl bg-white shadow-sm dark:bg-gray-900">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
         <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
       </div>
-      <div className="flex flex-1 flex-col gap-4 p-4">
+      <div className="flex flex-1 flex-col gap-4 p-5">
         <div>
           <p className="text-base font-bold text-neutral-900 dark:text-neutral-100">
             {product.name}
           </p>
-          <p className="mt-1 text-xs font-medium tracking-wider text-neutral-400 uppercase">
+          <p className="mt-1 text-xs font-semibold tracking-wider text-green-600 uppercase dark:text-green-500">
             {product.grade}
           </p>
         </div>
@@ -359,10 +355,10 @@ function SuggestedCard({
         <button
           type="button"
           onClick={handleAdd}
-          className={`w-full cursor-pointer py-3 text-sm font-bold tracking-widest uppercase transition-colors ${
+          className={`w-full cursor-pointer rounded-lg py-3 text-sm font-bold tracking-widest uppercase transition-colors ${
             added
               ? 'bg-green-600 text-white'
-              : 'border border-gray-300 text-neutral-700 hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-white dark:hover:text-black'
+              : 'bg-gray-100 text-neutral-700 hover:bg-green-100 hover:text-green-800 dark:bg-gray-800 dark:text-neutral-300 dark:hover:bg-green-950/40 dark:hover:text-green-400'
           }`}
         >
           {added ? 'Added ✓' : 'Add to Cart'}
