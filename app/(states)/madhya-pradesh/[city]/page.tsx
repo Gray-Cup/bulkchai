@@ -149,6 +149,9 @@ export default async function CityPage({ params }: CityPageProps) {
         nearbyAreas={cityInfo.nearbyAreas}
       />
 
+      {/* Products */}
+      <ProductsSection />
+
       {/* How Bulk Supply Works Section */}
       <HowBulkSupplyWorks
         city={cityInfo.city}
@@ -224,7 +227,6 @@ export default async function CityPage({ params }: CityPageProps) {
           </Link>
         </div>
       </section>
-      <ProductsSection />
     </div>
   )
 }

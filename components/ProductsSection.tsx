@@ -148,18 +148,18 @@ function ProductCard({ product }: { product: (typeof CHAI_PRODUCTS)[number] }) {
           </p>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2">
           <button
             type="button"
             onClick={handleBuyNow}
-            className="flex-1 cursor-pointer rounded-lg bg-green-600 py-3 text-sm font-bold tracking-widest text-white uppercase transition-colors hover:bg-green-700"
+            className="w-full cursor-pointer rounded-lg bg-green-600 py-3 text-sm font-bold tracking-widest text-white uppercase transition-colors hover:bg-green-700"
           >
             Buy Now
           </button>
           <button
             type="button"
             onClick={handleAdd}
-            className={`flex-1 cursor-pointer rounded-lg py-3 text-sm font-bold tracking-widest uppercase transition-colors ${
+            className={`w-full cursor-pointer rounded-lg py-3 text-sm font-bold tracking-widest uppercase transition-colors ${
               added
                 ? 'bg-green-600 text-white'
                 : 'bg-gray-100 text-neutral-700 hover:bg-green-100 hover:text-green-800 dark:bg-gray-800 dark:text-neutral-300 dark:hover:bg-green-950/40 dark:hover:text-green-400'
@@ -192,8 +192,8 @@ export function ProductsSection() {
           Cart →
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {CHAI_PRODUCTS.map((product) => (
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {CHAI_PRODUCTS.slice(0, 3).map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
       </div>
