@@ -44,12 +44,11 @@ export function generatePageMetadata({
   canonical,
   ...rest
 }: PageSEOProps): Metadata {
-  const metaTitle = title.includes(siteMetadata.title) ? title : `${title} | ${siteMetadata.title}`
   const metaDescription = description || siteMetadata.description
   const metaImage = image ? [image] : [siteMetadata.socialBanner]
 
   return {
-    title: metaTitle,
+    title: { absolute: title },
     description: metaDescription,
     alternates: canonical
       ? {
@@ -57,7 +56,7 @@ export function generatePageMetadata({
         }
       : undefined,
     openGraph: {
-      title: metaTitle,
+      title: title,
       description: metaDescription,
       url: './',
       siteName: siteMetadata.title,
@@ -66,7 +65,7 @@ export function generatePageMetadata({
       type: 'website',
     },
     twitter: {
-      title: metaTitle,
+      title: title,
       description: metaDescription, // Twitter cards should have description too
       card: 'summary_large_image',
       images: metaImage,

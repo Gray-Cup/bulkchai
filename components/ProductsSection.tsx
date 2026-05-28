@@ -175,7 +175,7 @@ function ProductCard({ product }: { product: (typeof CHAI_PRODUCTS)[number] }) {
 
 export function ProductsSection() {
   return (
-    <section className="mt-20 pt-4">
+    <section className="mt-20 pt-4 pb-8 md:pb-16">
       <div className="mb-10 flex items-end justify-between">
         <div>
           <p className="text-xs font-bold tracking-[0.25em] text-green-600 uppercase dark:text-green-500">

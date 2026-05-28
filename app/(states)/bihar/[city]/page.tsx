@@ -52,8 +52,8 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     return { title: 'City Not Found' }
   }
 
-  const title = `Bulk Tea & Chai Supply in ${cityInfo.city} | BulkChai`
-  const description = `Wholesale bulk tea and chai supply for businesses in ${cityInfo.city}, ${cityInfo.state}. GST billing, consistent quality, and reliable delivery for cafés, offices, canteens, and retailers.`
+  const title = `Wholesale Chai & Tea in ${cityInfo.city} | Bulk Chai`
+  const description = `Buy bulk chai and tea for your business in ${cityInfo.city}. Wholesale pricing, GST invoicing, and doorstep delivery across ${cityInfo.state}. Minimum 3kg orders — ideal for cafés, hotels, canteens, and offices.`
 
   return generatePageMetadata({
     title,
