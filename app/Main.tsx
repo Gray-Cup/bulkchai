@@ -1,57 +1,56 @@
 import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
 
 const MAX_DISPLAY = 5
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="max-w-sm rounded-md border border-neutral-400 p-5 hover:bg-neutral-100">
-                    <div className="space-y-5">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-lg leading-8 font-bold tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+      <div className="border-b border-gray-200 pt-16 pb-12 dark:border-gray-800">
+        <p className="mb-4 text-xs font-semibold tracking-[0.25em] text-gray-400 uppercase dark:text-gray-500">
+          Wholesale Tea Supplier
+        </p>
+        <p className="max-w-2xl text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+          {siteMetadata.description}
+        </p>
       </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base leading-6 font-medium">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="All posts"
-          >
-            All Posts &rarr;
-          </Link>
+
+      {posts.length > 0 && (
+        <div className="mt-16">
+          <p className="mb-8 text-xs font-semibold tracking-[0.25em] text-gray-400 uppercase dark:text-gray-500">
+            Latest Updates
+          </p>
+          <ul className="grid gap-px divide-y divide-gray-200 border border-gray-200 dark:divide-gray-800 dark:border-gray-800">
+            {posts.slice(0, MAX_DISPLAY).map((post) => {
+              const { slug, title } = post
+              return (
+                <li key={slug}>
+                  <Link
+                    href={`/blog/${slug}`}
+                    className="group flex items-center justify-between px-6 py-5 transition-colors hover:bg-gray-50 dark:hover:bg-gray-900"
+                  >
+                    <h2 className="text-base font-semibold text-gray-900 transition-colors group-hover:text-black dark:text-gray-100 dark:group-hover:text-white">
+                      {title}
+                    </h2>
+                    <span className="ml-4 shrink-0 text-gray-400 transition-colors group-hover:text-black dark:group-hover:text-white">
+                      →
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+          {posts.length > MAX_DISPLAY && (
+            <div className="mt-6">
+              <Link
+                href="/blog"
+                className="border-b border-current pb-0.5 text-sm font-semibold tracking-wide text-gray-900 uppercase transition-colors hover:text-black dark:text-gray-100 dark:hover:text-white"
+                aria-label="All posts"
+              >
+                All Posts →
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </>

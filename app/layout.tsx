@@ -2,6 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
+import { Inter } from 'next/font/google'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
@@ -12,6 +13,12 @@ import { Metadata } from 'next'
 import HeaderTop from '@/components/HeaderTop'
 import { generateOrganizationSchema } from '@/lib/seo-utils'
 import { GoogleAnalytics } from '@next/third-parties/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -57,7 +64,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const basePath = process.env.BASE_PATH || ''
 
   return (
-    <html lang={siteMetadata.language} className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang={siteMetadata.language}
+      className={`scroll-smooth ${inter.variable}`}
+      suppressHydrationWarning
+    >
       <link
         rel="apple-touch-icon"
         sizes="76x76"
@@ -85,8 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
-        {/* Organization Schema */}
+      <body className="bg-white pl-[calc(100vw-100%)] font-[family-name:var(--font-inter)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -94,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <ThemeProviders>
-          <div className="sticky top-0 z-50 w-full bg-green-600 py-3">
+          <div className="sticky top-0 z-50 w-full border-b border-black bg-black">
             <HeaderTop />
           </div>
           <SectionContainer>

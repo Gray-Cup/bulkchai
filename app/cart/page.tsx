@@ -35,7 +35,7 @@ function WeightDropdown({
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex cursor-pointer items-center justify-between gap-2 border border-gray-200 bg-white px-3 py-1.5 text-sm text-neutral-700 transition-colors hover:border-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-neutral-300"
+        className="flex cursor-pointer items-center justify-between gap-2 border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-neutral-800 transition-colors hover:border-black dark:border-gray-600 dark:bg-gray-900 dark:text-neutral-200 dark:hover:border-white"
       >
         <span className="font-medium">{tier}</span>
         <svg
@@ -60,13 +60,13 @@ function WeightDropdown({
               }}
               className={`flex w-full cursor-pointer items-center justify-between px-3 py-2.5 text-sm transition-colors ${
                 t.label === tier
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
-                  : 'text-neutral-700 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:bg-gray-800'
+                  ? 'bg-black text-white dark:bg-white dark:text-black'
+                  : 'text-neutral-700 hover:bg-gray-50 dark:text-neutral-300 dark:hover:bg-gray-800'
               }`}
             >
-              <span className="font-medium">{t.label}</span>
+              <span className="font-semibold">{t.label}</span>
               <span
-                className={`text-xs ${t.label === tier ? 'text-neutral-300' : 'text-neutral-400'}`}
+                className={`text-sm ${t.label === tier ? 'text-neutral-400 dark:text-neutral-600' : 'text-neutral-500'}`}
               >
                 {fmt(pricePerKg * t.kg)}
               </span>
@@ -150,17 +150,27 @@ export default function CartPage() {
     return (
       <div className="min-h-screen py-12">
         <div className="mx-auto max-w-5xl px-4 lg:px-6">
-          <div className="mb-8 flex items-center justify-between">
-            <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-              Your Cart
-            </h1>
-            <Link href="/buy-chai" className="text-sm text-green-600 hover:underline">
-              ← Continue shopping
+          <div className="mb-10 flex items-end justify-between border-b border-gray-200 pb-8 dark:border-gray-800">
+            <div>
+              <p className="text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+                Cart
+              </p>
+              <h1 className="mt-2 text-4xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
+                Your Cart
+              </h1>
+            </div>
+            <Link
+              href="/buy-chai"
+              className="text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              ← Shop
             </Link>
           </div>
-          <p className="mb-10 text-neutral-500 dark:text-neutral-400">Your cart is empty.</p>
+          <p className="mb-10 text-lg text-neutral-500 dark:text-neutral-400">
+            Your cart is empty.
+          </p>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-px bg-gray-200 sm:grid-cols-2 md:grid-cols-3 dark:bg-gray-700">
             {CHAI_PRODUCTS.map((product) => (
               <SuggestedCard key={product.slug} product={product} onAdd={addOther} />
             ))}
@@ -175,12 +185,20 @@ export default function CartPage() {
   return (
     <div className="min-h-screen py-12">
       <div className="mx-auto max-w-5xl px-4 lg:px-6">
-        <div className="mb-8 flex items-center justify-between">
-          <h1 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-            Your Cart
-          </h1>
-          <Link href="/buy-chai" className="text-sm text-green-600 hover:underline">
-            ← Continue shopping
+        <div className="mb-10 flex items-end justify-between border-b border-gray-200 pb-8 dark:border-gray-800">
+          <div>
+            <p className="text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+              Checkout
+            </p>
+            <h1 className="mt-2 text-4xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
+              Your Cart
+            </h1>
+          </div>
+          <Link
+            href="/buy-chai"
+            className="text-sm font-bold tracking-widest text-gray-500 uppercase transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+          >
+            ← Shop
           </Link>
         </div>
 
@@ -195,9 +213,9 @@ export default function CartPage() {
               return (
                 <div
                   key={`${item.slug}-${item.tier}`}
-                  className={`flex gap-4 p-4 ${i < enriched.length - 1 ? 'border-b border-gray-100 dark:border-gray-800' : ''}`}
+                  className={`flex gap-5 p-5 ${i < enriched.length - 1 ? 'border-b border-gray-100 dark:border-gray-800' : ''}`}
                 >
-                  <div className="relative h-20 w-16 shrink-0 overflow-hidden bg-neutral-50">
+                  <div className="relative h-24 w-20 shrink-0 overflow-hidden bg-neutral-50">
                     <img
                       src={item.product.image}
                       alt={item.product.name}
@@ -208,28 +226,30 @@ export default function CartPage() {
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
                       <div>
-                        <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                        <p className="text-base font-bold text-neutral-900 dark:text-neutral-100">
                           {item.product.name}
                         </p>
-                        <p className="text-xs text-neutral-400">{item.product.grade}</p>
+                        <p className="mt-0.5 text-xs font-medium tracking-wider text-neutral-400 uppercase">
+                          {item.product.grade}
+                        </p>
                       </div>
                       <button
                         type="button"
                         onClick={() => removeItem(item.slug, item.tier)}
-                        className="mt-0.5 shrink-0 cursor-pointer text-sm text-gray-300 transition-colors hover:text-red-400"
+                        className="mt-0.5 shrink-0 cursor-pointer text-sm font-bold text-gray-300 transition-colors hover:text-black dark:hover:text-white"
                       >
                         ✕
                       </button>
                     </div>
 
-                    <div className="mt-3 flex flex-wrap items-center gap-3">
+                    <div className="mt-4 flex flex-wrap items-center gap-3">
                       <WeightDropdown
                         tier={item.tier}
                         pricePerKg={item.product.pricePerKg}
                         onChange={(t) => updateItem(item.slug, item.tier, { tier: t })}
                       />
 
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-2">
                         <button
                           type="button"
                           onClick={() =>
@@ -237,11 +257,11 @@ export default function CartPage() {
                               ? updateItem(item.slug, item.tier, { quantity: item.quantity - 1 })
                               : removeItem(item.slug, item.tier)
                           }
-                          className="flex h-7 w-7 cursor-pointer items-center justify-center border border-gray-200 text-neutral-600 hover:bg-gray-50 dark:border-gray-700 dark:text-neutral-400 dark:hover:bg-gray-800"
+                          className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-300 text-neutral-600 transition-colors hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-400 dark:hover:border-white dark:hover:bg-white dark:hover:text-black"
                         >
                           −
                         </button>
-                        <span className="w-6 text-center text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        <span className="w-7 text-center text-base font-bold text-neutral-900 dark:text-neutral-100">
                           {item.quantity}
                         </span>
                         <button
@@ -249,13 +269,13 @@ export default function CartPage() {
                           onClick={() =>
                             updateItem(item.slug, item.tier, { quantity: item.quantity + 1 })
                           }
-                          className="flex h-7 w-7 cursor-pointer items-center justify-center border border-gray-200 text-neutral-600 hover:bg-gray-50 dark:border-gray-700 dark:text-neutral-400 dark:hover:bg-gray-800"
+                          className="flex h-9 w-9 cursor-pointer items-center justify-center border border-gray-300 text-neutral-600 transition-colors hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-400 dark:hover:border-white dark:hover:bg-white dark:hover:text-black"
                         >
                           +
                         </button>
                       </div>
 
-                      <p className="ml-auto text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+                      <p className="ml-auto text-base font-bold text-neutral-900 dark:text-neutral-100">
                         {fmt(price * item.quantity)}
                       </p>
                     </div>
@@ -264,27 +284,32 @@ export default function CartPage() {
               )
             })}
 
-            <div className="flex justify-between border-t border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-800/50">
-              <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Total</p>
-              <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+            <div className="flex justify-between border-t border-gray-200 bg-gray-50 px-5 py-4 dark:border-gray-700 dark:bg-gray-800/50">
+              <p className="text-base font-black tracking-tight text-neutral-900 uppercase dark:text-neutral-100">
+                Total
+              </p>
+              <p className="text-base font-black text-neutral-900 dark:text-neutral-100">
                 {fmt(total)}
               </p>
             </div>
           </div>
 
           {/* Checkout panel */}
-          <div className="sticky top-8 border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-900">
+          <div className="sticky top-8 border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900">
             <CheckoutForm selected={checkoutSelected} orderTotal={total} />
           </div>
         </div>
 
         {/* Other products */}
         {otherProducts.length > 0 && (
-          <div className="mt-16">
-            <h2 className="mb-6 text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          <div className="mt-20">
+            <p className="mb-2 text-xs font-bold tracking-[0.25em] text-neutral-400 uppercase dark:text-neutral-500">
+              Also Consider
+            </p>
+            <h2 className="mb-8 text-2xl font-black tracking-tight text-neutral-900 dark:text-neutral-100">
               You might also want
             </h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-px bg-gray-200 sm:grid-cols-2 md:grid-cols-3 dark:bg-gray-700">
               {otherProducts.map((product) => (
                 <SuggestedCard key={product.slug} product={product} onAdd={addOther} />
               ))}
@@ -314,26 +339,30 @@ function SuggestedCard({
   }
 
   return (
-    <div className="flex flex-col border border-gray-200 bg-white transition-all hover:border-gray-300 hover:shadow-sm dark:border-gray-700 dark:bg-gray-900">
+    <div className="flex flex-col border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900">
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <img src={product.image} alt={product.name} className="h-full w-full object-cover" />
       </div>
-      <div className="flex flex-1 flex-col gap-2.5 p-3">
+      <div className="flex flex-1 flex-col gap-4 p-4">
         <div>
-          <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+          <p className="text-base font-bold text-neutral-900 dark:text-neutral-100">
             {product.name}
           </p>
-          <p className="mt-0.5 text-xs text-neutral-400">{product.grade}</p>
+          <p className="mt-1 text-xs font-medium tracking-wider text-neutral-400 uppercase">
+            {product.grade}
+          </p>
         </div>
         <WeightDropdown tier={tier} pricePerKg={product.pricePerKg} onChange={setTier} />
-        <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+        <p className="text-base font-bold text-neutral-900 dark:text-neutral-100">
           {fmt(product.pricePerKg * kg)}
         </p>
         <button
           type="button"
           onClick={handleAdd}
-          className={`w-full cursor-pointer py-2.5 text-sm font-medium transition-colors ${
-            added ? 'bg-green-600 text-white' : 'bg-blue-600 text-white hover:bg-blue-700'
+          className={`w-full cursor-pointer py-3 text-sm font-bold tracking-widest uppercase transition-colors ${
+            added
+              ? 'bg-green-600 text-white'
+              : 'border border-gray-300 text-neutral-700 hover:border-black hover:bg-black hover:text-white dark:border-gray-600 dark:text-neutral-300 dark:hover:border-white dark:hover:bg-white dark:hover:text-black'
           }`}
         >
           {added ? 'Added ✓' : 'Add to Cart'}

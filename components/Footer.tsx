@@ -1,52 +1,37 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
 import FooterLocations from '@/components/seo/FooterLocations'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="mt-24 border-t border-gray-200 dark:border-gray-800">
       <FooterLocations />
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-5">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
-          <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
-          <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
-          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
-          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
-          <SocialIcon kind="x" href={siteMetadata.x} size={6} />
-          <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
-          <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
-          <SocialIcon kind="medium" href={siteMetadata.medium} size={6} />
+      <div className="flex flex-col gap-6 py-12 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="text-lg font-black tracking-tight text-black uppercase dark:text-white">
+            {siteMetadata.headerTitle}
+          </p>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            © {new Date().getFullYear()} {siteMetadata.author}
+          </p>
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-        </div>
-        <div className="mb-8 flex items-center space-x-2 py-2 text-xs text-gray-500 dark:text-gray-400">
-          <Link href="https://graycup.org/" className="hover:underline" target="_blank">
-            Company Website
-          </Link>
-          <div>{` • `}</div>
-
-          <Link href="/sitemap.xml" className="hover:underline" target="_blank">
-            Sitemap
-          </Link>
-          <div>{` • `}</div>
-          <Link href="/privacy-policy" className="hover:underline" target="_blank">
-            Privacy Policy
-          </Link>
-          <div>{` • `}</div>
-          <Link href="/contact-us" className="hover:underline" target="_blank">
-            Contact Us
-          </Link>
-          <div>{` • `}</div>
-          <Link href="/about" className="hover:underline" target="_blank">
-            About
-          </Link>
-        </div>
+        <nav className="flex flex-wrap gap-x-8 gap-y-2">
+          {[
+            { href: 'https://graycup.org/', label: 'Graycup' },
+            { href: '/privacy-policy', label: 'Privacy' },
+            { href: '/contact-us', label: 'Contact' },
+            { href: '/about', label: 'About' },
+            { href: '/sitemap.xml', label: 'Sitemap' },
+          ].map(({ href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              className="text-sm font-medium text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </footer>
   )
