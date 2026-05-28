@@ -39,68 +39,73 @@ export default function ProductsAndServicesPage() {
             {CHAI_PRODUCTS.map((product) => (
               <div
                 key={product.slug}
-                className="rounded-xl border border-gray-200 p-6 dark:border-gray-700"
+                className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700"
               >
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                      {product.name}
-                    </h3>
-                    <p className="mt-0.5 text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Grade: {product.grade}
-                    </p>
-                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                      {product.description}
-                    </p>
+                <img src={product.image} alt={product.name} className="h-48 w-full object-cover" />
+                <div className="p-6">
+                  <div className="mb-4 flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                        {product.name}
+                      </h3>
+                      <p className="mt-0.5 text-sm font-medium text-gray-500 dark:text-gray-400">
+                        Grade: {product.grade}
+                      </p>
+                      <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                        {product.description}
+                      </p>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Base rate</p>
+                      <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                        ₹{product.pricePerKg}/kg
+                      </p>
+                    </div>
                   </div>
-                  <div className="shrink-0 text-right">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Base rate</p>
-                    <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                      ₹{product.pricePerKg}/kg
-                    </p>
-                  </div>
-                </div>
 
-                {/* Pricing table */}
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-gray-200 dark:border-gray-700">
-                        <th className="pb-2 text-left font-medium text-gray-600 dark:text-gray-400">
-                          Bag Size
-                        </th>
-                        <th className="pb-2 text-left font-medium text-gray-600 dark:text-gray-400">
-                          Weight
-                        </th>
-                        <th className="pb-2 text-right font-medium text-gray-600 dark:text-gray-400">
-                          Price (INR)
-                        </th>
-                        <th className="pb-2 text-right font-medium text-gray-600 dark:text-gray-400">
-                          Price + 5% GST
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                      {TIERS.map((tier) => {
-                        const price = calcBagPrice(product.pricePerKg, tier.kg)
-                        const withGst = Math.round(price * 1.05)
-                        return (
-                          <tr key={tier.label}>
-                            <td className="py-2 font-medium text-gray-900 dark:text-gray-100">
-                              {tier.label} bag
-                            </td>
-                            <td className="py-2 text-gray-600 dark:text-gray-400">{tier.kg} kg</td>
-                            <td className="py-2 text-right text-gray-900 dark:text-gray-100">
-                              {formatINR(price)}
-                            </td>
-                            <td className="py-2 text-right text-gray-900 dark:text-gray-100">
-                              {formatINR(withGst)}
-                            </td>
-                          </tr>
-                        )
-                      })}
-                    </tbody>
-                  </table>
+                  {/* Pricing table */}
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-gray-200 dark:border-gray-700">
+                          <th className="pb-2 text-left font-medium text-gray-600 dark:text-gray-400">
+                            Bag Size
+                          </th>
+                          <th className="pb-2 text-left font-medium text-gray-600 dark:text-gray-400">
+                            Weight
+                          </th>
+                          <th className="pb-2 text-right font-medium text-gray-600 dark:text-gray-400">
+                            Price (INR)
+                          </th>
+                          <th className="pb-2 text-right font-medium text-gray-600 dark:text-gray-400">
+                            Price + 5% GST
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                        {TIERS.map((tier) => {
+                          const price = calcBagPrice(product.pricePerKg, tier.kg)
+                          const withGst = Math.round(price * 1.05)
+                          return (
+                            <tr key={tier.label}>
+                              <td className="py-2 font-medium text-gray-900 dark:text-gray-100">
+                                {tier.label} bag
+                              </td>
+                              <td className="py-2 text-gray-600 dark:text-gray-400">
+                                {tier.kg} kg
+                              </td>
+                              <td className="py-2 text-right text-gray-900 dark:text-gray-100">
+                                {formatINR(price)}
+                              </td>
+                              <td className="py-2 text-right text-gray-900 dark:text-gray-100">
+                                {formatINR(withGst)}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             ))}

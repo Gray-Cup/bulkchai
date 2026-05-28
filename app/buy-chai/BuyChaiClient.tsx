@@ -162,7 +162,13 @@ export default function BuyChaiClient() {
                   </span>
                 )}
 
-                <div className={`mb-3 h-1.5 w-12 rounded-full ${product.accent}`} />
+                <div className="-mx-5 -mt-5 mb-3 overflow-hidden rounded-t-xl">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-36 w-full object-cover"
+                  />
+                </div>
 
                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
                   {product.name}
