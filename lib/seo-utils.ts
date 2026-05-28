@@ -61,7 +61,7 @@ export function generatePageMetadata({
       url: './',
       siteName: siteMetadata.title,
       images: metaImage,
-      locale: siteMetadata.locale || 'en_US',
+      locale: siteMetadata.locale || 'en_IN',
       type: 'website',
     },
     twitter: {
@@ -97,18 +97,33 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: siteMetadata.headerTitle,
+    '@id': `${siteMetadata.siteUrl}/#organization`,
+    name: 'BulkChai',
+    legalName: siteMetadata.companyName || 'Gray Cup Enterprises Pvt. Ltd.',
     url: siteMetadata.siteUrl,
-    logo: siteMetadata.siteLogo || `${siteMetadata.siteUrl}/static/images/logo.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteMetadata.siteUrl}/static/images/logo.png`,
+      width: 512,
+      height: 512,
+    },
+    email: siteMetadata.email,
+    foundingDate: siteMetadata.foundingDate || '2019',
     sameAs: [
       siteMetadata.facebook,
       siteMetadata.twitter,
       siteMetadata.x,
-      siteMetadata.github,
       siteMetadata.linkedin,
       siteMetadata.instagram,
+      siteMetadata.youtube,
     ].filter(Boolean),
     contactPoint: siteMetadata.contactPoint,
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'IN',
+    },
+    areaServed: 'IN',
+    additionalType: 'http://www.productontology.org/id/Wholesaler',
   }
 }
 
