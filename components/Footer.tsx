@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
           <nav className="flex flex-wrap gap-x-8 gap-y-3">
             {[
-              { href: 'https://graycup.org/', label: 'Graycup' },
+              { href: 'https://graycup.org/', label: 'Gray Cup' },
               { href: '/privacy-policy', label: 'Privacy' },
               { href: '/contact-us', label: 'Contact' },
               { href: '/about', label: 'About' },
