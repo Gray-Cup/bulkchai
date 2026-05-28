@@ -95,7 +95,7 @@ export default function HaryanaPage() {
                     className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-5 py-4 transition-colors hover:border-green-500 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800"
                   >
                     <span className="font-medium text-gray-900 dark:text-gray-100">{city}</span>
-                    <span className="text-sm text-gray-500">View Details →</span>
+                    <span className="text-sm text-gray-500">View Details</span>
                   </Link>
                 )
               })}
